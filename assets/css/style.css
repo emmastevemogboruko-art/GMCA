@@ -1,0 +1,881 @@
+/* ==========================================
+   GMCA WEBSITE
+   Version 2.0
+========================================== */
+
+
+/* ==========================================
+   VARIABLES
+========================================== */
+
+:root{
+
+    --gold:#C9A227;
+    --gold-dark:#A88418;
+
+    --dark:#111111;
+
+    --white:#ffffff;
+
+    --light:#f8f9fa;
+
+    --transition:.35s ease;
+
+}
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+
+    background:#ffffff;
+
+    color:#222;
+
+}
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+
+    background:rgba(10,10,10,.88);
+
+    backdrop-filter:blur(12px);
+
+    padding:12px 0;
+
+}
+
+.logo{
+
+    width:65px;
+
+    height:auto;
+
+}
+
+.nav-link{
+
+    color:#fff !important;
+
+    margin-left:18px;
+
+    font-weight:500;
+
+    transition:var(--transition);
+
+}
+
+.nav-link:hover,
+
+.nav-link.active{
+
+    color:var(--gold) !important;
+
+}
+
+.btn-warning{
+
+    background:var(--gold);
+
+    border:none;
+
+    color:#fff;
+
+    font-weight:600;
+
+}
+
+.btn-warning:hover{
+
+    background:var(--gold-dark);
+
+    color:#fff;
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero-section{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("../images/hero/hero.jpg") center/cover no-repeat;
+
+    color:#fff;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+.hero-title{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:4rem;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+    margin:25px 0;
+
+}
+
+.hero-text{
+
+    font-size:1.15rem;
+
+    max-width:650px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    background:rgba(201,162,39,.18);
+
+    color:var(--gold);
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.btn-outline-light:hover{
+
+    background:#fff;
+
+    color:#111;
+
+}
+/* ==========================================
+   ABOUT PREVIEW
+========================================== */
+
+.section-padding{
+
+    padding:100px 0;
+
+}
+
+.about-preview{
+
+    background:#fff;
+
+}
+
+.section-title{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    color:#121212;
+
+    margin:20px 0;
+
+}
+
+.section-text{
+
+    font-size:1.08rem;
+
+    color:#555;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+}
+
+.about-preview img{
+
+    border-radius:25px;
+
+    transition:.4s;
+
+}
+
+.about-preview img:hover{
+
+    transform:scale(1.02);
+
+}
+/* ==========================================
+   PROGRAMS PREVIEW
+========================================== */
+
+.feature-card{
+
+    background:#fff;
+
+    padding:40px 30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.feature-icon{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.feature-card h4{
+
+    margin-bottom:18px;
+
+}
+
+.feature-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+/* ==========================================
+   FOOTER
+========================================== */
+
+.site-footer{
+
+    background:#111;
+
+    color:#fff;
+
+    padding:80px 0 30px;
+
+}
+
+.footer-logo{
+
+    width:70px;
+
+}
+
+.site-footer h5{
+
+    color:#d4a91f;
+
+    margin-bottom:20px;
+
+}
+
+.footer-links{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.footer-links li{
+
+    margin-bottom:12px;
+
+}
+
+.footer-links a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#d4a91f;
+
+}
+
+.site-footer hr{
+
+    border-color:rgba(255,255,255,.12);
+
+    margin:50px 0 25px;
+
+}
+
+.footer-bottom{
+
+    color:#ddd;
+
+}
+/* ==========================================
+   ABOUT HERO
+========================================== */
+
+.about-hero{
+
+padding:160px 0 100px;
+
+background:
+linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),
+url("../images/about/about.jpg") center/cover;
+
+color:#fff;
+
+}
+
+.about-hero h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:4rem;
+
+margin:25px 0;
+
+}
+
+.about-hero p{
+
+max-width:750px;
+
+margin:auto;
+
+font-size:1.1rem;
+
+line-height:1.9;
+
+}
+/* ==========================================
+   ABOUT VALUES
+========================================== */
+
+.about-values{
+
+    background:#f8f9fa;
+
+}
+
+.value-card{
+
+    background:#fff;
+
+    padding:45px 35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+.value-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 50px rgba(0,0,0,.12);
+
+}
+
+.value-icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:0 auto 25px;
+
+    background:#d4a91f;
+
+    color:#fff;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:2rem;
+
+}
+
+.value-card h4{
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+}
+
+.value-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+/* ==========================================
+   IMPACT
+========================================== */
+
+.impact-section{
+
+    background:#111;
+
+    color:#fff;
+
+    padding:90px 0;
+
+}
+
+.impact-box{
+
+    padding:20px;
+
+}
+
+.impact-box h2{
+
+    font-size:2.6rem;
+
+    color:#d4a91f;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.impact-box p{
+
+    color:#ddd;
+
+    font-size:1.05rem;
+
+    letter-spacing:1px;
+
+}
+/* ==========================================
+   PROGRAMS PAGE
+========================================== */
+
+.program-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+/* ==========================================
+   MINISTRY TRACKS
+========================================== */
+
+.track-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:40px;
+
+    height:100%;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.track-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 50px rgba(0,0,0,.12);
+
+}
+
+.track-icon{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:50%;
+
+    background:#d4a91f;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:2rem;
+
+    margin-bottom:25px;
+
+}
+
+.track-card h3{
+
+    margin-bottom:20px;
+
+}
+
+.track-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.track-card li{
+
+    padding:10px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.track-card li:last-child{
+
+    border-bottom:none;
+
+}
+/*==========================================
+    GROWTH JOURNEY
+==========================================*/
+
+.growth-journey{
+    background:#fff;
+}
+
+.journey-card{
+    background:#fff;
+    border-radius:20px;
+    padding:45px 30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+    transition:.35s;
+    height:100%;
+}
+
+.journey-card:hover{
+    transform:translateY(-10px);
+}
+
+.journey-icon{
+    width:80px;
+    height:80px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    background:#d4af37;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:2rem;
+}
+
+.journey-card h4{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.journey-card p{
+    color:#666;
+    line-height:1.8;
+}
+/*==========================================
+   PROGRAM GALLERY
+==========================================*/
+
+.program-gallery{
+
+    background:#f8f9fa;
+
+}
+
+.gallery-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+.gallery-card img{
+
+    width:100%;
+
+    height:340px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.gallery-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.gallery-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(to top,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.2));
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:30px;
+
+    color:#fff;
+
+}
+
+.gallery-overlay h4{
+
+    color:#fff;
+
+    margin-bottom:10px;
+
+}
+
+.gallery-overlay p{
+
+    margin:0;
+
+    color:rgba(255,255,255,.9);
+
+}
+/*==========================================
+   HOW WE EQUIP YOU
+==========================================*/
+
+.equip-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    height:100%;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.equip-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.equip-card i{
+
+    font-size:2.5rem;
+
+    color:#d4a91f;
+
+    margin-bottom:20px;
+
+    display:block;
+
+}
+
+.equip-card h4{
+
+    margin-bottom:15px;
+
+}
+
+.equip-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+/*==========================================
+   COMMUNITY HERO
+==========================================*/
+
+.community-hero{
+
+    position: relative;
+
+    height: 60vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    color: #fff;
+
+}
+
+.community-hero img{
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+
+}
+
+.community-hero .hero-overlay{
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.60);
+
+    z-index: 1;
+
+}
+
+.community-hero .container{
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.community-hero .hero-content{
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+.community-hero .hero-title{
+
+    color: #fff;
+
+}
+
+.community-hero .hero-text{
+
+    color: rgba(255,255,255,.92);
+
+}
+
+.community-hero{
+
+    padding-top:90px;
+
+}
