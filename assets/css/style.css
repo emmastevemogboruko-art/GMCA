@@ -879,3 +879,32 @@ line-height:1.9;
     padding-top:90px;
 
 }
+/*==========================================
+   COMMUNITY INTRO
+==========================================*/
+
+.community-intro{
+
+    background:#fff;
+
+}
+
+.community-intro img{
+
+    border-radius:20px;
+
+    transition:.4s;
+
+}
+
+.community-intro img:hover{
+
+    transform:scale(1.02);
+
+}
+
+.community-intro .section-title{
+
+    margin-top:20px;
+
+}
