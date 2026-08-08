@@ -1,0 +1,196 @@
+/* ==========================================================================
+   GMCA Member Portal
+   ----------------------------------------------------------------------------
+   File        : tables.css
+   Description : Table component styles.
+
+   Dependencies
+   ----------------------------------------------------------------------------
+   - variables.css
+   - typography.css
+
+   Notes
+   ----------------------------------------------------------------------------
+   Extends Bootstrap table styles while maintaining compatibility.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   TABLE CONTAINER
+   ========================================================================== */
+
+.table-responsive {
+    border-radius: var(--gmca-radius-lg);
+    overflow: hidden;
+}
+
+
+/* ==========================================================================
+   BASE TABLE
+   ========================================================================== */
+
+.table {
+    width: 100%;
+    margin-bottom: 0;
+
+    color: var(--gmca-color-text);
+
+    vertical-align: middle;
+
+    background-color: var(--gmca-color-surface);
+}
+
+.table > :not(caption) > * > * {
+    padding: 1rem 1.25rem;
+}
+
+
+/* ==========================================================================
+   TABLE HEADER
+   ========================================================================== */
+
+.table thead th {
+    background-color: var(--gmca-color-surface-alt);
+
+    color: var(--gmca-color-secondary);
+
+    font-size: var(--gmca-font-size-sm);
+
+    font-weight: var(--gmca-font-semibold);
+
+    text-transform: uppercase;
+
+    letter-spacing: .05em;
+
+    border-bottom: 2px solid var(--gmca-color-border);
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================================================
+   TABLE BODY
+   ========================================================================== */
+
+.table tbody td {
+    border-color: var(--gmca-color-border);
+}
+
+.table tbody tr {
+    transition:
+        background-color var(--gmca-transition-fast);
+}
+
+.table tbody tr:hover {
+    background-color: rgba(201, 162, 39, .05);
+}
+
+
+/* ==========================================================================
+   TABLE FOOTER
+   ========================================================================== */
+
+.table tfoot td,
+.table tfoot th {
+    background-color: var(--gmca-color-surface-alt);
+
+    border-top: 2px solid var(--gmca-color-border);
+
+    font-weight: var(--gmca-font-semibold);
+}
+
+
+/* ==========================================================================
+   STRIPED TABLE
+   ========================================================================== */
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(0, 0, 0, .015);
+}
+
+
+/* ==========================================================================
+   BORDERED TABLE
+   ========================================================================== */
+
+.table-bordered {
+    border-color: var(--gmca-color-border);
+}
+
+
+/* ==========================================================================
+   TABLE ACTIONS
+   ========================================================================== */
+
+.table-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: var(--gmca-space-2);
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================================================
+   TABLE STATUS
+   ========================================================================== */
+
+.table-status {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gmca-space-2);
+}
+
+
+/* ==========================================================================
+   EMPTY TABLE
+   ========================================================================== */
+
+.table-empty {
+    padding: var(--gmca-space-12);
+
+    text-align: center;
+
+    color: var(--gmca-color-text-muted);
+}
+
+
+/* ==========================================================================
+   COMPACT TABLE
+   ========================================================================== */
+
+.table-sm > :not(caption) > * > * {
+    padding: .65rem .9rem;
+}
+
+
+/* ==========================================================================
+   CLICKABLE ROWS
+   ========================================================================== */
+
+.table-clickable tbody tr {
+    cursor: pointer;
+}
+
+.table-clickable tbody tr:hover {
+    background-color: rgba(201, 162, 39, .08);
+}
+
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    .table {
+        font-size: var(--gmca-font-size-sm);
+    }
+
+    .table > :not(caption) > * > * {
+        padding: .85rem;
+    }
+
+}

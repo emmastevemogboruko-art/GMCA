@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | GMCA</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+    <!-- Admin Styles -->
+    <link rel="stylesheet" href="assets/css/base/admin.css">
+    <link rel="stylesheet" href="assets/css/layout/layout.css">
+    <link rel="stylesheet" href="assets/css/components/components.css">
+
+    <style>
+
+        body{
+
+            background:#f4f6fb;
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+
+        }
+
+        .login-card{
+
+            width:100%;
+            max-width:460px;
+
+            border:none;
+            border-radius:18px;
+
+            box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+        }
+
+        .gmca-logo{
+
+            width:72px;
+            height:72px;
+
+            background:#d4a514;
+
+            color:#fff;
+
+            border-radius:18px;
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            font-size:32px;
+
+            margin:auto;
+
+        }
+
+        .btn-login{
+
+            background:#d4a514;
+            border:none;
+
+        }
+
+        .btn-login:hover{
+
+            background:#bf9412;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-5 col-md-7">
+
+            <div class="card login-card">
+
+                <div class="card-body p-5">
+
+                    <div class="text-center mb-4">
+
+                        <div class="gmca-logo mb-3">
+
+                            <i class="bi bi-shield-lock-fill"></i>
+
+                        </div>
+
+                        <h2 class="fw-bold">
+
+                            GMCA Admin
+
+                        </h2>
+
+                        <p class="text-muted">
+
+                            Administrator Portal
+
+                        </p>
+
+                    </div>
+
+                    <div
+                        id="loginAlert"
+                        class="alert alert-danger d-none">
+                    </div>
+
+                    <form id="loginForm">
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+
+                                Username or Email
+
+                            </label>
+
+                            <input
+                                id="identifier"
+                                class="form-control"
+                                required>
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label class="form-label">
+
+                                Password
+
+                            </label>
+
+                            <input
+                                id="password"
+                                type="password"
+                                class="form-control"
+                                required>
+
+                        </div>
+
+                        <button
+                            id="loginBtn"
+                            class="btn btn-login text-white w-100">
+
+                            <span id="loginText">
+
+                                Login
+
+                            </span>
+
+                            <span
+                                id="loginSpinner"
+                                class="spinner-border spinner-border-sm ms-2 d-none">
+                            </span>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bootstrap -->
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core -->
+<script src="assets/js/core/config.js"></script>
+<script src="assets/js/core/storage.js"></script>
+<script src="assets/js/core/api.js"></script>
+<script src="assets/js/core/auth.js"></script>
+<script src="assets/js/core/utils.js"></script>
+
+<!-- Login -->
+<script src="assets/js/pages/login.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+/* ==========================================================================
+   GMCA Member Portal
+   ----------------------------------------------------------------------------
+   File        : navigation.css
+   Description : Reusable navigation components for menus, tabs,
+                 breadcrumbs, pagination and navigation groups.
+
+   Dependencies
+   ----------------------------------------------------------------------------
+   - variables.css
+   - typography.css
+   - animations.css
+   ========================================================================== */
+
+
+/* ==========================================================================
+   NAVIGATION LIST
+   ========================================================================== */
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gmca-space-2);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* ==========================================================================
+   NAVIGATION ITEM
+   ========================================================================== */
+
+.nav-item {
+    margin: 0;
+}
+
+
+/* ==========================================================================
+   NAVIGATION LINK
+   ========================================================================== */
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: var(--gmca-space-3);
+
+    width: 100%;
+
+    padding: .875rem 1rem;
+
+    color: var(--gmca-color-text);
+
+    border-radius: var(--gmca-radius-md);
+
+    text-decoration: none;
+
+    transition:
+        background-color var(--gmca-transition-fast),
+        color var(--gmca-transition-fast),
+        transform var(--gmca-transition-fast);
+}
+
+.nav-link:hover {
+    background-color: var(--gmca-color-surface-alt);
+    color: var(--gmca-color-primary);
+}
+
+.nav-link:focus-visible {
+    outline: 2px solid var(--gmca-color-primary);
+    outline-offset: 2px;
+}
+
+.nav-link.active,
+.nav-link[aria-current="page"] {
+    background-color: var(--gmca-color-primary-light);
+    color: var(--gmca-color-primary);
+    font-weight: var(--gmca-font-semibold);
+}
+
+
+/* ==========================================================================
+   NAVIGATION ICON
+   ========================================================================== */
+
+.nav-link i,
+.nav-link svg {
+    flex-shrink: 0;
+    width: 1.25rem;
+
+    text-align: center;
+
+    font-size: 1.1rem;
+}
+
+
+/* ==========================================================================
+   NAVIGATION TEXT
+   ========================================================================== */
+
+.nav-text {
+    flex: 1;
+}
+
+
+/* ==========================================================================
+   NAVIGATION BADGE
+   ========================================================================== */
+
+.nav-badge {
+    margin-left: auto;
+}
+
+
+/* ==========================================================================
+   NAVIGATION SECTION
+   ========================================================================== */
+
+.nav-section {
+    margin-top: var(--gmca-space-6);
+}
+
+.nav-section:first-child {
+    margin-top: 0;
+}
+
+.nav-section-title {
+    margin-bottom: var(--gmca-space-2);
+
+    padding: 0 var(--gmca-space-4);
+
+    color: var(--gmca-color-text-light);
+
+    font-size: var(--gmca-font-size-xs);
+
+    font-weight: var(--gmca-font-semibold);
+
+    text-transform: uppercase;
+
+    letter-spacing: .08em;
+}
+
+
+/* ==========================================================================
+   BREADCRUMBS
+   ========================================================================== */
+
+.breadcrumb {
+    margin-bottom: var(--gmca-space-4);
+
+    background: transparent;
+}
+
+.breadcrumb-item a {
+    color: var(--gmca-color-primary);
+}
+
+.breadcrumb-item.active {
+    color: var(--gmca-color-text-muted);
+}
+
+
+/* ==========================================================================
+   TABS
+   ========================================================================== */
+
+.nav-tabs {
+    border-bottom: 1px solid var(--gmca-color-border);
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+
+    border-radius: 0;
+
+    background: transparent;
+
+    color: var(--gmca-color-text-muted);
+}
+
+.nav-tabs .nav-link:hover {
+    background: transparent;
+    color: var(--gmca-color-primary);
+}
+
+.nav-tabs .nav-link.active {
+    background: transparent;
+
+    color: var(--gmca-color-primary);
+
+    border-bottom-color: var(--gmca-color-primary);
+}
+
+
+/* ==========================================================================
+   PAGINATION
+   ========================================================================== */
+
+.pagination {
+    gap: var(--gmca-space-2);
+}
+
+.page-link {
+    border-radius: var(--gmca-radius-md);
+
+    border-color: var(--gmca-color-border);
+
+    color: var(--gmca-color-text);
+
+    min-width: 42px;
+
+    text-align: center;
+}
+
+.page-link:hover {
+    background-color: var(--gmca-color-primary-light);
+    border-color: var(--gmca-color-primary-light);
+
+    color: var(--gmca-color-primary);
+}
+
+.page-item.active .page-link {
+    background-color: var(--gmca-color-primary);
+    border-color: var(--gmca-color-primary);
+
+    color: var(--gmca-color-white);
+}
+
+
+/* ==========================================================================
+   MOBILE NAVIGATION
+   ========================================================================== */
+
+.mobile-nav {
+    display: none;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .nav-link {
+        padding: .75rem 1rem;
+    }
+
+    .nav-section-title {
+        padding-inline: var(--gmca-space-2);
+    }
+
+}

@@ -1,0 +1,281 @@
+/* ==========================================================================
+   GMCA Member Portal
+   ----------------------------------------------------------------------------
+   File        : buttons.css
+   Description : Button component styles for the GMCA Member Portal.
+
+   Dependencies
+   ----------------------------------------------------------------------------
+   - variables.css
+   - typography.css
+   - animations.css
+
+   Notes
+   ----------------------------------------------------------------------------
+   Extends Bootstrap's .btn component while applying the GMCA design system.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   BASE BUTTON
+   ========================================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gmca-space-2);
+
+    font-weight: var(--gmca-font-medium);
+    font-size: var(--gmca-font-size-md);
+
+    border-radius: var(--gmca-radius-md);
+
+    padding: .75rem 1.5rem;
+
+    border-width: 1px;
+
+    transition:
+        background-color var(--gmca-transition-fast),
+        border-color var(--gmca-transition-fast),
+        color var(--gmca-transition-fast),
+        box-shadow var(--gmca-transition-fast),
+        transform var(--gmca-transition-fast);
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================================================
+   BUTTON STATES
+   ========================================================================== */
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: scale(.98);
+}
+
+.btn:focus-visible {
+    box-shadow: 0 0 0 4px rgba(201, 162, 39, .25);
+}
+
+.btn:disabled,
+.btn.disabled {
+    opacity: .65;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+/* ==========================================================================
+   PRIMARY
+   ========================================================================== */
+
+.btn-primary {
+
+    background-color: var(--gmca-color-primary);
+    border-color: var(--gmca-color-primary);
+
+    color: var(--gmca-color-white);
+
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+
+    background-color: var(--gmca-color-primary-dark);
+    border-color: var(--gmca-color-primary-dark);
+    color: var(--gmca-color-white);
+
+}
+
+
+/* ==========================================================================
+   SECONDARY
+   ========================================================================== */
+
+.btn-secondary {
+
+    background-color: var(--gmca-color-secondary);
+    border-color: var(--gmca-color-secondary);
+
+    color: var(--gmca-color-white);
+
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+
+    background-color: #111827;
+    border-color: #111827;
+    color: var(--gmca-color-white);
+
+}
+
+
+/* ==========================================================================
+   OUTLINE PRIMARY
+   ========================================================================== */
+
+.btn-outline-primary {
+
+    color: var(--gmca-color-primary);
+    border-color: var(--gmca-color-primary);
+    background: transparent;
+
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+
+    background: var(--gmca-color-primary);
+    color: var(--gmca-color-white);
+
+}
+
+
+/* ==========================================================================
+   LIGHT
+   ========================================================================== */
+
+.btn-light {
+
+    background: var(--gmca-color-white);
+    border-color: var(--gmca-color-border);
+
+    color: var(--gmca-color-text);
+
+}
+
+.btn-light:hover {
+
+    background: var(--gmca-color-surface-alt);
+
+}
+
+
+/* ==========================================================================
+   LINK BUTTON
+   ========================================================================== */
+
+.btn-link {
+
+    color: var(--gmca-color-primary);
+    text-decoration: none;
+
+}
+
+.btn-link:hover {
+
+    color: var(--gmca-color-primary-dark);
+
+}
+
+
+/* ==========================================================================
+   ICON BUTTONS
+   ========================================================================== */
+
+.btn-icon {
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border-radius: var(--gmca-radius-circle);
+
+}
+
+.btn-icon-sm {
+
+    width: 34px;
+    height: 34px;
+
+}
+
+.btn-icon-lg {
+
+    width: 52px;
+    height: 52px;
+
+}
+
+
+/* ==========================================================================
+   FULL WIDTH
+   ========================================================================== */
+
+.btn-block {
+
+    width: 100%;
+
+}
+
+
+/* ==========================================================================
+   LOADING BUTTON
+   ========================================================================== */
+
+.btn-loading {
+
+    pointer-events: none;
+
+}
+
+.btn-loading .spinner-border {
+
+    width: 1rem;
+    height: 1rem;
+
+}
+
+
+/* ==========================================================================
+   BUTTON GROUP
+   ========================================================================== */
+
+.btn-group>.btn {
+
+    border-radius: 0;
+
+}
+
+.btn-group>.btn:first-child {
+
+    border-top-left-radius: var(--gmca-radius-md);
+    border-bottom-left-radius: var(--gmca-radius-md);
+
+}
+
+.btn-group>.btn:last-child {
+
+    border-top-right-radius: var(--gmca-radius-md);
+    border-bottom-right-radius: var(--gmca-radius-md);
+
+}
+
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 576px) {
+
+    .btn {
+
+        width: 100%;
+
+    }
+
+    .btn-icon {
+
+        width: 42px;
+        min-width: 42px;
+
+    }
+
+}

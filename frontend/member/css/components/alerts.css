@@ -1,0 +1,243 @@
+/* ==========================================================================
+   GMCA Member Portal
+   ----------------------------------------------------------------------------
+   File        : alerts.css
+   Description : Alert component styles for notifications, validation,
+                 API responses, and system messages.
+
+   Dependencies
+   ----------------------------------------------------------------------------
+   - variables.css
+   - typography.css
+   - animations.css
+
+   Notes
+   ----------------------------------------------------------------------------
+   Extends Bootstrap alert components using the GMCA design system.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   BASE ALERT
+   ========================================================================== */
+
+.alert {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--gmca-space-3);
+
+    padding: var(--gmca-space-4) var(--gmca-space-5);
+
+    margin-bottom: var(--gmca-space-4);
+
+    border: 1px solid transparent;
+    border-radius: var(--gmca-radius-md);
+
+    font-size: var(--gmca-font-size-sm);
+
+    box-shadow: var(--gmca-shadow-xs);
+}
+
+
+/* ==========================================================================
+   ALERT ICON
+   ========================================================================== */
+
+.alert-icon {
+    flex-shrink: 0;
+
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+
+/* ==========================================================================
+   ALERT CONTENT
+   ========================================================================== */
+
+.alert-content {
+    flex: 1;
+}
+
+.alert-title {
+    margin-bottom: var(--gmca-space-1);
+
+    font-weight: var(--gmca-font-semibold);
+
+    color: inherit;
+}
+
+.alert-message {
+    margin: 0;
+}
+
+
+/* ==========================================================================
+   DISMISS BUTTON
+   ========================================================================== */
+
+.alert .btn-close {
+    margin-left: auto;
+    opacity: .65;
+}
+
+.alert .btn-close:hover {
+    opacity: 1;
+}
+
+
+/* ==========================================================================
+   SUCCESS
+   ========================================================================== */
+
+.alert-success {
+
+    color: #0F5132;
+
+    background-color: #D1FADF;
+
+    border-color: #A6F4C5;
+
+}
+
+
+/* ==========================================================================
+   ERROR / DANGER
+   ========================================================================== */
+
+.alert-danger {
+
+    color: #842029;
+
+    background-color: #FEE4E2;
+
+    border-color: #FECDCA;
+
+}
+
+
+/* ==========================================================================
+   WARNING
+   ========================================================================== */
+
+.alert-warning {
+
+    color: #7A2E0B;
+
+    background-color: #FEF3C7;
+
+    border-color: #FDE68A;
+
+}
+
+
+/* ==========================================================================
+   INFO
+   ========================================================================== */
+
+.alert-info {
+
+    color: #055160;
+
+    background-color: #D9F5FF;
+
+    border-color: #B6ECFF;
+
+}
+
+
+/* ==========================================================================
+   OUTLINE ALERTS
+   ========================================================================== */
+
+.alert-outline {
+    background: transparent;
+}
+
+.alert-outline.alert-success {
+    border-color: var(--gmca-color-success);
+    color: var(--gmca-color-success);
+}
+
+.alert-outline.alert-danger {
+    border-color: var(--gmca-color-danger);
+    color: var(--gmca-color-danger);
+}
+
+.alert-outline.alert-warning {
+    border-color: var(--gmca-color-warning);
+    color: var(--gmca-color-warning);
+}
+
+.alert-outline.alert-info {
+    border-color: var(--gmca-color-info);
+    color: var(--gmca-color-info);
+}
+
+
+/* ==========================================================================
+   ALERT WITH BORDER
+   ========================================================================== */
+
+.alert-left-border {
+    border-left-width: 5px;
+}
+
+.alert-left-border.alert-success {
+    border-left-color: var(--gmca-color-success);
+}
+
+.alert-left-border.alert-danger {
+    border-left-color: var(--gmca-color-danger);
+}
+
+.alert-left-border.alert-warning {
+    border-left-color: var(--gmca-color-warning);
+}
+
+.alert-left-border.alert-info {
+    border-left-color: var(--gmca-color-info);
+}
+
+
+/* ==========================================================================
+   INLINE ALERT
+   ========================================================================== */
+
+.alert-inline {
+    display: inline-flex;
+    margin-bottom: 0;
+}
+
+
+/* ==========================================================================
+   TOAST CONTAINER
+   ========================================================================== */
+
+.alert-toast {
+    min-width: 320px;
+    max-width: 420px;
+
+    box-shadow: var(--gmca-shadow-lg);
+
+    animation: fadeUp .25s ease;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 576px) {
+
+    .alert {
+        padding: var(--gmca-space-4);
+        gap: var(--gmca-space-2);
+    }
+
+    .alert-toast {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+}

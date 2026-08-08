@@ -1,0 +1,223 @@
+/* ==========================================================================
+   GMCA Member Portal
+   ----------------------------------------------------------------------------
+   File        : badges.css
+   Description : Badge component styles used throughout the Member Portal.
+
+   Dependencies
+   ----------------------------------------------------------------------------
+   - variables.css
+   - typography.css
+   ========================================================================== */
+
+
+/* ==========================================================================
+   BASE BADGE
+   ========================================================================== */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gmca-space-1);
+
+    padding: .35rem .75rem;
+
+    border-radius: var(--gmca-radius-pill);
+
+    font-size: var(--gmca-font-size-xs);
+    font-weight: var(--gmca-font-semibold);
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================================================
+   PRIMARY
+   ========================================================================== */
+
+.badge-primary {
+    color: var(--gmca-color-white);
+    background-color: var(--gmca-color-primary);
+}
+
+
+/* ==========================================================================
+   SECONDARY
+   ========================================================================== */
+
+.badge-secondary {
+    color: var(--gmca-color-white);
+    background-color: var(--gmca-color-secondary);
+}
+
+
+/* ==========================================================================
+   SUCCESS
+   ========================================================================== */
+
+.badge-success {
+    color: #0F5132;
+    background-color: #D1FADF;
+}
+
+
+/* ==========================================================================
+   WARNING
+   ========================================================================== */
+
+.badge-warning {
+    color: #7A2E0B;
+    background-color: #FEF3C7;
+}
+
+
+/* ==========================================================================
+   DANGER
+   ========================================================================== */
+
+.badge-danger {
+    color: #842029;
+    background-color: #FEE4E2;
+}
+
+
+/* ==========================================================================
+   INFO
+   ========================================================================== */
+
+.badge-info {
+    color: #055160;
+    background-color: #D9F5FF;
+}
+
+
+/* ==========================================================================
+   LIGHT
+   ========================================================================== */
+
+.badge-light {
+    color: var(--gmca-color-text);
+    background-color: var(--gmca-color-surface-alt);
+    border: 1px solid var(--gmca-color-border);
+}
+
+
+/* ==========================================================================
+   OUTLINE BADGES
+   ========================================================================== */
+
+.badge-outline-primary {
+    color: var(--gmca-color-primary);
+    background: transparent;
+    border: 1px solid var(--gmca-color-primary);
+}
+
+.badge-outline-success {
+    color: var(--gmca-color-success);
+    background: transparent;
+    border: 1px solid var(--gmca-color-success);
+}
+
+.badge-outline-warning {
+    color: var(--gmca-color-warning);
+    background: transparent;
+    border: 1px solid var(--gmca-color-warning);
+}
+
+.badge-outline-danger {
+    color: var(--gmca-color-danger);
+    background: transparent;
+    border: 1px solid var(--gmca-color-danger);
+}
+
+.badge-outline-info {
+    color: var(--gmca-color-info);
+    background: transparent;
+    border: 1px solid var(--gmca-color-info);
+}
+
+
+/* ==========================================================================
+   BADGE SIZES
+   ========================================================================== */
+
+.badge-sm {
+    padding: .25rem .5rem;
+    font-size: .6875rem;
+}
+
+.badge-lg {
+    padding: .5rem 1rem;
+    font-size: var(--gmca-font-size-sm);
+}
+
+
+/* ==========================================================================
+   ICON BADGES
+   ========================================================================== */
+
+.badge-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gmca-space-1);
+}
+
+.badge-icon i,
+.badge-icon svg {
+    font-size: .9em;
+}
+
+
+/* ==========================================================================
+   STATUS BADGES
+   ========================================================================== */
+
+.badge-status {
+    min-width: 90px;
+    justify-content: center;
+}
+
+
+/* ==========================================================================
+   NOTIFICATION BADGE
+   ========================================================================== */
+
+.badge-notification {
+    min-width: 20px;
+    min-height: 20px;
+
+    padding: 0 .4rem;
+
+    border-radius: var(--gmca-radius-pill);
+
+    font-size: .6875rem;
+    font-weight: var(--gmca-font-bold);
+
+    line-height: 20px;
+
+    text-align: center;
+}
+
+
+/* ==========================================================================
+   PILL BADGES
+   ========================================================================== */
+
+.badge-pill {
+    border-radius: var(--gmca-radius-pill);
+}
+
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 576px) {
+
+    .badge-status {
+        min-width: auto;
+    }
+
+}

@@ -1,0 +1,1582 @@
+/*==================================================
+  GMCA MEMBERSHIP PORTAL
+  Version: 1.0
+==================================================*/
+
+
+/*==================================================
+  CSS VARIABLES
+==================================================*/
+
+:root{
+
+    --primary:#B8860B;
+    --primary-dark:#8C6507;
+    --primary-light:#F5E7BC;
+
+    --secondary:#123524;
+
+    --white:#ffffff;
+
+    --bg:#F7F8FA;
+
+    --card:#ffffff;
+
+    --text:#222222;
+
+    --muted:#666666;
+
+    --border:#E5E7EB;
+
+    --success:#198754;
+
+    --radius-sm:12px;
+    --radius:20px;
+    --radius-lg:30px;
+
+    --shadow-sm:0 8px 24px rgba(0,0,0,.05);
+
+    --shadow:
+        0 18px 45px rgba(0,0,0,.08);
+
+    --shadow-lg:
+        0 35px 90px rgba(0,0,0,.10);
+
+    --transition:.35s ease;
+
+}
+
+
+
+/*==================================================
+  RESET
+==================================================*/
+
+*,
+*::before,
+*::after{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+
+
+/*==================================================
+  TYPOGRAPHY
+==================================================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-family:"Cormorant Garamond",serif;
+
+    color:var(--secondary);
+
+    font-weight:700;
+
+    margin-bottom:0;
+
+}
+
+
+
+p{
+
+    color:var(--muted);
+
+    margin-bottom:0;
+
+}
+
+
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+
+
+/*==================================================
+  MEMBERSHIP PORTAL WRAPPER
+==================================================*/
+
+.membership-portal{
+
+    min-height:100vh;
+
+    padding:70px 0 100px;
+
+}
+
+
+
+/*==================================================
+  HEADER
+==================================================*/
+
+.membership-header{
+
+    margin-bottom:70px;
+
+}
+
+
+
+.portal-brand{
+
+    max-width:920px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+
+
+.portal-logo{
+
+    width:90px;
+
+    margin:auto auto 25px;
+
+}
+
+
+
+.portal-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 22px;
+
+    border-radius:100px;
+
+    background:rgba(184,134,11,.12);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    font-size:.92rem;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.portal-title{
+
+    font-size:3.5rem;
+
+    line-height:1.1;
+
+    margin-bottom:22px;
+
+}
+
+
+
+.portal-description{
+
+    max-width:760px;
+
+    margin:auto;
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+}
+
+
+
+/*==================================================
+  APPLICATION SECTION
+==================================================*/
+
+.membership-wizard{
+
+    margin-bottom:80px;
+
+}
+
+
+
+/*==================================================
+  WELCOME CARD
+==================================================*/
+
+.welcome-card{
+
+    position:relative;
+
+    max-width:1280px;
+
+    margin:auto;
+
+    background:var(--card);
+
+    border-radius:28px;
+
+    border:1px solid rgba(184,134,11,.12);
+
+    overflow:hidden;
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.08),
+        0 10px 25px rgba(184,134,11,.08);
+
+}
+
+
+
+/* Soft Gold Glow */
+
+.welcome-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:340px;
+
+    height:340px;
+
+    right:-120px;
+
+    top:-120px;
+
+    border-radius:50%;
+
+    background:rgba(184,134,11,.08);
+
+    filter:blur(90px);
+
+    z-index:0;
+
+}
+
+
+
+/*==================================================
+  GRID
+==================================================*/
+
+.portal-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    min-height:650px;
+
+}
+
+
+
+.portal-panel{
+
+    position:relative;
+
+    z-index:2;
+
+    padding:80px;
+
+}
+
+
+
+.portal-left{
+
+    background:#fff;
+
+}
+
+
+
+.portal-right{
+
+    background:#FCFCFA;
+
+    border-left:1px solid rgba(184,134,11,.08);
+
+}
+/*==================================================
+  CHIPS
+==================================================*/
+
+.portal-chip{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 22px;
+
+    margin-bottom:24px;
+
+    border-radius:999px;
+
+    background:rgba(184,134,11,.10);
+
+    color:var(--primary);
+
+    font-size:.90rem;
+
+    font-weight:600;
+
+    letter-spacing:.4px;
+
+}
+
+
+
+/*==================================================
+  HEADINGS
+==================================================*/
+
+.portal-heading{
+
+    font-size:3rem;
+
+    line-height:1.15;
+
+    margin-bottom:26px;
+
+    position:relative;
+
+}
+
+
+
+.portal-heading::after{
+
+    content:"";
+
+    display:block;
+
+    width:85px;
+
+    height:4px;
+
+    margin-top:18px;
+
+    border-radius:20px;
+
+    background:var(--primary);
+
+}
+
+
+
+.portal-subtitle{
+
+    font-size:2.2rem;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.portal-text{
+
+    max-width:560px;
+
+    font-size:1.05rem;
+
+    line-height:1.95;
+
+    margin-bottom:40px;
+
+}
+
+
+
+/*==================================================
+  CHECKBOX
+==================================================*/
+
+.portal-checkbox{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    padding:22px;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    background:#FAFAF8;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    margin-bottom:35px;
+
+}
+
+
+
+.portal-checkbox:hover{
+
+    border-color:rgba(184,134,11,.35);
+
+    background:#FFFDF6;
+
+}
+
+
+
+.portal-checkbox input{
+
+    display:none;
+
+}
+
+
+
+.checkbox-box{
+
+    width:24px;
+
+    height:24px;
+
+    border-radius:7px;
+
+    border:2px solid #C8C8C8;
+
+    flex-shrink:0;
+
+    margin-top:2px;
+
+    position:relative;
+
+    transition:var(--transition);
+
+    background:#fff;
+
+}
+
+
+
+.portal-checkbox input:checked + .checkbox-box{
+
+    background:var(--primary);
+
+    border-color:var(--primary);
+
+}
+
+
+
+.portal-checkbox input:checked + .checkbox-box::after{
+
+    content:"✓";
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+}
+
+
+
+/*==================================================
+  BUTTON
+==================================================*/
+
+.portal-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:14px;
+
+    padding:18px 38px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    box-shadow:0 15px 35px rgba(184,134,11,.25);
+
+}
+
+
+
+.portal-button:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 20px 45px rgba(184,134,11,.35);
+
+}
+
+
+
+.portal-button i{
+
+    transition:var(--transition);
+
+}
+
+
+
+.portal-button:hover i{
+
+    transform:translateX(6px);
+
+}
+
+
+
+.portal-button:disabled{
+
+    opacity:.55;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+    box-shadow:none;
+
+}
+
+
+
+.portal-button:disabled:hover{
+
+    background:var(--primary);
+
+}
+
+
+
+/*==================================================
+  RIGHT PANEL
+==================================================*/
+
+.portal-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+
+
+/*==================================================
+  TIMELINE
+==================================================*/
+
+.portal-timeline{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:34px;
+
+}
+
+
+
+.timeline-step{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:22px;
+
+}
+
+
+
+.timeline-step:not(:last-child)::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:24px;
+
+    top:50px;
+
+    width:2px;
+
+    height:70px;
+
+    background:#E5E5E5;
+
+}
+
+
+
+.timeline-circle{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    background:#EFEFEF;
+
+    color:#555;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    transition:var(--transition);
+
+}
+
+
+
+.timeline-step.active .timeline-circle{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    box-shadow:0 10px 25px rgba(184,134,11,.30);
+
+}
+
+
+
+.timeline-content h5{
+
+    font-size:1.45rem;
+
+    margin-bottom:6px;
+
+}
+
+
+
+.timeline-content p{
+
+    font-size:.98rem;
+
+    line-height:1.7;
+
+}
+/*==================================================
+  WIZARD CONTENT
+==================================================*/
+
+.wizard-content{
+
+    max-width:1280px;
+
+    margin:60px auto 0;
+
+}
+
+
+
+.portal-card{
+
+    background:var(--card);
+
+    border:1px solid rgba(184,134,11,.10);
+
+    border-radius:28px;
+
+    padding:70px;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.portal-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100px;
+
+    left:-100px;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(184,134,11,.05);
+
+    filter:blur(70px);
+
+}
+
+
+
+/*==================================================
+  FORM LAYOUT
+==================================================*/
+
+.portal-form{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+
+
+.portal-field{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+.portal-field.full{
+
+    grid-column:1 / -1;
+
+}
+
+
+
+.portal-field label{
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    color:var(--secondary);
+
+    margin-bottom:10px;
+
+}
+
+
+
+.portal-field input,
+
+.portal-field select,
+
+.portal-field textarea{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    background:#fff;
+
+    color:var(--text);
+
+    font-size:1rem;
+
+    transition:var(--transition);
+
+}
+
+
+
+.portal-field textarea{
+
+    resize:vertical;
+
+    min-height:140px;
+
+}
+
+
+
+.portal-field input:focus,
+
+.portal-field select:focus,
+
+.portal-field textarea:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(184,134,11,.12);
+
+}
+
+
+
+/*==================================================
+  FILE UPLOAD
+==================================================*/
+
+.portal-upload{
+
+    border:2px dashed rgba(184,134,11,.25);
+
+    border-radius:18px;
+
+    padding:45px;
+
+    text-align:center;
+
+    background:#FCFCFA;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+
+
+.portal-upload:hover{
+
+    border-color:var(--primary);
+
+    background:#FFFDF8;
+
+}
+
+
+
+.portal-upload i{
+
+    font-size:2.5rem;
+
+    color:var(--primary);
+
+    margin-bottom:18px;
+
+}
+
+
+
+.portal-upload p{
+
+    font-size:.95rem;
+
+}
+
+
+
+/*==================================================
+  NAVIGATION BUTTONS
+==================================================*/
+
+.portal-actions{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:60px;
+
+}
+
+
+
+.portal-btn-secondary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:16px 34px;
+
+    background:#fff;
+
+    color:var(--secondary);
+
+    border:1px solid var(--border);
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    font-weight:600;
+
+}
+
+
+
+.portal-btn-secondary:hover{
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+
+    transform:translateY(-2px);
+
+}
+
+
+
+.portal-btn-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:16px 38px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    box-shadow:0 15px 35px rgba(184,134,11,.22);
+
+}
+
+
+
+.portal-btn-primary:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/*==================================================
+  ANIMATIONS
+==================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+.portal-panel{
+
+    animation:fadeUp .7s ease both;
+
+}
+
+
+
+.timeline-step{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+
+
+.portal-card{
+
+    animation:fadeUp .7s ease both;
+
+}
+
+
+
+/*==================================================
+  ACCESSIBILITY
+==================================================*/
+
+button:focus,
+
+input:focus,
+
+select:focus,
+
+textarea:focus{
+
+    outline:none;
+
+}
+
+
+
+button:focus-visible,
+
+input:focus-visible,
+
+select:focus-visible,
+
+textarea:focus-visible{
+
+    outline:3px solid rgba(184,134,11,.30);
+
+    outline-offset:3px;
+
+}
+
+
+
+/*==================================================
+  FOOTER
+==================================================*/
+
+.membership-footer{
+
+    margin-top:80px;
+
+    padding:35px 0;
+
+    border-top:1px solid rgba(184,134,11,.10);
+
+}
+
+
+
+.membership-footer p{
+
+    font-size:.92rem;
+
+    color:#777;
+
+}
+
+
+
+/*==================================================
+  UTILITIES
+==================================================*/
+
+.d-none{
+
+    display:none !important;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-2{
+
+    margin-top:.5rem;
+
+}
+
+.mt-3{
+
+    margin-top:1rem;
+
+}
+
+.mt-4{
+
+    margin-top:1.5rem;
+
+}
+
+.mt-5{
+
+    margin-top:3rem;
+
+}
+/*==================================================
+  LARGE DESKTOP
+==================================================*/
+
+@media (min-width:1400px){
+
+    .portal-title{
+
+        font-size:4.2rem;
+
+    }
+
+    .portal-heading{
+
+        font-size:3.4rem;
+
+    }
+
+}
+
+
+
+/*==================================================
+  DESKTOP
+==================================================*/
+
+@media (max-width:1200px){
+
+    .portal-panel{
+
+        padding:65px;
+
+    }
+
+    .portal-title{
+
+        font-size:3rem;
+
+    }
+
+    .portal-heading{
+
+        font-size:2.6rem;
+
+    }
+
+}
+
+
+
+/*==================================================
+  TABLET
+==================================================*/
+
+@media (max-width:992px){
+
+    .membership-portal{
+
+        padding:50px 0 70px;
+
+    }
+
+    .membership-header{
+
+        margin-bottom:50px;
+
+    }
+
+    .portal-title{
+
+        font-size:2.7rem;
+
+    }
+
+    .portal-description{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+    }
+
+    .portal-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .portal-left{
+
+        border-bottom:1px solid rgba(184,134,11,.08);
+
+    }
+
+    .portal-right{
+
+        border-left:none;
+
+    }
+
+    .portal-panel{
+
+        padding:55px;
+
+    }
+
+    .portal-heading{
+
+        font-size:2.4rem;
+
+    }
+
+    .portal-subtitle{
+
+        font-size:2rem;
+
+    }
+
+    .portal-form{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+
+/*==================================================
+  MOBILE
+==================================================*/
+
+@media (max-width:768px){
+
+    .portal-logo{
+
+        width:72px;
+
+    }
+
+    .portal-title{
+
+        font-size:2.2rem;
+
+    }
+
+    .portal-description{
+
+        font-size:.95rem;
+
+    }
+
+    .portal-panel{
+
+        padding:35px 28px;
+
+    }
+
+    .portal-heading{
+
+        font-size:2rem;
+
+    }
+
+    .portal-subtitle{
+
+        font-size:1.7rem;
+
+    }
+
+    .portal-text{
+
+        font-size:.96rem;
+
+        line-height:1.8;
+
+    }
+
+    .portal-chip{
+
+        font-size:.82rem;
+
+        padding:8px 18px;
+
+    }
+
+    .portal-checkbox{
+
+        padding:18px;
+
+    }
+
+    .portal-button,
+
+    .portal-btn-primary,
+
+    .portal-btn-secondary{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .portal-actions{
+
+        flex-direction:column;
+
+        gap:18px;
+
+    }
+
+    .timeline-circle{
+
+        width:42px;
+
+        height:42px;
+
+        font-size:.95rem;
+
+    }
+
+    .timeline-step{
+
+        gap:16px;
+
+    }
+
+    .timeline-step:not(:last-child)::after{
+
+        left:20px;
+
+        top:42px;
+
+        height:72px;
+
+    }
+
+}
+
+
+
+/*==================================================
+  SMALL MOBILE
+==================================================*/
+
+@media (max-width:576px){
+
+    .membership-portal{
+
+        padding:35px 0 50px;
+
+    }
+
+    .portal-title{
+
+        font-size:1.85rem;
+
+    }
+
+    .portal-heading{
+
+        font-size:1.75rem;
+
+    }
+
+    .portal-subtitle{
+
+        font-size:1.5rem;
+
+    }
+
+    .portal-description{
+
+        font-size:.92rem;
+
+    }
+
+    .portal-text{
+
+        font-size:.92rem;
+
+    }
+
+    .portal-panel{
+
+        padding:28px 22px;
+
+    }
+
+    .portal-card{
+
+        padding:35px 22px;
+
+        border-radius:22px;
+
+    }
+
+    .portal-upload{
+
+        padding:28px 20px;
+
+    }
+
+    .portal-upload i{
+
+        font-size:2rem;
+
+    }
+
+    .timeline-content h5{
+
+        font-size:1.15rem;
+
+    }
+
+    .timeline-content p{
+
+        font-size:.88rem;
+
+    }
+
+}
+
+
+
+/*==================================================
+  MOTION PREFERENCES
+==================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
+
+
+
+/*==================================================
+  END OF FILE
+==================================================*/

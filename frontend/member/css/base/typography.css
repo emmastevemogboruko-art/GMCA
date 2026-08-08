@@ -1,0 +1,346 @@
+/* ==========================================================================
+   GMCA Member Portal
+   ----------------------------------------------------------------------------
+   File        : typography.css
+   Description : Global typography styles for the GMCA Member Portal.
+                 Defines font rendering, headings, paragraphs, links,
+                 lists, helper classes, and responsive typography.
+
+   Dependencies:
+   - variables.css
+
+   ========================================================================== */
+
+
+/* ==========================================================================
+   FONT RENDERING
+   ========================================================================== */
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--gmca-font-family);
+    font-size: var(--gmca-font-size-md);
+    font-weight: var(--gmca-font-normal);
+    line-height: var(--gmca-line-height-normal);
+    color: var(--gmca-color-text);
+    background-color: var(--gmca-color-background);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    text-rendering: optimizeLegibility;
+}
+
+
+/* ==========================================================================
+   HEADINGS
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: var(--gmca-space-4);
+
+    font-weight: var(--gmca-font-bold);
+    line-height: var(--gmca-line-height-tight);
+
+    color: var(--gmca-color-secondary);
+}
+
+h1 {
+    font-size: var(--gmca-font-size-4xl);
+}
+
+h2 {
+    font-size: var(--gmca-font-size-3xl);
+}
+
+h3 {
+    font-size: var(--gmca-font-size-2xl);
+}
+
+h4 {
+    font-size: var(--gmca-font-size-xl);
+}
+
+h5 {
+    font-size: var(--gmca-font-size-lg);
+}
+
+h6 {
+    font-size: var(--gmca-font-size-md);
+}
+
+
+/* ==========================================================================
+   DISPLAY HEADINGS
+   ========================================================================== */
+
+.display-1,
+.display-2,
+.display-3 {
+    font-weight: var(--gmca-font-bold);
+    line-height: 1.1;
+    color: var(--gmca-color-secondary);
+}
+
+.display-1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.display-2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.display-3 {
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+}
+
+
+/* ==========================================================================
+   PARAGRAPHS
+   ========================================================================== */
+
+p {
+    margin-top: 0;
+    margin-bottom: var(--gmca-space-4);
+
+    color: var(--gmca-color-text-muted);
+}
+
+
+/* ==========================================================================
+   LINKS
+   ========================================================================== */
+
+a {
+    color: var(--gmca-color-primary);
+    text-decoration: none;
+    transition: color var(--gmca-transition-fast);
+}
+
+a:hover {
+    color: var(--gmca-color-primary-dark);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--gmca-color-primary);
+    outline-offset: 3px;
+    border-radius: var(--gmca-radius-sm);
+}
+
+
+/* ==========================================================================
+   LISTS
+   ========================================================================== */
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: var(--gmca-space-4);
+    padding-left: var(--gmca-space-6);
+}
+
+li {
+    margin-bottom: var(--gmca-space-2);
+}
+
+
+/* ==========================================================================
+   INLINE ELEMENTS
+   ========================================================================== */
+
+strong,
+b {
+    font-weight: var(--gmca-font-semibold);
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+small {
+    font-size: var(--gmca-font-size-sm);
+}
+
+mark {
+    background: var(--gmca-color-primary-light);
+    color: inherit;
+    padding: 0 .25rem;
+    border-radius: var(--gmca-radius-sm);
+}
+
+
+/* ==========================================================================
+   HORIZONTAL RULE
+   ========================================================================== */
+
+hr {
+    margin: var(--gmca-space-8) 0;
+    border: none;
+    border-top: 1px solid var(--gmca-color-border);
+}
+
+
+/* ==========================================================================
+   BLOCKQUOTE
+   ========================================================================== */
+
+blockquote {
+    margin: var(--gmca-space-6) 0;
+    padding-left: var(--gmca-space-4);
+
+    border-left: 4px solid var(--gmca-color-primary);
+
+    color: var(--gmca-color-text-muted);
+
+    font-style: italic;
+}
+
+
+/* ==========================================================================
+   CODE
+   ========================================================================== */
+
+code,
+pre {
+    font-family:
+        Consolas,
+        Monaco,
+        "Courier New",
+        monospace;
+}
+
+code {
+    padding: .15rem .35rem;
+
+    border-radius: var(--gmca-radius-sm);
+
+    background: var(--gmca-color-surface-alt);
+
+    color: var(--gmca-color-danger);
+
+    font-size: .9em;
+}
+
+pre {
+    overflow-x: auto;
+
+    padding: var(--gmca-space-4);
+
+    border-radius: var(--gmca-radius-md);
+
+    background: var(--gmca-color-surface-alt);
+}
+
+
+/* ==========================================================================
+   TEXT HELPERS
+   ========================================================================== */
+
+.text-muted {
+    color: var(--gmca-color-text-muted) !important;
+}
+
+.text-light {
+    color: var(--gmca-color-text-light) !important;
+}
+
+.text-primary {
+    color: var(--gmca-color-primary) !important;
+}
+
+.text-secondary {
+    color: var(--gmca-color-secondary) !important;
+}
+
+.text-white {
+    color: var(--gmca-color-white) !important;
+}
+
+.text-success {
+    color: var(--gmca-color-success) !important;
+}
+
+.text-warning {
+    color: var(--gmca-color-warning) !important;
+}
+
+.text-danger {
+    color: var(--gmca-color-danger) !important;
+}
+
+.text-info {
+    color: var(--gmca-color-info) !important;
+}
+
+
+/* ==========================================================================
+   TEXT UTILITIES
+   ========================================================================== */
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-break {
+    word-break: break-word;
+}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ==========================================================================
+   SELECTION
+   ========================================================================== */
+
+::selection {
+    background: var(--gmca-color-primary);
+    color: var(--gmca-color-white);
+}
+
+
+/* ==========================================================================
+   RESPONSIVE TYPOGRAPHY
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: var(--gmca-font-size-3xl);
+    }
+
+    h2 {
+        font-size: var(--gmca-font-size-2xl);
+    }
+
+    h3 {
+        font-size: var(--gmca-font-size-xl);
+    }
+
+}

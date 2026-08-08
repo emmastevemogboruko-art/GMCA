@@ -1,0 +1,246 @@
+/* ==========================================================================
+   GMCA Member Portal
+   ----------------------------------------------------------------------------
+   File        : variables.css
+   Description : Global design tokens used throughout the GMCA Member Portal.
+                 This file is the single source of truth for the portal's
+                 colors, typography, spacing, borders, shadows, transitions,
+                 sizing, and theme variables.
+
+   IMPORTANT
+   ----------------------------------------------------------------------------
+   • Do not write component styles in this file.
+   • Do not hardcode colors in other stylesheets.
+   • Always reference these variables using var().
+   • This file should be loaded before every other stylesheet.
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       BRAND COLORS
+       ====================================================================== */
+
+    --gmca-color-primary: #C9A227;
+    --gmca-color-primary-dark: #A88416;
+    --gmca-color-primary-light: #F3E7B5;
+
+    --gmca-color-secondary: #1F2937;
+
+    --gmca-color-white: #FFFFFF;
+    --gmca-color-black: #000000;
+
+    /* ======================================================================
+       SURFACE COLORS
+       ====================================================================== */
+
+    --gmca-color-background: #F7F9FC;
+    --gmca-color-surface: #FFFFFF;
+    --gmca-color-surface-alt: #F8FAFC;
+
+    /* ======================================================================
+       TEXT COLORS
+       ====================================================================== */
+
+    --gmca-color-text: #1F2937;
+    --gmca-color-text-muted: #6B7280;
+    --gmca-color-text-light: #9CA3AF;
+    --gmca-color-text-inverse: #FFFFFF;
+
+    /* ======================================================================
+       BORDER COLORS
+       ====================================================================== */
+
+    --gmca-color-border: #E5E7EB;
+    --gmca-color-border-light: #F3F4F6;
+
+    /* ======================================================================
+       STATUS COLORS
+       ====================================================================== */
+
+    --gmca-color-success: #16A34A;
+    --gmca-color-warning: #F59E0B;
+    --gmca-color-danger: #DC2626;
+    --gmca-color-info: #0EA5E9;
+
+    /* ======================================================================
+       OVERLAYS
+       ====================================================================== */
+
+    --gmca-overlay-light: rgba(255,255,255,.65);
+    --gmca-overlay-dark: rgba(17,24,39,.70);
+
+    /* ======================================================================
+       TYPOGRAPHY
+       ====================================================================== */
+
+    --gmca-font-family:
+        "Poppins",
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    --gmca-font-size-xs: .75rem;
+    --gmca-font-size-sm: .875rem;
+    --gmca-font-size-md: 1rem;
+    --gmca-font-size-lg: 1.125rem;
+    --gmca-font-size-xl: 1.25rem;
+    --gmca-font-size-2xl: 1.5rem;
+    --gmca-font-size-3xl: 2rem;
+    --gmca-font-size-4xl: 2.5rem;
+
+    --gmca-font-light: 300;
+    --gmca-font-normal: 400;
+    --gmca-font-medium: 500;
+    --gmca-font-semibold: 600;
+    --gmca-font-bold: 700;
+
+    --gmca-line-height-tight: 1.2;
+    --gmca-line-height-normal: 1.5;
+    --gmca-line-height-relaxed: 1.75;
+
+    /* ======================================================================
+       SPACING SCALE (8px System)
+       ====================================================================== */
+
+    --gmca-space-0: 0;
+
+    --gmca-space-1: .25rem;
+    --gmca-space-2: .5rem;
+    --gmca-space-3: .75rem;
+    --gmca-space-4: 1rem;
+    --gmca-space-5: 1.25rem;
+    --gmca-space-6: 1.5rem;
+    --gmca-space-8: 2rem;
+    --gmca-space-10: 2.5rem;
+    --gmca-space-12: 3rem;
+    --gmca-space-16: 4rem;
+    --gmca-space-20: 5rem;
+    --gmca-space-24: 6rem;
+
+    /* ======================================================================
+       BORDER RADIUS
+       ====================================================================== */
+
+    --gmca-radius-none: 0;
+    --gmca-radius-sm: .375rem;
+    --gmca-radius-md: .75rem;
+    --gmca-radius-lg: 1rem;
+    --gmca-radius-xl: 1.5rem;
+    --gmca-radius-pill: 9999px;
+    --gmca-radius-circle: 50%;
+
+    /* ======================================================================
+       SHADOWS
+       ====================================================================== */
+
+    --gmca-shadow-xs:
+        0 1px 2px rgba(0,0,0,.05);
+
+    --gmca-shadow-sm:
+        0 2px 8px rgba(15,23,42,.08);
+
+    --gmca-shadow-md:
+        0 8px 24px rgba(15,23,42,.10);
+
+    --gmca-shadow-lg:
+        0 16px 40px rgba(15,23,42,.12);
+
+    --gmca-shadow-xl:
+        0 24px 60px rgba(15,23,42,.16);
+
+    /* ======================================================================
+       COMPONENT TOKENS
+       ====================================================================== */
+
+    /* Sidebar */
+
+    --gmca-sidebar-background: var(--gmca-color-secondary);
+    --gmca-sidebar-text: var(--gmca-color-white);
+    --gmca-sidebar-hover: rgba(255,255,255,.08);
+    --gmca-sidebar-active: var(--gmca-color-primary);
+    --gmca-sidebar-border: rgba(255,255,255,.08);
+
+    /* Header */
+
+    --gmca-header-background: var(--gmca-color-surface);
+    --gmca-header-border: var(--gmca-color-border);
+
+    /* Cards */
+
+    --gmca-card-background: var(--gmca-color-surface);
+    --gmca-card-border: var(--gmca-color-border);
+    --gmca-card-shadow: var(--gmca-shadow-sm);
+
+    /* Buttons */
+
+    --gmca-button-primary: var(--gmca-color-primary);
+    --gmca-button-primary-hover: var(--gmca-color-primary-dark);
+
+    /* Hover */
+
+    --gmca-hover-background: #F9FAFB;
+
+    /* Focus */
+
+    --gmca-focus-ring:
+        0 0 0 4px rgba(201,162,39,.18);
+
+    /* ======================================================================
+       BORDERS
+       ====================================================================== */
+
+    --gmca-border-width: 1px;
+    --gmca-border-style: solid;
+
+    /* ======================================================================
+       TRANSITIONS
+       ====================================================================== */
+
+    --gmca-transition-fast: 150ms ease-in-out;
+    --gmca-transition-normal: 250ms ease-in-out;
+    --gmca-transition-slow: 350ms ease-in-out;
+
+    /* ======================================================================
+       LAYOUT
+       ====================================================================== */
+
+    --gmca-header-height: 72px;
+    --gmca-sidebar-width: 280px;
+    --gmca-content-max-width: 1440px;
+    --gmca-login-card-width: 500px;
+
+    /* ======================================================================
+       Z-INDEX
+       ====================================================================== */
+
+    --gmca-z-dropdown: 1000;
+    --gmca-z-sticky: 1020;
+    --gmca-z-fixed: 1030;
+    --gmca-z-modal-backdrop: 1040;
+    --gmca-z-modal: 1050;
+    --gmca-z-tooltip: 1080;
+
+}
+
+/* ==========================================================================
+   FUTURE DARK THEME
+   ========================================================================== */
+
+[data-theme="dark"] {
+
+    --gmca-color-background: #111827;
+    --gmca-color-surface: #1F2937;
+    --gmca-color-surface-alt: #374151;
+
+    --gmca-color-text: #F9FAFB;
+    --gmca-color-text-muted: #D1D5DB;
+    --gmca-color-border: #374151;
+
+    --gmca-sidebar-background: #111827;
+    --gmca-header-background: #1F2937;
+    --gmca-card-background: #1F2937;
+
+}

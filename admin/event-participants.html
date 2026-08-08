@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Event Participants | GMCA Admin
+
+    </title>
+
+    <!-- ==========================================================
+         Google Fonts
+    =========================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+
+    <link
+        rel="stylesheet"
+        href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Admin CSS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/base/admin.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/components/components.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/layout/layout.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================================
+     Loading Overlay
+=========================================================== -->
+
+<div
+    id="loadingOverlay"
+    class="loading-overlay">
+
+    <div
+        class="spinner-border text-warning"
+        role="status">
+
+        <span class="visually-hidden">
+
+            Loading...
+
+        </span>
+
+    </div>
+
+</div>
+
+<!-- ==========================================================
+     App
+=========================================================== -->
+
+<div
+    id="app"
+    class="app">
+
+    <!-- ======================================================
+         Sidebar
+    ======================================================= -->
+
+    <aside
+        id="sidebar"
+        class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+
+                <i class="bi bi-shield-lock-fill"></i>
+
+            </div>
+
+            <div>
+
+                <h5>
+
+                    GMCA
+
+                </h5>
+
+                <small>
+
+                    Admin Portal
+
+                </small>
+
+            </div>
+
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="dashboard.html"
+                class="nav-link">
+
+                <i class="bi bi-speedometer2"></i>
+
+                <span>
+
+                    Dashboard
+
+                </span>
+
+            </a>
+
+            <a
+                href="members.html"
+                class="nav-link">
+
+                <i class="bi bi-people-fill"></i>
+
+                <span>
+
+                    Members
+
+                </span>
+
+            </a>
+
+            <a
+                href="applications.html"
+                class="nav-link">
+
+                <i class="bi bi-file-earmark-text"></i>
+
+                <span>
+
+                    Applications
+
+                </span>
+
+            </a>
+
+            <a
+                href="events.html"
+                class="nav-link active">
+
+                <i class="bi bi-calendar-event"></i>
+
+                <span>
+
+                    Events
+
+                </span>
+
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <button
+                id="logoutBtn"
+                class="btn btn-outline-danger w-100">
+
+                <i class="bi bi-box-arrow-right me-2"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- ======================================================
+         Main Content
+    ======================================================= -->
+
+    <main class="main-content">
+
+        <!-- ======================================================
+             Header
+        ======================================================= -->
+
+        <header class="topbar">
+
+            <div class="d-flex align-items-center">
+
+                <button
+                    id="sidebarToggle"
+                    class="btn btn-light me-3">
+
+                    <i class="bi bi-list"></i>
+
+                </button>
+
+                <div>
+
+                    <h3 class="mb-0">
+
+                        Event Participants
+
+                    </h3>
+
+                    <small
+                        id="eventTitle"
+                        class="text-muted">
+
+                        Loading event...
+
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="dropdown">
+
+                <button
+                    class="btn btn-light dropdown-toggle"
+                    data-bs-toggle="dropdown">
+
+                    <i class="bi bi-person-circle me-2"></i>
+
+                    <span id="adminName">
+
+                        Administrator
+
+                    </span>
+
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+
+                    <li>
+
+                        <button
+                            id="logoutBtnTop"
+                            class="dropdown-item text-danger">
+
+                            <i class="bi bi-box-arrow-right me-2"></i>
+
+                            Logout
+
+                        </button>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </header>
+
+        <!-- ======================================================
+             Banner
+        ======================================================= -->
+
+        <section class="welcome-banner">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <h2 class="mb-2">
+
+                        Participant Management
+
+                    </h2>
+
+                    <p class="text-muted mb-0">
+
+                        Register members, manage attendance and monitor participation for this event.
+
+                    </p>
+
+                </div>
+
+                <div
+                    class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+
+                    <a
+                        id="backBtn"
+                        href="#"
+                        class="btn btn-outline-secondary">
+
+                        <i class="bi bi-arrow-left me-2"></i>
+
+                        Back to Event
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ======================================================
+             Statistics
+        ======================================================= -->
+
+        <section class="dashboard-cards">
+
+            <div class="row g-4">
+
+                <!-- ======================================================
+                     Registered
+                ======================================================= -->
+
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon bg-primary">
+
+                            <i class="bi bi-people-fill"></i>
+
+                        </div>
+
+                        <div class="card-info">
+
+                            <small>
+
+                                Registered
+
+                            </small>
+
+                            <h3 id="registeredCount">
+
+                                0
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ======================================================
+                     Checked In
+                ======================================================= -->
+
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon bg-success">
+
+                            <i class="bi bi-check2-circle"></i>
+
+                        </div>
+
+                        <div class="card-info">
+
+                            <small>
+
+                                Checked In
+
+                            </small>
+
+                            <h3 id="checkedInCount">
+
+                                0
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ======================================================
+                     Pending
+                ======================================================= -->
+
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon bg-warning">
+
+                            <i class="bi bi-hourglass-split"></i>
+
+                        </div>
+
+                        <div class="card-info">
+
+                            <small>
+
+                                Pending
+
+                            </small>
+
+                            <h3 id="pendingCount">
+
+                                0
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ======================================================
+                     Absent
+                ======================================================= -->
+
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon bg-danger">
+
+                            <i class="bi bi-person-x-fill"></i>
+
+                        </div>
+
+                        <div class="card-info">
+
+                            <small>
+
+                                Absent
+
+                            </small>
+
+                            <h3 id="absentCount">
+
+                                0
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ======================================================
+             Participant Management
+        ======================================================= -->
+
+        <section class="dashboard-content mt-4">
+
+            <div class="card shadow-sm border-0">
+
+                <div class="card-header bg-white">
+
+                    <div class="row g-3 align-items-center">
+
+                        <div class="col-lg-4">
+
+                            <input
+                                id="searchInput"
+                                class="form-control"
+                                placeholder="Search participant...">
+
+                        </div>
+
+                        <div class="col-lg-3">
+
+                            <select
+                                id="attendanceFilter"
+                                class="form-select">
+
+                                <option value="">
+
+                                    All Attendance
+
+                                </option>
+
+                                <option value="Pending">
+
+                                    Pending
+
+                                </option>
+
+                                <option value="Checked In">
+
+                                    Checked In
+
+                                </option>
+
+                                <option value="Absent">
+
+                                    Absent
+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-lg-5 text-lg-end">
+
+                            <button
+                                id="refreshBtn"
+                                class="btn btn-outline-secondary">
+
+                                <i class="bi bi-arrow-clockwise me-2"></i>
+
+                                Refresh
+
+                            </button>
+
+                            <button
+                                id="registerMemberBtn"
+                                class="btn btn-warning">
+
+                                <i class="bi bi-person-plus-fill me-2"></i>
+
+                                Register Member
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover align-middle mb-0">
+
+                        <thead class="table-light">
+
+                            <tr>
+
+                                <th>
+
+                                    Membership #
+
+                                </th>
+
+                                <th>
+
+                                    Member
+
+                                </th>
+
+                                <th>
+
+                                    Country
+
+                                </th>
+
+                                <th>
+
+                                    Role
+
+                                </th>
+
+                                <th>
+
+                                    Registration
+
+                                </th>
+
+                                <th>
+
+                                    Attendance
+
+                                </th>
+
+                                <th class="text-center">
+
+                                    Actions
+
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="participantsTableBody">
+
+                            <tr>
+
+                                <td
+                                    colspan="7"
+                                    class="text-center py-5 text-muted">
+
+                                    <div
+                                        class="spinner-border spinner-border-sm text-warning me-2">
+
+                                    </div>
+
+                                    Loading participants...
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div
+                    id="emptyState"
+                    class="text-center py-5 d-none">
+
+                    <i
+                        class="bi bi-people display-1 text-muted">
+
+                    </i>
+
+                    <h4 class="mt-3">
+
+                        No Participants Found
+
+                    </h4>
+
+                    <p class="text-muted">
+
+                        No members have been registered for this event yet.
+
+                    </p>
+
+                    <button
+                        id="emptyRegisterBtn"
+                        class="btn btn-warning">
+
+                        <i class="bi bi-person-plus-fill me-2"></i>
+
+                        Register First Member
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- ======================================================
+                 Register Member Modal
+            ======================================================= -->
+
+            <div
+                class="modal fade"
+                id="registerMemberModal"
+                tabindex="-1"
+                aria-hidden="true">
+
+                <div class="modal-dialog modal-lg">
+
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+
+                            <h5 class="modal-title">
+
+                                Register Member
+
+                            </h5>
+
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal">
+
+                            </button>
+
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Search Member
+
+                                </label>
+
+                                <input
+                                    id="memberSearch"
+                                    class="form-control"
+                                    placeholder="Search by membership number, name or email">
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Select Member
+
+                                </label>
+
+                                <select
+                                    id="memberSelect"
+                                    class="form-select">
+
+                                    <option value="">
+
+                                        Select a member...
+
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label class="form-label">
+
+                                        Event Role
+
+                                    </label>
+
+                                    <select
+                                        id="roleSelect"
+                                        class="form-select">
+
+                                        <option value="">
+
+                                            Participant
+
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label class="form-label">
+
+                                        Attendance
+
+                                    </label>
+
+                                    <select
+                                        id="attendanceStatus"
+                                        class="form-select">
+
+                                        <option>
+
+                                            Pending
+
+                                        </option>
+
+                                        <option>
+
+                                            Checked In
+
+                                        </option>
+
+                                        <option>
+
+                                            Absent
+
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                                <label class="form-label">
+
+                                    Remarks
+
+                                </label>
+
+                                <textarea
+                                    id="remarks"
+                                    rows="3"
+                                    class="form-control"
+                                    placeholder="Optional remarks"></textarea>
+
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+
+                            <button
+                                class="btn btn-outline-secondary"
+                                data-bs-dismiss="modal">
+
+                                Cancel
+
+                            </button>
+
+                            <button
+                                id="saveRegistrationBtn"
+                                class="btn btn-warning">
+
+                                <i class="bi bi-person-plus-fill me-2"></i>
+
+                                Register Member
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ======================================================
+             Footer
+        ======================================================= -->
+
+        <footer class="dashboard-footer mt-5 py-4">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+
+                    <small class="text-muted">
+
+                        &copy; 2026 Global Mentorship & Coaching Alliance (GMCA).
+                        All rights reserved.
+
+                    </small>
+
+                </div>
+
+                <div class="col-md-6 text-md-end mt-2 mt-md-0">
+
+                    <small class="text-muted">
+
+                        GMCA Membership Management System
+                        &middot;
+                        Event Participants
+
+                    </small>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- ==========================================================
+     Bootstrap
+=========================================================== -->
+
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- ==========================================================
+     Core
+=========================================================== -->
+
+<script src="assets/js/core/config.js"></script>
+<script src="assets/js/core/storage.js"></script>
+<script src="assets/js/core/api.js"></script>
+<script src="assets/js/core/auth.js"></script>
+<script src="assets/js/core/utils.js"></script>
+
+<!-- ==========================================================
+     Layout
+=========================================================== -->
+
+<script src="assets/js/layout/sidebar.js"></script>
+<script src="assets/js/layout/header.js"></script>
+
+<!-- ==========================================================
+     Event Participants
+=========================================================== -->
+
+<script src="assets/js/pages/event-participants.js"></script>
+
+</body>
+
+</html>

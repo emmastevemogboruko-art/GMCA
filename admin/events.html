@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        GMCA Events Management
+
+    </title>
+
+    <!-- ==========================================================
+         Google Fonts
+    =========================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ==========================================================
+         Bootstrap
+    =========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+    <!-- ==========================================================
+         Font Awesome
+    =========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- ==========================================================
+         Admin Styles
+    =========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/base/admin.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/components/components.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/layout/layout.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================================
+     Loading Overlay
+=========================================================== -->
+
+<div
+    id="loadingOverlay"
+    class="loading-overlay">
+
+    <div
+        class="spinner-border text-warning"
+        role="status">
+
+        <span class="visually-hidden">
+
+            Loading...
+
+        </span>
+
+    </div>
+
+</div>
+
+<!-- ==========================================================
+     Application
+=========================================================== -->
+
+<div
+    id="app"
+    class="app">
+
+    <!-- ======================================================
+         Sidebar
+    ======================================================= -->
+
+    <aside
+        id="sidebar"
+        class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+
+                <i class="bi bi-shield-lock-fill"></i>
+
+            </div>
+
+            <div>
+
+                <h5>
+
+                    GMCA
+
+                </h5>
+
+                <small>
+
+                    Admin Portal
+
+                </small>
+
+            </div>
+
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="dashboard.html"
+                class="nav-link">
+
+                <i class="bi bi-speedometer2"></i>
+
+                <span>
+
+                    Dashboard
+
+                </span>
+
+            </a>
+
+            <a
+                href="members.html"
+                class="nav-link">
+
+                <i class="bi bi-people-fill"></i>
+
+                <span>
+
+                    Members
+
+                </span>
+
+            </a>
+
+            <a
+                href="applications.html"
+                class="nav-link">
+
+                <i class="bi bi-file-earmark-text"></i>
+
+                <span>
+
+                    Applications
+
+                </span>
+
+            </a>
+
+            <a
+                href="events.html"
+                class="nav-link active">
+
+                <i class="bi bi-calendar-event"></i>
+
+                <span>
+
+                    Events
+
+                </span>
+
+            </a>
+
+            <a
+                href="#"
+                class="nav-link">
+
+                <i class="bi bi-bar-chart"></i>
+
+                <span>
+
+                    Reports
+
+                </span>
+
+            </a>
+
+            <a
+                href="#"
+                class="nav-link">
+
+                <i class="bi bi-gear"></i>
+
+                <span>
+
+                    Settings
+
+                </span>
+
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <button
+                id="logoutBtn"
+                class="btn btn-outline-danger w-100">
+
+                <i class="bi bi-box-arrow-right me-2"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- ======================================================
+         Main Content
+    ======================================================= -->
+
+    <main class="main-content">
+
+        <!-- ======================================================
+             Header
+        ======================================================= -->
+
+        <header class="topbar">
+
+            <div class="d-flex align-items-center">
+
+                <button
+                    id="sidebarToggle"
+                    class="btn btn-light me-3">
+
+                    <i class="bi bi-list"></i>
+
+                </button>
+
+                <div>
+
+                    <h3 class="mb-0">
+
+                        Events
+
+                    </h3>
+
+                    <small
+                        class="text-muted">
+
+                        Manage conferences, seminars, workshops and ministry events.
+
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="d-flex align-items-center">
+
+                <button
+                    class="btn btn-warning"
+                    onclick="location.href='event-create.html'">
+
+                    <i class="bi bi-plus-circle me-2"></i>
+
+                    Create Event
+
+                </button>
+
+                <div class="dropdown ms-3">
+
+                    <button
+                        class="btn btn-light dropdown-toggle"
+                        data-bs-toggle="dropdown">
+
+                        <i class="bi bi-person-circle me-2"></i>
+
+                        <span id="adminName">
+
+                            Administrator
+
+                        </span>
+
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="#">
+
+                                <i class="bi bi-person me-2"></i>
+
+                                Profile
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <hr class="dropdown-divider">
+
+                        </li>
+
+                        <li>
+
+                            <button
+                                id="logoutBtnTop"
+                                class="dropdown-item text-danger">
+
+                                <i class="bi bi-box-arrow-right me-2"></i>
+
+                                Logout
+
+                            </button>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ======================================================
+             Events Banner
+        ======================================================= -->
+
+        <section class="welcome-banner">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <h2 class="mb-2">
+
+                        Events Management
+
+                    </h2>
+
+                    <p class="text-muted mb-0">
+
+                        Create, publish and manage GMCA conferences, seminars,
+                        workshops and ministry events from one central location.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+
+                    <button
+                        class="btn btn-warning"
+                        onclick="location.href='event-create.html'">
+
+                        <i class="bi bi-calendar-plus me-2"></i>
+
+                        Create New Event
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ======================================================
+             Statistics Cards
+        ======================================================= -->
+
+        <section class="dashboard-cards">
+
+            <div class="row g-4">
+
+                <!-- ==========================================
+                     Upcoming Events
+                =========================================== -->
+
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon bg-primary">
+
+                            <i class="bi bi-calendar-event"></i>
+
+                        </div>
+
+                        <div class="card-info">
+
+                            <small>
+
+                                Upcoming Events
+
+                            </small>
+
+                            <h3 id="upcomingEvents">
+
+                                0
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ==========================================
+                     Published
+                =========================================== -->
+
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon bg-success">
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                        </div>
+
+                        <div class="card-info">
+
+                            <small>
+
+                                Published
+
+                            </small>
+
+                            <h3 id="publishedEvents">
+
+                                0
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ==========================================
+                     Draft
+                =========================================== -->
+
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon bg-secondary">
+
+                            <i class="bi bi-pencil-square"></i>
+
+                        </div>
+
+                        <div class="card-info">
+
+                            <small>
+
+                                Draft Events
+
+                            </small>
+
+                            <h3 id="draftEvents">
+
+                                0
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ==========================================
+                     Completed
+                =========================================== -->
+
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon bg-info">
+
+                            <i class="bi bi-flag-fill"></i>
+
+                        </div>
+
+                        <div class="card-info">
+
+                            <small>
+
+                                Completed
+
+                            </small>
+
+                            <h3 id="completedEvents">
+
+                                0
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ======================================================
+             Toolbar
+        ======================================================= -->
+
+        <section class="mt-4">
+
+            <div class="card shadow-sm border-0">
+
+                <div class="card-body">
+
+                    <div class="row g-3 align-items-center">
+
+                        <div class="col-lg-6">
+
+                            <div class="input-group">
+
+                                <span class="input-group-text">
+
+                                    <i class="bi bi-search"></i>
+
+                                </span>
+
+                                <input
+                                    id="searchInput"
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Search events by title, venue or event type...">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-3">
+
+                            <select
+                                id="statusFilter"
+                                class="form-select">
+
+                                <option value="">
+
+                                    All Statuses
+
+                                </option>
+
+                                <option value="Draft">
+
+                                    Draft
+
+                                </option>
+
+                                <option value="Published">
+
+                                    Published
+
+                                </option>
+
+                                <option value="Registration Closed">
+
+                                    Registration Closed
+
+                                </option>
+
+                                <option value="Completed">
+
+                                    Completed
+
+                                </option>
+
+                                <option value="Cancelled">
+
+                                    Cancelled
+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-lg-3 text-lg-end">
+
+                            <button
+                                id="refreshBtn"
+                                class="btn btn-outline-primary">
+
+                                <i class="bi bi-arrow-clockwise me-2"></i>
+
+                                Refresh
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ======================================================
+             Events Table
+        ======================================================= -->
+
+        <section class="mt-4">
+
+            <div class="card shadow-sm border-0">
+
+                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+
+                    <h5 class="mb-0">
+
+                        <i class="bi bi-calendar-event text-primary me-2"></i>
+
+                        Events
+
+                    </h5>
+
+                    <span
+                        id="eventCount"
+                        class="badge bg-primary">
+
+                        0 Events
+
+                    </span>
+
+                </div>
+
+                <div class="table-responsive">
+
+                    <table class="table align-middle mb-0">
+
+                        <thead class="table-light">
+
+                            <tr>
+
+                                <th>
+
+                                    Event
+
+                                </th>
+
+                                <th>
+
+                                    Date
+
+                                </th>
+
+                                <th>
+
+                                    Venue
+
+                                </th>
+
+                                <th>
+
+                                    Status
+
+                                </th>
+
+                                <th>
+
+                                    Registration
+
+                                </th>
+
+                                <th>
+
+                                    Capacity
+
+                                </th>
+
+                                <th class="text-center">
+
+                                    Actions
+
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="eventsTableBody">
+
+                            <tr>
+
+                                <td
+                                    colspan="7"
+                                    class="text-center py-5 text-muted">
+
+                                    <div
+                                        class="spinner-border spinner-border-sm text-warning me-2">
+
+                                    </div>
+
+                                    Loading events...
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ======================================================
+             Empty State
+        ======================================================= -->
+
+        <section
+            id="emptyState"
+            class="text-center py-5 d-none">
+
+            <i
+                class="bi bi-calendar-event display-1 text-muted">
+
+            </i>
+
+            <h4 class="mt-4">
+
+                No Events Found
+
+            </h4>
+
+            <p class="text-muted">
+
+                Create your first GMCA event to get started.
+
+            </p>
+
+            <button
+                class="btn btn-warning"
+                onclick="location.href='event-create.html'">
+
+                <i class="bi bi-calendar-plus me-2"></i>
+
+                Create Event
+
+            </button>
+
+        </section>
+
+        <!-- ======================================================
+             Footer
+        ======================================================= -->
+
+        <footer class="dashboard-footer mt-5 py-4">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+
+                    <small class="text-muted">
+
+                        &copy; 2026 Global Mentorship & Coaching Alliance (GMCA).
+                        All rights reserved.
+
+                    </small>
+
+                </div>
+
+                <div class="col-md-6 text-md-end mt-2 mt-md-0">
+
+                    <small class="text-muted">
+
+                        GMCA Membership Management System
+                        &middot;
+                        Events Administration
+
+                    </small>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- ==========================================================
+     Bootstrap
+=========================================================== -->
+
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- ==========================================================
+     Core
+=========================================================== -->
+
+<script src="assets/js/core/config.js"></script>
+<script src="assets/js/core/storage.js"></script>
+<script src="assets/js/core/api.js"></script>
+<script src="assets/js/core/auth.js"></script>
+<script src="assets/js/core/utils.js"></script>
+
+<!-- ==========================================================
+     Layout
+=========================================================== -->
+
+<script src="assets/js/layout/sidebar.js"></script>
+<script src="assets/js/layout/header.js"></script>
+
+<!-- ==========================================================
+     Events
+=========================================================== -->
+
+<script src="assets/js/pages/events.js"></script>
+
+</body>
+
+</html>

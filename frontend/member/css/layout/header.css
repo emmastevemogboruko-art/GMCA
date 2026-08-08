@@ -1,0 +1,583 @@
+/* ==========================================================================
+   GMCA Member Portal
+   ----------------------------------------------------------------------------
+   File: header.css
+
+   Application Header
+
+   Matches dashboard.html exactly.
+
+   ========================================================================== */
+
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.app-header{
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    gap:var(--gmca-space-5);
+
+    padding:1.25rem 2rem;
+
+    background:#EEF2F7;
+
+    border-bottom:none;
+}
+
+
+
+/* ==========================================================================
+   LEFT
+   ========================================================================== */
+
+.header-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    min-width:0;
+}
+
+
+
+/* ==========================================================================
+   PAGE TITLE
+   ========================================================================== */
+
+.page-title{
+
+    margin:0;
+
+    color:var(--gmca-color-text);
+
+    font-size:2rem;
+
+    font-weight:var(--gmca-font-bold);
+
+    line-height:1.2;
+}
+
+
+
+/* ==========================================================================
+   DATE
+   ========================================================================== */
+
+.page-date{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin:0;
+
+    color:var(--gmca-color-text-muted);
+
+    font-size:var(--gmca-font-size-sm);
+
+    font-weight:var(--gmca-font-medium);
+}
+
+.page-date i{
+
+    color:var(--gmca-color-primary);
+
+    font-size:.95rem;
+}
+
+
+
+/* ==========================================================================
+   RIGHT
+   ========================================================================== */
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--gmca-space-4);
+
+    flex-shrink:0;
+}
+
+
+
+/* ==========================================================================
+   NOTIFICATION BUTTON
+   ========================================================================== */
+
+.notification-btn{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    width:46px;
+    height:46px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--gmca-color-surface-alt);
+
+    color:var(--gmca-color-text);
+
+    cursor:pointer;
+
+    transition:
+        background var(--gmca-transition-fast),
+        color var(--gmca-transition-fast),
+        transform var(--gmca-transition-fast),
+        box-shadow var(--gmca-transition-fast);
+}
+
+.notification-btn:hover{
+
+    background:var(--gmca-color-primary);
+
+    color:var(--gmca-color-text-inverse);
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--gmca-shadow-sm);
+}
+
+.notification-btn:focus-visible{
+
+    outline:none;
+
+    box-shadow:
+        0 0 0 3px rgba(59,130,246,.25);
+}
+
+.notification-btn i{
+
+    font-size:1.05rem;
+}
+
+
+
+/* ==========================================================================
+   USER DROPDOWN
+   ========================================================================== */
+
+.user-dropdown{
+
+    display:flex;
+
+    align-items:center;
+}
+
+
+
+/* ==========================================================================
+   BOOTSTRAP TOGGLE
+   ========================================================================== */
+
+.user-dropdown .dropdown-toggle{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--gmca-space-3);
+
+    padding:
+        .45rem
+        .75rem;
+
+    border:none;
+
+    border-radius:var(--gmca-radius-lg);
+
+    background:transparent;
+
+    color:var(--gmca-color-text);
+
+    text-decoration:none;
+
+    transition:
+        background var(--gmca-transition-fast),
+        box-shadow var(--gmca-transition-fast),
+        transform var(--gmca-transition-fast);
+}
+
+.user-dropdown .dropdown-toggle:hover{
+
+    background:var(--gmca-color-surface-alt);
+
+    transform:translateY(-2px);
+}
+
+.user-dropdown .dropdown-toggle:focus{
+
+    box-shadow:none;
+}
+
+.user-dropdown .dropdown-toggle::after{
+
+    margin-left:8px;
+}
+
+
+
+/* ==========================================================================
+   USER AVATAR
+   ========================================================================== */
+
+.user-avatar{
+
+    width:44px;
+    height:44px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:var(--gmca-color-primary);
+
+    color:var(--gmca-color-text-inverse);
+
+    font-size:1rem;
+
+    font-weight:var(--gmca-font-bold);
+
+    box-shadow:var(--gmca-shadow-sm);
+}
+
+
+
+/* ==========================================================================
+   USER DETAILS
+   ========================================================================== */
+
+.user-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    line-height:1.2;
+}
+
+.user-name{
+
+    color:var(--gmca-color-text);
+
+    font-size:var(--gmca-font-size-sm);
+
+    font-weight:var(--gmca-font-semibold);
+}
+
+.user-role{
+
+    margin-top:3px;
+
+    color:var(--gmca-color-text-muted);
+
+    font-size:var(--gmca-font-size-xs);
+
+    font-weight:var(--gmca-font-medium);
+}
+
+/* ==========================================================================
+   BOOTSTRAP DROPDOWN MENU
+   ========================================================================== */
+
+.user-dropdown .dropdown-menu{
+
+    min-width:240px;
+
+    margin-top:12px;
+
+    padding:var(--gmca-space-2);
+
+    border:
+        var(--gmca-border-width)
+        var(--gmca-border-style)
+        var(--gmca-color-border);
+
+    border-radius:var(--gmca-radius-lg);
+
+    background:var(--gmca-color-surface);
+
+    box-shadow:var(--gmca-shadow-lg);
+
+    overflow:hidden;
+}
+
+
+
+/* ==========================================================================
+   DROPDOWN ITEMS
+   ========================================================================== */
+
+.user-dropdown .dropdown-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--gmca-space-3);
+
+    padding:
+        .75rem
+        1rem;
+
+    border-radius:var(--gmca-radius-md);
+
+    color:var(--gmca-color-text);
+
+    font-size:var(--gmca-font-size-sm);
+
+    font-weight:var(--gmca-font-medium);
+
+    transition:
+        background var(--gmca-transition-fast),
+        color var(--gmca-transition-fast),
+        transform var(--gmca-transition-fast);
+}
+
+.user-dropdown .dropdown-item:hover,
+.user-dropdown .dropdown-item:focus{
+
+    background:var(--gmca-color-surface-alt);
+
+    color:var(--gmca-color-primary);
+
+    transform:translateX(4px);
+}
+
+.user-dropdown .dropdown-item i{
+
+    width:20px;
+
+    text-align:center;
+
+    color:var(--gmca-color-text-muted);
+
+    transition:color var(--gmca-transition-fast);
+}
+
+.user-dropdown .dropdown-item:hover i{
+
+    color:var(--gmca-color-primary);
+}
+
+
+
+/* ==========================================================================
+   DROPDOWN DIVIDER
+   ========================================================================== */
+
+.user-dropdown .dropdown-divider{
+
+    margin:
+        var(--gmca-space-2)
+        0;
+
+    border-top:
+        var(--gmca-border-width)
+        var(--gmca-border-style)
+        var(--gmca-color-border);
+
+    opacity:1;
+}
+
+
+
+/* ==========================================================================
+   LOGOUT ITEM
+   ========================================================================== */
+
+.user-dropdown .dropdown-item.logout{
+
+    color:var(--gmca-color-danger);
+}
+
+.user-dropdown .dropdown-item.logout i{
+
+    color:inherit;
+}
+
+.user-dropdown .dropdown-item.logout:hover{
+
+    background:rgba(220,53,69,.08);
+
+    color:var(--gmca-color-danger);
+}
+
+
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width:991.98px){
+
+    .app-header{
+
+        padding:
+            var(--gmca-space-5)
+            var(--gmca-space-6);
+    }
+
+    .page-title{
+
+        font-size:1.75rem;
+    }
+
+}
+
+
+
+@media (max-width:767.98px){
+
+    .app-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:var(--gmca-space-4);
+    }
+
+    .header-right{
+
+        width:100%;
+
+        justify-content:space-between;
+    }
+
+    .user-dropdown .dropdown-menu{
+
+        min-width:220px;
+    }
+
+}
+
+
+
+@media (max-width:575.98px){
+
+    .app-header{
+
+        padding:
+            var(--gmca-space-4)
+            var(--gmca-space-5);
+    }
+
+    .page-title{
+
+        font-size:1.5rem;
+    }
+
+    .page-date{
+
+        font-size:var(--gmca-font-size-xs);
+    }
+
+    .notification-btn{
+
+        width:42px;
+        height:42px;
+    }
+
+    .user-avatar{
+
+        width:40px;
+        height:40px;
+
+        font-size:.9rem;
+    }
+
+    .user-info{
+
+        display:none;
+    }
+
+    .user-dropdown .dropdown-toggle{
+
+        padding:.4rem;
+    }
+
+    .user-dropdown .dropdown-menu{
+
+        width:100%;
+
+        min-width:200px;
+    }
+
+}
+
+
+
+/* ==========================================================================
+   ACCESSIBILITY
+   ========================================================================== */
+
+.notification-btn:focus-visible,
+.user-dropdown .dropdown-toggle:focus-visible,
+.user-dropdown .dropdown-item:focus-visible{
+
+    outline:2px solid var(--gmca-color-primary);
+
+    outline-offset:2px;
+}
+
+
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+
+.user-dropdown .dropdown-menu{
+
+    animation:gmcaDropdown .18s ease;
+}
+
+@keyframes gmcaDropdown{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(-8px)
+            scale(.98);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}

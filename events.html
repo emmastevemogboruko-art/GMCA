@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Gospel Music Community Africa</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================
+     NAVIGATION
+========================================== -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+        <!-- Logo -->
+
+        <a class="navbar-brand" href="index.html">
+
+            <img src="assets/images/logo/logo.png"
+                 alt="GMCA Logo"
+                 class="logo">
+
+        </a>
+
+        <!-- Mobile Toggle -->
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainMenu"
+                aria-controls="mainMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <!-- Navigation Links -->
+
+        <div class="collapse navbar-collapse"
+             id="mainMenu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="about.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="programs.html">
+
+                        Programs
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="community.html">
+
+                        Community
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link active"
+                       href="events.html">
+
+                        Events
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="contact.html">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item ms-lg-3">
+
+                    <a href="community.html"
+                       class="btn btn-warning rounded-pill px-4">
+
+                        Join the Community
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- ==========================================
+     EVENTS HERO
+========================================== -->
+
+<section class="events-hero">
+
+    <img src="assets/images/events/events-hero.jpg"
+         alt="GMCA Events">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="section-tag">
+
+                EVENTS
+
+            </span>
+
+            <h1>
+
+                Experience Worship.<br>
+                Build Community.<br>
+                Be Inspired.
+
+            </h1>
+
+            <p>
+
+                Join conferences, worship gatherings, music workshops and special
+                events designed to equip, connect and inspire gospel ministers
+                across Africa.
+
+            </p>
+
+            <a href="#upcoming-events" class="btn btn-warning btn-lg px-5">
+
+                Explore Events
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     UPCOMING EVENTS
+========================================== -->
+
+<section id="upcoming-events" class="upcoming-events section-padding">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                UPCOMING EVENTS
+            </span>
+
+            <h2 class="section-title">
+                Join Us at Our Next Gathering
+            </h2>
+
+            <p class="section-text">
+                Experience inspiring worship, practical training and meaningful fellowship through our upcoming events across Africa.
+            </p>
+
+        </div>
+
+        <!-- Dynamic Upcoming Events Container -->
+
+        <div class="row g-4" id="upcoming-events-container">
+
+            <!-- Upcoming events will be rendered here dynamically -->
+
+            <div class="col-12">
+
+                <div class="event-empty-state text-center py-5">
+
+                    <i class="bi bi-calendar-event display-3 text-muted mb-4"></i>
+
+                    <h4 class="mb-3">
+                        No Upcoming Events
+                    </h4>
+
+                    <p class="text-muted mb-0">
+                        No upcoming events at the moment. Please check back soon for future GMCA events.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     SIGNATURE EVENTS
+========================================== -->
+
+<section class="signature-events section-padding">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                SIGNATURE EVENTS
+            </span>
+
+            <h2 class="section-title">
+                Our Signature Events
+            </h2>
+
+            <p class="section-text">
+                GMCA's flagship events unite gospel ministers, worship leaders, creatives and industry professionals to advance excellence, collaboration and Kingdom impact across Africa.
+            </p>
+
+        </div>
+
+        <!-- Dynamic Signature Events Container -->
+
+        <div class="row g-4" id="signature-events-container">
+
+            <!-- Signature events will be rendered here dynamically -->
+
+            <div class="col-12">
+
+                <div class="event-empty-state text-center py-5">
+
+                    <i class="bi bi-stars display-3 text-muted mb-4"></i>
+
+                    <h4 class="mb-3">
+                        Signature Events Coming Soon
+                    </h4>
+
+                    <p class="text-muted mb-0">
+                        GMCA signature events will be announced soon. Stay connected for updates on our flagship gatherings and annual experiences.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     EVENT GALLERY
+========================================== -->
+
+<section class="event-gallery section-padding">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+
+                EVENT GALLERY
+
+            </span>
+
+            <h2 class="section-title">
+
+                Moments That Inspire
+
+            </h2>
+
+            <p class="section-text">
+
+                A glimpse into the worship, learning, fellowship and unforgettable
+                moments shared at GMCA events across Africa.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+
+                <div class="gallery-card">
+
+                    <img src="assets/images/events/event-1.jpg"
+                         alt="Worship Conference">
+
+                    <div class="gallery-overlay">
+
+                        <h4>Conference Sessions</h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="gallery-card">
+
+                    <img src="assets/images/events/event-2.jpg"
+                         alt="Live Worship">
+
+                    <div class="gallery-overlay">
+
+                        <h4>Live Worship</h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="gallery-card">
+
+                    <img src="assets/images/events/event-3.jpg"
+                         alt="Training Workshop">
+
+                    <div class="gallery-overlay">
+
+                        <h4>Training Workshops</h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="gallery-card">
+
+                    <img src="assets/images/events/event-4.jpg"
+                         alt="Community Fellowship">
+
+                    <div class="gallery-overlay">
+
+                        <h4>Community Fellowship</h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     WHY ATTEND
+========================================== -->
+
+<section class="why-attend section-padding">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                WHY ATTEND?
+            </span>
+
+            <h2 class="section-title">
+                More Than an Event
+            </h2>
+
+            <p class="section-text">
+                Every GMCA gathering is designed to strengthen your faith, develop your gifts, and connect you with a Christ-centered community of gospel ministers across Africa.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Card 1 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="attend-feature-card">
+
+                    <div class="attend-icon">
+                        <i class="bi bi-music-note-beamed"></i>
+                    </div>
+
+                    <h4>Inspiring Worship</h4>
+
+                    <div class="attend-divider"></div>
+
+                    <ul>
+
+                        <li><i class="bi bi-check-circle-fill"></i> Spirit-filled Worship</li>
+
+                        <li><i class="bi bi-check-circle-fill"></i> Christ-centered Gatherings</li>
+
+                        <li><i class="bi bi-check-circle-fill"></i> Renewed Faith</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="attend-feature-card">
+
+                    <div class="attend-icon">
+                        <i class="bi bi-lightbulb-fill"></i>
+                    </div>
+
+                    <h4>Practical Learning</h4>
+
+                    <div class="attend-divider"></div>
+
+                    <ul>
+
+                        <li><i class="bi bi-check-circle-fill"></i> Workshops</li>
+
+                        <li><i class="bi bi-check-circle-fill"></i> Ministry Insights</li>
+
+                        <li><i class="bi bi-check-circle-fill"></i> Leadership Growth</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="attend-feature-card">
+
+                    <div class="attend-icon">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+
+                    <h4>Meaningful Connections</h4>
+
+                    <div class="attend-divider"></div>
+
+                    <ul>
+
+                        <li><i class="bi bi-check-circle-fill"></i> Fellowship</li>
+
+                        <li><i class="bi bi-check-circle-fill"></i> Networking</li>
+
+                        <li><i class="bi bi-check-circle-fill"></i> Collaboration</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Card 4 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="attend-feature-card">
+
+                    <div class="attend-icon">
+                        <i class="bi bi-stars"></i>
+                    </div>
+
+                    <h4>Kingdom Impact</h4>
+
+                    <div class="attend-divider"></div>
+
+                    <ul>
+
+                        <li><i class="bi bi-check-circle-fill"></i> Purposeful Service</li>
+
+                        <li><i class="bi bi-check-circle-fill"></i> Lasting Influence</li>
+
+                        <li><i class="bi bi-check-circle-fill"></i> Gospel Mission</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     EVENTS CTA
+========================================== -->
+
+<section class="events-cta section-padding">
+
+    <div class="container">
+
+        <div class="join-box text-center">
+
+            <span class="section-tag">
+
+                DON'T MISS OUT
+
+            </span>
+
+            <h2 class="section-title">
+
+                Be Part of Our Next Event
+
+            </h2>
+
+            <p class="section-text">
+
+                Join us for inspiring worship, meaningful connections and practical ministry training. We look forward to welcoming you to the next GMCA gathering.
+
+            </p>
+
+            <a href="contact.html" class="btn btn-warning btn-lg px-5">
+
+                Register Your Interest
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     PREMIUM FOOTER
+========================================== -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="row gy-5">
+
+            <!-- Brand -->
+
+            <div class="col-lg-4">
+
+                <img src="assets/images/logo/logo.png"
+                     alt="GMCA Logo"
+                     class="footer-logo">
+
+                <h3 class="footer-title mt-4">
+                    Gospel Music Community Africa
+                </h3>
+
+                <p class="footer-text">
+                    Uniting, equipping and inspiring gospel ministers across Africa through worship, mentorship, collaboration and Christ-centered community.
+                </p>
+
+                <div class="footer-social">
+
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+
+                    <a href="#"><i class="bi bi-tiktok"></i></a>
+
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+
+                    <a href="#"><i class="bi bi-whatsapp"></i></a>
+
+                </div>
+
+            </div>
+
+            <!-- Explore -->
+
+            <div class="col-lg-2 col-md-4">
+
+                <h5>Explore</h5>
+
+                <ul class="footer-links">
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="about.html">About</a></li>
+
+                    <li><a href="programs.html">Programs</a></li>
+
+                    <li><a href="community.html">Community</a></li>
+
+                    <li><a href="events.html">Events</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Community -->
+
+            <div class="col-lg-3 col-md-4">
+
+                <h5>Community</h5>
+
+                <ul class="footer-links">
+
+                    <li><a href="#">Become a Member</a></li>
+
+                    <li><a href="#">Mentorship</a></li>
+
+                    <li><a href="#">Training</a></li>
+
+                    <li><a href="#">Partnerships</a></li>
+
+                    <li><a href="#">Volunteer</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div class="col-lg-3 col-md-4">
+
+                <h5>Get in Touch</h5>
+
+                <ul class="footer-contact">
+
+                    <li>
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        info@gmcafrica.org
+
+                    </li>
+
+                    <li>
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                        +254 XXX XXX XXX
+
+                    </li>
+
+                    <li>
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        Nairobi, Kenya
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+
+                    © 2025 Gospel Music Community Africa.
+
+                </div>
+
+                <div class="col-md-6 text-md-end">
+
+                    <span>
+                        Where Every Voice Finds Expression & Value.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Main JS -->
+<script src="assets/js/app.js"></script>
+
+<!-- Events Page -->
+<script src="assets/js/pages/events.js"></script>
+
+</body>
+
+</html>

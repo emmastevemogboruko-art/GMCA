@@ -1,0 +1,26 @@
+.card{
+    border-radius:12px;
+}
+
+.card-header{
+    font-weight:600;
+}
+
+.table th{
+    width:35%;
+    color:#6c757d;
+    font-weight:600;
+}
+
+.table td{
+    color:#212529;
+}
+
+#memberName{
+    font-weight:700;
+}
+
+.badge{
+    font-size:.8rem;
+    padding:.45rem .75rem;
+}

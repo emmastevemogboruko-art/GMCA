@@ -1,0 +1,343 @@
+/* ==========================================================================
+   GMCA Member Portal
+   ----------------------------------------------------------------------------
+   File: layout.css
+
+   Purpose
+   -------
+   Core application layout.
+
+   Responsible for:
+   • Overall application shell
+   • Sidebar + main layout
+   • Header/content/footer positioning
+   • Responsive behaviour
+
+   IMPORTANT
+   -------
+   • No component styling.
+   • No colors outside design tokens.
+   • Uses GMCA design variables only.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   GLOBAL
+   ========================================================================== */
+
+html,
+body{
+
+    width:100%;
+    min-height:100%;
+    margin:0;
+    padding:0;
+
+}
+
+*,
+*::before,
+*::after{
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:var(--gmca-font-family);
+
+    font-size:var(--gmca-font-size-md);
+
+    line-height:var(--gmca-line-height-normal);
+
+    color:var(--gmca-color-text);
+
+    background:var(--gmca-color-background);
+
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+
+    overflow-x:hidden;
+
+}
+
+
+/* ==========================================================================
+   APP SHELL
+   ========================================================================== */
+
+.app{
+
+    display:flex;
+
+    min-height:100vh;
+
+    width:100%;
+
+    background:var(--gmca-color-background);
+
+}
+
+
+/* ==========================================================================
+   MAIN AREA
+   ========================================================================== */
+
+.app-main{
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+    min-width:0;
+
+    min-height:100vh;
+
+    transition:all var(--gmca-transition-normal);
+
+}
+
+
+/* ==========================================================================
+   CONTENT
+   ========================================================================== */
+
+.app-content{
+
+    flex:1;
+
+    width:100%;
+
+    padding:2rem;
+
+    background:#EEF2F7;
+
+    overflow-y:auto;
+
+}
+
+/* ==========================================================================
+   PAGE CONTAINER
+   ========================================================================== */
+
+.container,
+.page-container{
+
+    width:100%;
+
+    max-width:var(--gmca-content-max-width);
+
+    margin-inline:auto;
+
+}
+
+
+/* ==========================================================================
+   PAGE SECTIONS
+   ========================================================================== */
+
+.page-section{
+
+    width:100%;
+
+}
+
+.page-section:not(:last-child){
+
+    margin-bottom:var(--gmca-space-8);
+
+}
+
+
+/* ==========================================================================
+   SPACING HELPERS
+   ========================================================================== */
+
+.section-spacing{
+
+    margin-bottom:var(--gmca-space-8);
+
+}
+
+.content-spacing{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--gmca-space-8);
+
+}
+
+
+/* ==========================================================================
+   PAGE GRID
+   ========================================================================== */
+
+.page-grid{
+
+    display:grid;
+
+    gap:var(--gmca-space-8);
+
+}
+
+.page-grid-2{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:var(--gmca-space-8);
+
+}
+
+.page-grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:var(--gmca-space-8);
+
+}
+
+.page-grid-4{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:var(--gmca-space-6);
+
+}
+
+
+/* ==========================================================================
+   FLEX HELPERS
+   ========================================================================== */
+
+.flex-between{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.flex-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width:1199.98px){
+
+    .page-grid-4{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+@media (max-width:991.98px){
+
+    .app-content{
+
+        padding:var(--gmca-space-6);
+
+    }
+
+    .page-grid-2{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .page-grid-3{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .page-grid-4{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+@media (max-width:767.98px){
+
+    .app{
+
+        flex-direction:column;
+
+    }
+
+    .app-main{
+
+        width:100%;
+
+        min-width:100%;
+
+    }
+
+    .app-content{
+
+        padding:var(--gmca-space-4);
+
+    }
+
+    .page-grid-4{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+@media (max-width:575.98px){
+
+    .app-content{
+
+        padding:var(--gmca-space-3);
+
+    }
+
+    .page-grid-2,
+    .page-grid-3,
+    .page-grid-4{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

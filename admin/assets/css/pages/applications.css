@@ -1,0 +1,68 @@
+/* ==========================================================
+   GMCA Admin Portal
+   Applications Page
+   ========================================================== */
+
+.page-toolbar {
+    margin-bottom: 1.5rem;
+}
+
+.page-toolbar h4 {
+    font-weight: 600;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.card-header {
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background: #f8f9fa;
+    font-size: .9rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    padding: .9rem .75rem;
+}
+
+.table tbody tr:hover {
+    background: #f8fbff;
+}
+
+.badge {
+    padding: .45rem .75rem;
+    font-size: .75rem;
+}
+
+#searchInput {
+    min-width: 280px;
+}
+
+#emptyState {
+    color: #6c757d;
+}
+
+#emptyState i {
+    opacity: .35;
+}
+
+@media (max-width:768px){
+
+    #searchInput{
+
+        min-width:auto;
+
+    }
+
+}

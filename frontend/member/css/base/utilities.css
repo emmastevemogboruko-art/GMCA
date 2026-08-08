@@ -1,0 +1,260 @@
+/* ==========================================================================
+   GMCA Member Portal
+   ----------------------------------------------------------------------------
+   File        : utilities.css
+   Description : Project-specific utility classes that complement Bootstrap.
+                 These utilities promote consistency and reduce repetitive CSS.
+
+   Dependencies:
+   - variables.css
+
+   NOTE
+   ----------------------------------------------------------------------------
+   Bootstrap already provides many layout utilities (flex, grid, spacing,
+   display, etc.). This file only contains helpers that are specific to
+   the GMCA design system or commonly reused throughout the portal.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   CONTAINERS
+   ========================================================================== */
+
+.gmca-container {
+    width: 100%;
+    max-width: var(--gmca-content-max-width);
+    margin-inline: auto;
+    padding-inline: var(--gmca-space-4);
+}
+
+
+/* ==========================================================================
+   BACKGROUND HELPERS
+   ========================================================================== */
+
+.bg-surface {
+    background-color: var(--gmca-color-surface) !important;
+}
+
+.bg-surface-alt {
+    background-color: var(--gmca-color-surface-alt) !important;
+}
+
+.bg-primary-soft {
+    background-color: var(--gmca-color-primary-light) !important;
+}
+
+
+/* ==========================================================================
+   BORDER HELPERS
+   ========================================================================== */
+
+.border-light {
+    border: var(--gmca-border-width)
+        var(--gmca-border-style)
+        var(--gmca-color-border-light) !important;
+}
+
+.border-default {
+    border: var(--gmca-border-width)
+        var(--gmca-border-style)
+        var(--gmca-color-border) !important;
+}
+
+
+/* ==========================================================================
+   RADIUS HELPERS
+   ========================================================================== */
+
+.rounded-sm {
+    border-radius: var(--gmca-radius-sm) !important;
+}
+
+.rounded-md {
+    border-radius: var(--gmca-radius-md) !important;
+}
+
+.rounded-lg {
+    border-radius: var(--gmca-radius-lg) !important;
+}
+
+.rounded-xl {
+    border-radius: var(--gmca-radius-xl) !important;
+}
+
+
+/* ==========================================================================
+   SHADOW HELPERS
+   ========================================================================== */
+
+.shadow-xs {
+    box-shadow: var(--gmca-shadow-xs) !important;
+}
+
+.shadow-sm {
+    box-shadow: var(--gmca-shadow-sm) !important;
+}
+
+.shadow-md {
+    box-shadow: var(--gmca-shadow-md) !important;
+}
+
+.shadow-lg {
+    box-shadow: var(--gmca-shadow-lg) !important;
+}
+
+.shadow-xl {
+    box-shadow: var(--gmca-shadow-xl) !important;
+}
+
+
+/* ==========================================================================
+   WIDTH HELPERS
+   ========================================================================== */
+
+.w-fit {
+    width: fit-content;
+}
+
+.max-content {
+    max-width: var(--gmca-content-max-width);
+}
+
+
+/* ==========================================================================
+   CURSOR HELPERS
+   ========================================================================== */
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+
+/* ==========================================================================
+   OVERFLOW HELPERS
+   ========================================================================== */
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+
+/* ==========================================================================
+   OBJECT FIT
+   ========================================================================== */
+
+.object-cover {
+    object-fit: cover;
+}
+
+.object-contain {
+    object-fit: contain;
+}
+
+
+/* ==========================================================================
+   GLASS EFFECT
+   ========================================================================== */
+
+.glass {
+
+    background: var(--gmca-overlay-light);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, .25);
+
+    box-shadow: var(--gmca-shadow-lg);
+}
+
+
+/* ==========================================================================
+   DIVIDERS
+   ========================================================================== */
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--gmca-color-border);
+}
+
+
+/* ==========================================================================
+   VISIBILITY
+   ========================================================================== */
+
+.invisible {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+
+/* ==========================================================================
+   USER SELECTION
+   ========================================================================== */
+
+.user-select-none {
+    user-select: none;
+}
+
+.user-select-all {
+    user-select: all;
+}
+
+
+/* ==========================================================================
+   SCREEN READER ONLY
+   ========================================================================== */
+
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+}
+
+
+/* ==========================================================================
+   IMAGE HELPERS
+   ========================================================================== */
+
+.img-fluid-rounded {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--gmca-radius-lg);
+}
+
+
+/* ==========================================================================
+   TRANSITIONS
+   ========================================================================== */
+
+.transition {
+    transition: all var(--gmca-transition-normal);
+}
+
+.transition-fast {
+    transition: all var(--gmca-transition-fast);
+}
+
+.transition-slow {
+    transition: all var(--gmca-transition-slow);
+}

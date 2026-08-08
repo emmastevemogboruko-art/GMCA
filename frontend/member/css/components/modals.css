@@ -1,0 +1,223 @@
+/* ==========================================================================
+   GMCA Member Portal
+   ----------------------------------------------------------------------------
+   File        : modals.css
+   Description : Modal component styles.
+
+   Dependencies
+   ----------------------------------------------------------------------------
+   - variables.css
+   - typography.css
+   - animations.css
+
+   Notes
+   ----------------------------------------------------------------------------
+   Extends Bootstrap modal styling while preserving accessibility and
+   JavaScript compatibility.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   MODAL DIALOG
+   ========================================================================== */
+
+.modal-dialog {
+    margin: var(--gmca-space-8) auto;
+}
+
+
+/* ==========================================================================
+   MODAL CONTENT
+   ========================================================================== */
+
+.modal-content {
+    border: none;
+
+    border-radius: var(--gmca-radius-lg);
+
+    background-color: var(--gmca-color-surface);
+
+    box-shadow: var(--gmca-shadow-xl);
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================================
+   MODAL HEADER
+   ========================================================================== */
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: var(--gmca-space-5) var(--gmca-space-6);
+
+    border-bottom: 1px solid var(--gmca-color-border);
+
+    background-color: transparent;
+}
+
+.modal-title {
+    margin: 0;
+
+    font-size: var(--gmca-font-size-xl);
+
+    font-weight: var(--gmca-font-semibold);
+}
+
+
+/* ==========================================================================
+   MODAL BODY
+   ========================================================================== */
+
+.modal-body {
+    padding: var(--gmca-space-6);
+}
+
+
+/* ==========================================================================
+   MODAL FOOTER
+   ========================================================================== */
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--gmca-space-3);
+
+    padding: var(--gmca-space-5) var(--gmca-space-6);
+
+    border-top: 1px solid var(--gmca-color-border);
+
+    background-color: transparent;
+}
+
+
+/* ==========================================================================
+   CLOSE BUTTON
+   ========================================================================== */
+
+.btn-close {
+    opacity: .6;
+
+    transition:
+        opacity var(--gmca-transition-fast),
+        transform var(--gmca-transition-fast);
+}
+
+.btn-close:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}
+
+
+/* ==========================================================================
+   MODAL BACKDROP
+   ========================================================================== */
+
+.modal-backdrop.show {
+    opacity: .55;
+}
+
+
+/* ==========================================================================
+   MODAL SIZES
+   ========================================================================== */
+
+.modal-sm .modal-content {
+    border-radius: var(--gmca-radius-md);
+}
+
+.modal-lg .modal-content,
+.modal-xl .modal-content {
+    border-radius: var(--gmca-radius-xl);
+}
+
+
+/* ==========================================================================
+   SCROLLABLE MODAL
+   ========================================================================== */
+
+.modal-dialog-scrollable .modal-body {
+    scrollbar-width: thin;
+}
+
+
+/* ==========================================================================
+   CENTERED CONTENT
+   ========================================================================== */
+
+.modal-center {
+    text-align: center;
+}
+
+.modal-center .modal-footer {
+    justify-content: center;
+}
+
+
+/* ==========================================================================
+   CONFIRMATION MODAL
+   ========================================================================== */
+
+.modal-confirm-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 72px;
+    height: 72px;
+
+    margin: 0 auto var(--gmca-space-5);
+
+    border-radius: var(--gmca-radius-circle);
+
+    background-color: var(--gmca-color-primary-light);
+
+    color: var(--gmca-color-primary);
+
+    font-size: 2rem;
+}
+
+
+/* ==========================================================================
+   MODAL DIVIDER
+   ========================================================================== */
+
+.modal-divider {
+    margin: var(--gmca-space-5) 0;
+
+    border-top: 1px solid var(--gmca-color-border);
+}
+
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    .modal-dialog {
+        margin: var(--gmca-space-4);
+    }
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: var(--gmca-space-5);
+    }
+
+    .modal-footer {
+        flex-direction: column;
+    }
+
+    .modal-footer .btn {
+        width: 100%;
+    }
+
+}

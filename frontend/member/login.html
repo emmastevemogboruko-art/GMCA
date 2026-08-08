@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GMCA Member Portal | Login</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+    <!-- Login CSS -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body class="bg-light">
+
+    <div class="container">
+
+        <div class="row justify-content-center align-items-center min-vh-100">
+
+            <div class="col-sm-10 col-md-8 col-lg-5">
+
+                <div class="card shadow-lg border-0">
+
+                    <div class="card-body p-5">
+
+                        <!-- Logo -->
+                        <div class="text-center mb-4">
+
+                            <img src="../../assets/images/logo/logo.png"
+                                 alt="GMCA Logo"
+                                 class="img-fluid mb-3"
+                                 style="max-height:90px;">
+
+                            <h3 class="fw-bold">
+                                GMCA Member Portal
+                            </h3>
+
+                            <p class="text-muted mb-0">
+                                Membership Management System
+                            </p>
+
+                        </div>
+
+                        <!-- Alert Container -->
+                        <div id="alertContainer"></div>
+
+                        <!-- Login Form -->
+                        <form id="loginForm" novalidate>
+
+                            <!-- Username / Email -->
+                            <div class="mb-3">
+
+                                <label for="identifier" class="form-label">
+                                    Username or Email
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="identifier"
+                                    name="identifier"
+                                    placeholder="Enter username or email"
+                                    autocomplete="username"
+                                    required>
+
+                            </div>
+
+                            <!-- Password -->
+                            <div class="mb-4">
+
+                                <label for="password" class="form-label">
+                                    Password
+                                </label>
+
+                                <div class="input-group">
+
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="password"
+                                        name="password"
+                                        placeholder="Enter password"
+                                        autocomplete="current-password"
+                                        required>
+
+                                    <button
+                                        class="btn btn-outline-secondary"
+                                        type="button"
+                                        id="togglePassword"
+                                        aria-label="Show password">
+
+                                        <i class="bi bi-eye"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Login Button -->
+                            <div class="d-grid">
+
+                                <button
+                                    type="submit"
+                                    id="loginButton"
+                                    class="btn btn-primary btn-lg">
+
+                                    <span
+                                        id="loginSpinner"
+                                        class="spinner-border spinner-border-sm me-2 d-none"
+                                        role="status"
+                                        aria-hidden="true">
+                                    </span>
+
+                                    <span id="loginButtonText">
+                                        Sign In
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <div class="card-footer text-center bg-white">
+
+                        <small class="text-muted">
+
+                            © <span id="currentYear"></span>
+
+                            GMCA Member Portal
+
+                            |
+                            Version 1.0.0
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+   <!-- Shared Configuration -->
+    <script src="js/config.js"></script>
+
+    <!-- Core -->
+    <script src="js/core/storage.js"></script>
+    <script src="js/core/api.js"></script>
+    <script src="js/core/auth.js"></script>
+
+    <!-- Page -->
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

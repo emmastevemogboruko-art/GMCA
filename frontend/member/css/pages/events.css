@@ -1,0 +1,260 @@
+/* ==========================================================================
+   GMCA Events Page
+   ========================================================================== */
+
+.events-page{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+    padding-bottom:2rem;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.events-hero{
+    background:linear-gradient(135deg,#c99d12,#b78907);
+    color:#fff;
+    border-radius:24px;
+    padding:3rem;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.events-hero::before,
+.events-hero::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+}
+
+.events-hero::before{
+    width:320px;
+    height:320px;
+    right:-120px;
+    top:-80px;
+}
+
+.events-hero::after{
+    width:220px;
+    height:220px;
+    left:-70px;
+    bottom:-80px;
+}
+
+.events-hero h1{
+    margin:0;
+    font-size:2.4rem;
+    font-weight:700;
+}
+
+.events-hero p{
+    margin-top:1rem;
+    max-width:650px;
+    opacity:.95;
+}
+
+/* ==========================================================================
+   Filter Card
+   ========================================================================== */
+
+.events-filter{
+    background:#fff;
+    border-radius:20px;
+    padding:1.5rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:1rem;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.events-filter input,
+.events-filter select{
+    width:100%;
+    height:48px;
+    border:1px solid #e7e7e7;
+    border-radius:12px;
+    padding:0 15px;
+    background:#fafafa;
+    transition:.25s;
+}
+
+.events-filter input:focus,
+.events-filter select:focus{
+    outline:none;
+    border-color:#c99d12;
+    box-shadow:0 0 0 4px rgba(201,157,18,.12);
+    background:#fff;
+}
+
+/* ==========================================================================
+   Events Grid
+   ========================================================================== */
+
+.events-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
+    gap:1.75rem;
+}
+
+/* ==========================================================================
+   Event Card
+   ========================================================================== */
+
+.event-card{
+    background:#fff;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 12px 28px rgba(0,0,0,.06);
+    transition:.3s ease;
+    display:flex;
+    flex-direction:column;
+}
+
+.event-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.event-card-header{
+    padding:1.5rem;
+    border-bottom:1px solid #f2f2f2;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:1rem;
+}
+
+.event-card-title{
+    margin:0;
+    font-size:1.2rem;
+    font-weight:700;
+    color:#1f2937;
+}
+
+.event-card-type{
+    margin-top:.4rem;
+    color:#6b7280;
+    font-size:.95rem;
+}
+
+.event-card-body{
+    padding:1.5rem;
+    display:grid;
+    gap:.9rem;
+    color:#555;
+}
+
+.event-card-body p{
+    margin:0;
+    display:flex;
+    align-items:center;
+    gap:.75rem;
+}
+
+.event-card-body i{
+    color:#c99d12;
+    font-size:1rem;
+}
+
+.event-card-footer{
+    margin-top:auto;
+    padding:1.5rem;
+    border-top:1px solid #f3f3f3;
+}
+
+/* ==========================================================================
+   Status Badges
+   ========================================================================== */
+
+.event-status{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:.45rem .9rem;
+    border-radius:999px;
+    font-size:.8rem;
+    font-weight:600;
+    text-transform:uppercase;
+}
+
+.status-open{
+    background:#e9f9ef;
+    color:#15803d;
+}
+
+.status-published{
+    background:#eef5ff;
+    color:#2563eb;
+}
+
+.status-closed{
+    background:#fef3c7;
+    color:#b45309;
+}
+
+.status-cancelled{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn-event{
+    width:100%;
+    border:none;
+    border-radius:12px;
+    padding:12px;
+    background:#c99d12;
+    color:#fff;
+    font-weight:600;
+    transition:.25s;
+}
+
+.btn-event:hover{
+    background:#af8505;
+}
+
+/* ==========================================================================
+   Empty State
+   ========================================================================== */
+
+.events-empty{
+    background:#fff;
+    border-radius:22px;
+    padding:4rem 2rem;
+    text-align:center;
+    color:#777;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.events-empty i{
+    font-size:3rem;
+    color:#c99d12;
+    margin-bottom:1rem;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media(max-width:768px){
+
+    .events-hero{
+        padding:2rem;
+    }
+
+    .events-hero h1{
+        font-size:2rem;
+    }
+
+    .events-grid{
+        grid-template-columns:1fr;
+    }
+
+}

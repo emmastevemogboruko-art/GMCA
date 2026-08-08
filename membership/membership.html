@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==================================================
+         META
+    ================================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GMCA Membership Portal | Gospel Music Community Africa</title>
+
+    <!-- ==================================================
+         GOOGLE FONTS
+    ================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ==================================================
+         BOOTSTRAP (CDN)
+    ================================================== -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons (CDN) -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- ==================================================
+         MAIN WEBSITE STYLES
+    ================================================== -->
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- ==================================================
+         MEMBERSHIP PORTAL STYLES
+    ================================================== -->
+
+    <link rel="stylesheet" href="../assets/css/membership.css">
+
+</head>
+
+<body>
+
+<main class="membership-portal">
+
+    <!-- ==================================================
+         MEMBERSHIP HEADER START
+    ================================================== -->
+
+    <section class="membership-header">
+
+        <div class="container">
+
+            <div class="portal-brand">
+
+                <img
+                    src="../assets/images/logo.png"
+                    alt="Gospel Music Community Africa"
+                    class="portal-logo">
+
+                <span class="portal-badge">
+
+                    Membership Portal
+
+                </span>
+
+                <h1 class="portal-title">
+
+                    Join the Gospel Music Community Africa
+
+                </h1>
+
+                <p class="portal-description">
+
+                    We're delighted that you're taking this step toward becoming part of
+                    a vibrant community of gospel ministers. This application helps us
+                    learn about your ministry and discover how GMCA can support your
+                    growth, service, leadership, and impact across Africa.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==================================================
+         MEMBERSHIP HEADER END
+    ================================================== -->
+
+
+
+    <!-- ==================================================
+         APPLICATION WIZARD START
+    ================================================== -->
+
+    <section class="membership-wizard">
+
+        <div class="container">
+
+            <div
+                class="welcome-card"
+                id="welcomeCard">
+
+                <div class="portal-grid">
+
+                    <!-- ==========================================
+                         LEFT PANEL
+                    =========================================== -->
+
+                    <section class="portal-panel portal-left">
+
+                        <span class="portal-chip">
+
+                            Welcome
+
+                        </span>
+
+                        <h2 class="portal-heading">
+
+                            Welcome to the GMCA Family
+
+                        </h2>
+
+                        <p class="portal-text">
+
+                            Every ministry has a story, and we're honored to learn about
+                            yours.
+
+                            This application is your first step toward joining a community
+                            that encourages collaboration, spiritual growth, servant
+                            leadership, and excellence in gospel music ministry across
+                            Africa.
+
+                        </p>
+
+                        <label class="portal-checkbox">
+
+                            <input
+                                type="checkbox"
+                                id="agreement">
+
+                            <span class="checkbox-box"></span>
+
+                            <span>
+
+                                I understand that my membership application will be
+                                reviewed by the GMCA Membership Team before approval.
+
+                            </span>
+
+                        </label>
+
+                        <button
+                            class="portal-button"
+                            id="beginJourney"
+                            disabled>
+
+                            Begin Your Journey
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </button>
+
+                    </section>
+
+                    <!-- ==========================================
+                         RIGHT PANEL
+                    =========================================== -->
+
+                    <aside class="portal-panel portal-right">
+
+                        <span class="portal-chip">
+
+                            Membership Journey
+
+                        </span>
+
+                        <h3 class="portal-subtitle">
+
+                            Your Application Steps
+
+                        </h3>
+
+                        <div class="portal-timeline">
+
+                            <div class="timeline-step active">
+
+                                <div class="timeline-circle">
+                                    1
+                                </div>
+
+                                <div class="timeline-content">
+
+                                    <h5>About You</h5>
+
+                                    <p>
+                                        Tell us who you are and introduce yourself.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="timeline-step">
+
+                                <div class="timeline-circle">
+                                    2
+                                </div>
+
+                                <div class="timeline-content">
+
+                                    <h5>Your Ministry</h5>
+
+                                    <p>
+                                        Share your ministry experience and calling.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="timeline-step">
+
+                                <div class="timeline-circle">
+                                    3
+                                </div>
+
+                                <div class="timeline-content">
+
+                                    <h5>Growth Path</h5>
+
+                                    <p>
+                                        Tell us how GMCA can support your journey.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="timeline-step">
+
+                                <div class="timeline-circle">
+                                    4
+                                </div>
+
+                                <div class="timeline-content">
+
+                                    <h5>Review &amp; Submit</h5>
+
+                                    <p>
+                                        Review your application before submitting it.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==================================================
+         APPLICATION WIZARD END
+    ================================================== -->
+
+
+
+    <!-- ==================================================
+         DYNAMIC WIZARD CONTENT
+    ================================================== -->
+
+    <section
+        id="wizardContent"
+        class="wizard-content d-none">
+
+        <div class="container">
+
+            <div id="wizardContainer"></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="membership-footer">
+
+        <div class="container">
+
+            <p class="text-center mb-0">
+
+                © 2026 Gospel Music Community Africa.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+</main>
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<!-- Bootstrap (CDN) -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Membership Portal -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../assets/js/supabase.js"></script>
+<script src="../assets/js/api.js"></script>
+<script src="../assets/js/state.js"></script>
+<script src="../assets/js/helpers.js"></script>
+<script src="../assets/js/validation.js"></script>
+<script src="../assets/js/steps.js"></script>
+<script src="../assets/js/wizard.js"></script>
+<script src="../assets/js/membership.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Create Event | GMCA Admin
+
+    </title>
+
+    <!-- ==========================================================
+         Google Fonts
+    =========================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ==========================================================
+         Bootstrap
+    =========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+    <!-- ==========================================================
+         Font Awesome
+    =========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- ==========================================================
+         Admin Styles
+    =========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/base/admin.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/components/components.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/layout/layout.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================================
+     Loading Overlay
+=========================================================== -->
+
+<div
+    id="loadingOverlay"
+    class="loading-overlay">
+
+    <div
+        class="spinner-border text-warning"
+        role="status">
+
+        <span class="visually-hidden">
+
+            Loading...
+
+        </span>
+
+    </div>
+
+</div>
+
+<!-- ==========================================================
+     Application
+=========================================================== -->
+
+<div
+    id="app"
+    class="app">
+
+    <!-- ======================================================
+         Sidebar
+    ======================================================= -->
+
+    <aside
+        id="sidebar"
+        class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+
+                <i class="bi bi-shield-lock-fill"></i>
+
+            </div>
+
+            <div>
+
+                <h5>
+
+                    GMCA
+
+                </h5>
+
+                <small>
+
+                    Admin Portal
+
+                </small>
+
+            </div>
+
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="dashboard.html"
+                class="nav-link">
+
+                <i class="bi bi-speedometer2"></i>
+
+                <span>
+
+                    Dashboard
+
+                </span>
+
+            </a>
+
+            <a
+                href="members.html"
+                class="nav-link">
+
+                <i class="bi bi-people-fill"></i>
+
+                <span>
+
+                    Members
+
+                </span>
+
+            </a>
+
+            <a
+                href="applications.html"
+                class="nav-link">
+
+                <i class="bi bi-file-earmark-text"></i>
+
+                <span>
+
+                    Applications
+
+                </span>
+
+            </a>
+
+            <a
+                href="events.html"
+                class="nav-link active">
+
+                <i class="bi bi-calendar-event"></i>
+
+                <span>
+
+                    Events
+
+                </span>
+
+            </a>
+
+            <a
+                href="#"
+                class="nav-link">
+
+                <i class="bi bi-bar-chart"></i>
+
+                <span>
+
+                    Reports
+
+                </span>
+
+            </a>
+
+            <a
+                href="#"
+                class="nav-link">
+
+                <i class="bi bi-gear"></i>
+
+                <span>
+
+                    Settings
+
+                </span>
+
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <button
+                id="logoutBtn"
+                class="btn btn-outline-danger w-100">
+
+                <i class="bi bi-box-arrow-right me-2"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- ======================================================
+         Main Content
+    ======================================================= -->
+
+    <main class="main-content">
+
+        <!-- ======================================================
+             Header
+        ======================================================= -->
+
+        <header class="topbar">
+
+            <div class="d-flex align-items-center">
+
+                <button
+                    id="sidebarToggle"
+                    class="btn btn-light me-3">
+
+                    <i class="bi bi-list"></i>
+
+                </button>
+
+                <div>
+
+                    <h3
+                        id="pageTitle"
+                        class="mb-0">
+
+                        Create Event
+
+                    </h3>
+
+                    <small
+                        class="text-muted">
+
+                        Create a new GMCA event. Only the title and start date are required.
+
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="d-flex align-items-center">
+
+                <div class="dropdown">
+
+                    <button
+                        class="btn btn-light dropdown-toggle"
+                        data-bs-toggle="dropdown">
+
+                        <i class="bi bi-person-circle me-2"></i>
+
+                        <span id="adminName">
+
+                            Administrator
+
+                        </span>
+
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="#">
+
+                                <i class="bi bi-person me-2"></i>
+
+                                Profile
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <hr class="dropdown-divider">
+
+                        </li>
+
+                        <li>
+
+                            <button
+                                id="logoutBtnTop"
+                                class="dropdown-item text-danger">
+
+                                <i class="bi bi-box-arrow-right me-2"></i>
+
+                                Logout
+
+                            </button>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ======================================================
+             Page Banner
+        ======================================================= -->
+
+        <section class="welcome-banner">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <h2 class="mb-2">
+
+                        Event Information
+
+                    </h2>
+
+                    <p class="text-muted mb-0">
+
+                        Start with the essentials. You can save this event as a draft and complete the remaining information whenever you're ready.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+
+                    <a
+                        href="events.html"
+                        class="btn btn-outline-secondary">
+
+                        <i class="bi bi-arrow-left me-2"></i>
+
+                        Back to Events
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ======================================================
+             Event Form
+        ======================================================= -->
+
+        <form id="eventForm">
+
+            <div class="row g-4">
+
+                <!-- ======================================================
+                     General Information
+                ======================================================= -->
+
+                <div class="col-lg-8">
+
+                    <div class="card shadow-sm border-0">
+
+                        <div class="card-header bg-white">
+
+                            <h5 class="mb-0">
+
+                                <i class="bi bi-info-circle-fill text-primary me-2"></i>
+
+                                General Information
+
+                            </h5>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Event Title
+                                    <span class="text-danger">*</span>
+
+                                </label>
+
+                                <input
+                                    id="title"
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Enter event title"
+                                    required>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Description
+
+                                </label>
+
+                                <textarea
+                                    id="description"
+                                    class="form-control"
+                                    rows="5"
+                                    placeholder="Provide a brief description of the event"></textarea>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label class="form-label">
+
+                                        Event Type
+
+                                    </label>
+
+                                    <select
+                                        id="eventType"
+                                        class="form-select">
+
+                                        <option value="">
+
+                                            Select...
+
+                                        </option>
+
+                                        <option>
+
+                                            Conference
+
+                                        </option>
+
+                                        <option>
+
+                                            Summit
+
+                                        </option>
+
+                                        <option>
+
+                                            Workshop
+
+                                        </option>
+
+                                        <option>
+
+                                            Seminar
+
+                                        </option>
+
+                                        <option>
+
+                                            Retreat
+
+                                        </option>
+
+                                        <option>
+
+                                            Training
+
+                                        </option>
+
+                                        <option>
+
+                                            Convention
+
+                                        </option>
+
+                                        <option>
+
+                                            Meeting
+
+                                        </option>
+
+                                        <option>
+
+                                            Other
+
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label class="form-label">
+
+                                        Status
+
+                                    </label>
+
+                                    <select
+                                        id="status"
+                                        class="form-select">
+
+                                        <option selected>
+
+                                            Draft
+
+                                        </option>
+
+                                        <option>
+
+                                            Published
+
+                                        </option>
+
+                                        <option>
+
+                                            Registration Closed
+
+                                        </option>
+
+                                        <option>
+
+                                            Completed
+
+                                        </option>
+
+                                        <option>
+
+                                            Cancelled
+
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-3">
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="isFeatured">
+
+                        <label
+                            class="form-check-label"
+                            for="isFeatured">
+
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+
+                            Show as Signature Event
+
+                        </label>
+
+                    </div>
+
+                    <small class="text-muted">
+
+                        Signature Events appear in the
+                        "Our Signature Events" section
+                        of the public website.
+
+                    </small>
+
+                </div>
+                
+
+                <!-- ======================================================
+                     Schedule
+                ======================================================= -->
+
+                <div class="col-lg-4">
+
+                    <div class="card shadow-sm border-0">
+
+                        <div class="card-header bg-white">
+
+                            <h5 class="mb-0">
+
+                                <i class="bi bi-calendar-event text-success me-2"></i>
+
+                                Schedule
+
+                            </h5>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Start Date
+                                    <span class="text-danger">*</span>
+
+                                </label>
+
+                                <input
+                                    id="startDate"
+                                    type="date"
+                                    class="form-control"
+                                    required>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    End Date
+
+                                </label>
+
+                                <input
+                                    id="endDate"
+                                    type="date"
+                                    class="form-control">
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Start Time
+
+                                </label>
+
+                                <input
+                                    id="startTime"
+                                    type="time"
+                                    class="form-control">
+
+                            </div>
+
+                            <div>
+
+                                <label class="form-label">
+
+                                    End Time
+
+                                </label>
+
+                                <input
+                                    id="endTime"
+                                    type="time"
+                                    class="form-control">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ======================================================
+                     Venue
+                ======================================================= -->
+
+                <div class="col-lg-6">
+
+                    <div class="card shadow-sm border-0">
+
+                        <div class="card-header bg-white">
+
+                            <h5 class="mb-0">
+
+                                <i class="bi bi-geo-alt-fill text-danger me-2"></i>
+
+                                Venue
+
+                            </h5>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Venue
+
+                                </label>
+
+                                <input
+                                    id="venue"
+                                    class="form-control"
+                                    placeholder="Venue name">
+
+                            </div>
+
+                            <div>
+
+                                <label class="form-label">
+
+                                    Location
+
+                                </label>
+
+                                <input
+                                    id="location"
+                                    class="form-control"
+                                    placeholder="City, Country">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ======================================================
+                     Registration
+                ======================================================= -->
+
+                <div class="col-lg-6">
+
+                    <div class="card shadow-sm border-0">
+
+                        <div class="card-header bg-white">
+
+                            <h5 class="mb-0">
+
+                                <i class="bi bi-person-check-fill text-warning me-2"></i>
+
+                                Registration
+
+                            </h5>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label class="form-label">
+
+                                        Opens
+
+                                    </label>
+
+                                    <input
+                                        id="registrationOpen"
+                                        type="date"
+                                        class="form-control">
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label class="form-label">
+
+                                        Closes
+
+                                    </label>
+
+                                    <input
+                                        id="registrationClose"
+                                        type="date"
+                                        class="form-control">
+
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                                <label class="form-label">
+
+                                    Maximum Participants
+
+                                </label>
+
+                                <input
+                                    id="maxParticipants"
+                                    type="number"
+                                    min="0"
+                                    class="form-control"
+                                    placeholder="Leave blank for unlimited">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ======================================================
+                     Payment (Optional)
+                ======================================================= -->
+
+                <div class="col-12">
+
+                    <div class="accordion"
+                         id="paymentAccordion">
+
+                        <div class="accordion-item border-0 shadow-sm">
+
+                            <h2 class="accordion-header">
+
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#paymentSection">
+
+                                    <i class="bi bi-credit-card-fill text-primary me-2"></i>
+
+                                    Payment (Optional)
+
+                                </button>
+
+                            </h2>
+
+                            <div
+                                id="paymentSection"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#paymentAccordion">
+
+                                <div class="accordion-body">
+
+                                    <div class="row">
+
+                                        <div class="col-md-3 mb-3">
+
+                                            <label class="form-label">
+
+                                                Registration Fee
+
+                                            </label>
+
+                                            <input
+                                                id="registrationFee"
+                                                type="number"
+                                                step="0.01"
+                                                class="form-control">
+
+                                        </div>
+
+                                        <div class="col-md-3 mb-3">
+
+                                            <label class="form-label">
+
+                                                Currency
+
+                                            </label>
+
+                                            <input
+                                                id="currency"
+                                                class="form-control"
+                                                placeholder="USD">
+
+                                        </div>
+
+                                        <div class="col-md-3 mb-3">
+
+                                            <label class="form-label">
+
+                                                Payment Gateway
+
+                                            </label>
+
+                                            <input
+                                                id="paymentGateway"
+                                                class="form-control">
+
+                                        </div>
+
+                                        <div class="col-md-3 mb-3">
+
+                                            <label class="form-label">
+
+                                                Payment Link
+
+                                            </label>
+
+                                            <input
+                                                id="paymentLink"
+                                                class="form-control">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ======================================================
+                     External Registration
+                ======================================================= -->
+
+                <div class="col-12">
+
+                    <div class="card shadow-sm border-0">
+
+                        <div class="card-header bg-white">
+
+                            <h5 class="mb-0">
+
+                                <i class="bi bi-link-45deg text-info me-2"></i>
+
+                                External Registration (Optional)
+
+                            </h5>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <label class="form-label">
+
+                                External Registration Link
+
+                            </label>
+
+                            <input
+                                id="externalRegistrationLink"
+                                type="url"
+                                class="form-control"
+                                placeholder="https://...">
+
+                            <small class="text-muted">
+
+                                Leave blank to use the built-in GMCA member registration.
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ======================================================
+                     Action Buttons
+                ======================================================= -->
+
+                <div class="col-12">
+
+                    <div class="card shadow-sm border-0">
+
+                        <div class="card-body">
+
+                            <div class="d-flex flex-wrap gap-2 justify-content-end">
+
+                                <a
+                                    href="events.html"
+                                    class="btn btn-outline-secondary">
+
+                                    <i class="bi bi-x-circle me-2"></i>
+
+                                    Cancel
+
+                                </a>
+
+                                <button
+                                    type="button"
+                                    id="saveDraftBtn"
+                                    class="btn btn-outline-primary">
+
+                                    <i class="bi bi-save me-2"></i>
+
+                                    Save Draft
+
+                                </button>
+
+                                <button
+                                    type="submit"
+                                    id="publishBtn"
+                                    class="btn btn-warning">
+
+                                    <i class="bi bi-check-circle me-2"></i>
+
+                                    Publish Event
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+
+        <!-- ======================================================
+             Footer
+        ======================================================= -->
+
+        <footer class="dashboard-footer mt-5 py-4">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+
+                    <small class="text-muted">
+
+                        &copy; 2026 Global Mentorship & Coaching Alliance (GMCA).
+                        All rights reserved.
+
+                    </small>
+
+                </div>
+
+                <div class="col-md-6 text-md-end mt-2 mt-md-0">
+
+                    <small class="text-muted">
+
+                        GMCA Membership Management System
+                        &middot;
+                        Events Administration
+
+                    </small>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- ==========================================================
+     Bootstrap
+=========================================================== -->
+
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- ==========================================================
+     Core
+=========================================================== -->
+
+<script src="assets/js/core/config.js"></script>
+<script src="assets/js/core/storage.js"></script>
+<script src="assets/js/core/api.js"></script>
+<script src="assets/js/core/auth.js"></script>
+<script src="assets/js/core/utils.js"></script>
+
+<!-- ==========================================================
+     Layout
+=========================================================== -->
+
+<script src="assets/js/layout/sidebar.js"></script>
+<script src="assets/js/layout/header.js"></script>
+
+<!-- ==========================================================
+     Event Create
+=========================================================== -->
+
+<script src="assets/js/pages/event-create.js"></script>
+
+</body>
+
+</html>

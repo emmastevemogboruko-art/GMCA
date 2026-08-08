@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Application Details</title>
+
+    <link rel="stylesheet" href="css/base/admin.css">
+    <link rel="stylesheet" href="css/components/components.css">
+    <link rel="stylesheet" href="css/pages/applications.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Application Details</h1>
+
+    <div id="loading">
+        Loading application...
+    </div>
+
+    <div id="application-content" style="display:none;">
+
+        <div id="application-details"></div>
+
+        <hr>
+
+        <div class="card">
+
+            <h2>Admin Review</h2>
+
+            <label>Status</label>
+
+            <select id="status">
+
+                <option value="Pending">Pending</option>
+                <option value="Approved">Approved</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Hold">Hold</option>
+
+            </select>
+
+            <br><br>
+
+            <label>Admin Notes</label>
+
+            <textarea
+                id="admin_notes"
+                rows="6"
+                placeholder="Write your review here..."
+            ></textarea>
+
+            <br><br>
+
+            <button
+                id="save-btn"
+                class="btn btn-primary">
+
+                Save Changes
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="module">import './js/pages/application.js';</script>
+
+</body>
+</html>

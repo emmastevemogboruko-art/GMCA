@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | GMCA Member Portal</title>
+
+    <!-- ==========================================================
+         Vendor Styles
+    =========================================================== -->
+
+    <link rel="stylesheet"
+          href="../../assets/vendor/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+          href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+    <!-- ==========================================================
+         Member Styles
+    =========================================================== -->
+
+    <link rel="stylesheet"
+          href="css/member.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ==========================================================
+         SIDEBAR
+    =========================================================== -->
+
+    <aside
+        id="sidebar"
+        class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <a
+                href="dashboard.html"
+                class="brand-link">
+
+                <div class="brand-logo">
+
+                    <i class="bi bi-buildings-fill"></i>
+
+                </div>
+
+                <div class="brand-text">
+
+                    <h1>GMCA</h1>
+
+                    <small>Member Portal</small>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <div class="nav-section">
+
+                <span class="nav-title">
+
+                    Main
+
+                </span>
+
+                <ul class="nav flex-column">
+
+                    <li class="nav-item">
+
+                        <a
+                            href="dashboard.html"
+                            class="nav-link">
+
+                            <i class="bi bi-grid-1x2-fill"></i>
+
+                            <span>Dashboard</span>
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            href="profile.html"
+                            class="nav-link active">
+
+                            <i class="bi bi-person-circle"></i>
+
+                            <span>My Profile</span>
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            href="events.html"
+                            class="nav-link">
+
+                            <i class="bi bi-calendar-event"></i>
+
+                            <span>Events</span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <hr>
+
+            <div class="nav-section">
+
+                <span class="nav-title">
+
+                    Account
+
+                </span>
+
+                <ul class="nav flex-column">
+
+                    <li class="nav-item">
+
+                        <a
+                            href="change-password.html"
+                            class="nav-link">
+
+                            <i class="bi bi-shield-lock"></i>
+
+                            <span>Change Password</span>
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            href="#"
+                            id="logoutBtn"
+                            class="nav-link">
+
+                            <i class="bi bi-box-arrow-right"></i>
+
+                            <span>Logout</span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <small>
+
+                © 2026
+                <span>Gospel Music Community Africa</span>
+
+            </small>
+
+        </div>
+
+    </aside>
+
+    <!-- ==========================================================
+         MAIN CONTENT
+    =========================================================== -->
+
+    <div class="app-main">
+
+        <!-- ======================================================
+             HEADER
+        ======================================================= -->
+
+        <header class="app-header">
+
+            <div class="header-left">
+
+                <button
+                    class="btn btn-link sidebar-toggle d-lg-none"
+                    id="sidebarToggle"
+                    type="button">
+
+                    <i class="bi bi-list"></i>
+
+                </button>
+
+                <div>
+
+                    <h2 class="page-title">
+
+                        My Profile
+
+                    </h2>
+
+                    <p
+                        id="currentDate"
+                        class="page-date">
+
+                        Loading...
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="header-right">
+
+                <button
+                    class="btn btn-light notification-btn">
+
+                    <i class="bi bi-bell"></i>
+
+                </button>
+
+                <div class="dropdown">
+
+                    <button
+                        class="btn btn-light dropdown-toggle user-dropdown"
+                        data-bs-toggle="dropdown">
+
+                        <span id="headerMemberName">
+
+                            Loading...
+
+                        </span>
+
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="profile.html">
+
+                                My Profile
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="change-password.html">
+
+                                Change Password
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <hr class="dropdown-divider">
+
+                        </li>
+
+                        <li>
+
+                            <button
+                                id="headerLogoutBtn"
+                                class="dropdown-item">
+
+                                Logout
+
+                            </button>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ======================================================
+             PAGE CONTENT
+        ======================================================= -->
+
+        <main class="app-content">
+
+            <!-- ==================================================
+                 HERO
+            =================================================== -->
+
+            <section class="dashboard-hero">
+
+                <div class="hero-card">
+
+                    <div class="hero-content">
+
+                        <div class="hero-heading">
+
+                            <p class="hero-greeting">
+
+                                Member Profile
+
+                            </p>
+
+                            <h1
+                                id="heroMemberName"
+                                class="hero-name">
+
+                                Loading...
+
+                            </h1>
+
+                            <p class="hero-description">
+
+                                View your personal information,
+                                membership details, ministry information
+                                and contact information.
+
+                            </p>
+
+                        </div>
+
+                        <div class="hero-summary">
+
+                            <div class="summary-item">
+
+                                <span class="summary-label">
+
+                                    Membership Number
+
+                                </span>
+
+                                <strong
+                                    id="membershipNumber">
+
+                                    —
+
+                                </strong>
+
+                            </div>
+
+                            <div class="summary-item">
+
+                                <span class="summary-label">
+
+                                    Status
+
+                                </span>
+
+                                <strong
+                                    id="status">
+
+                                    —
+
+                                </strong>
+
+                            </div>
+
+                            <div class="summary-item">
+
+                                <span class="summary-label">
+
+                                    Member Since
+
+                                </span>
+
+                                <strong
+                                    id="joinedDate">
+
+                                    —
+
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                 PROFILE CONTENT
+            =================================================== -->
+
+            <div class="row g-4">
+            <!-- ==========================================================
+                LEFT COLUMN
+                =========================================================== -->
+
+            <div class="col-lg-6">
+
+    <!-- ======================================================
+         PERSONAL INFORMATION
+    ======================================================= -->
+
+    <section class="profile-section">
+
+        <h4>
+
+            <i class="bi bi-person-fill me-2 text-warning"></i>
+
+            Personal Information
+
+        </h4>
+
+        <div class="profile-grid">
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    First Name
+
+                </span>
+
+                <div
+                    id="firstName"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Middle Name
+
+                </span>
+
+                <div
+                    id="middleName"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Last Name
+
+                </span>
+
+                <div
+                    id="lastName"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Email Address
+
+                </span>
+
+                <div
+                    id="email"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Phone Number
+
+                </span>
+
+                <div
+                    id="phone"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================================
+         MEMBERSHIP INFORMATION
+    ======================================================= -->
+
+    <section class="profile-section">
+
+        <h4>
+
+            <i class="bi bi-patch-check-fill me-2 text-warning"></i>
+
+            Membership Information
+
+        </h4>
+
+        <div class="profile-grid">
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Membership Number
+
+                </span>
+
+                <div
+                    id="membershipNumberInfo"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Category
+
+                </span>
+
+                <div
+                    id="category"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Membership Status
+
+                </span>
+
+                <div
+                    id="membershipStatus"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Joined Date
+
+                </span>
+
+                <div
+                    id="joinedDateInfo"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- ==========================================================
+     RIGHT COLUMN
+=========================================================== -->
+
+<div class="col-lg-6">
+
+    <!-- ======================================================
+         MINISTRY INFORMATION
+    ======================================================= -->
+
+    <section class="profile-section">
+
+        <h4>
+
+            <i class="bi bi-music-note-beamed me-2 text-warning"></i>
+
+            Ministry Information
+
+        </h4>
+
+        <div class="profile-grid">
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Church Name
+
+                </span>
+
+                <div
+                    id="churchName"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Ministry Name
+
+                </span>
+
+                <div
+                    id="ministryName"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Denomination
+
+                </span>
+
+                <div
+                    id="denomination"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Occupation
+
+                </span>
+
+                <div
+                    id="occupation"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================================
+         ADDRESS INFORMATION
+    ======================================================= -->
+
+    <section class="profile-section">
+
+        <h4>
+
+            <i class="bi bi-geo-alt-fill me-2 text-warning"></i>
+
+            Address Information
+
+        </h4>
+
+        <div class="profile-grid">
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    Country
+
+                </span>
+
+                <div
+                    id="country"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    State / Province
+
+                </span>
+
+                <div
+                    id="stateProvince"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    City
+
+                </span>
+
+                <div
+                    id="city"
+                    class="info-value">
+
+                    —
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+</div>
+
+</main>
+
+<!-- ==========================================================
+     FOOTER
+=========================================================== -->
+
+<footer class="app-footer">
+
+    <small>
+
+        © 2026 Gospel Music Community Africa
+
+    </small>
+
+</footer>
+
+</div>
+
+</div>
+
+<!-- ==========================================================
+     LOADING OVERLAY
+=========================================================== -->
+
+<div
+    id="loadingOverlay"
+    class="loading-overlay d-none">
+
+    <div
+        class="spinner-border text-warning"
+        role="status">
+
+        <span class="visually-hidden">
+
+            Loading...
+
+        </span>
+
+    </div>
+
+</div>
+
+<!-- ==========================================================
+     VENDOR SCRIPTS
+=========================================================== -->
+
+<script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- ==========================================================
+     CORE
+=========================================================== -->
+
+<script src="js/config.js"></script>
+<script src="js/core/storage.js"></script>
+<script src="js/core/api.js"></script>
+<script src="js/core/auth.js"></script>
+<script src="js/core/layout.js"></script>
+
+<!-- ==========================================================
+     PAGE
+=========================================================== -->
+
+<script src="js/profile.js"></script>
+
+</body>
+
+</html>

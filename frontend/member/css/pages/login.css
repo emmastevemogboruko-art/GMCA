@@ -1,0 +1,276 @@
+/* ==========================================================
+   GMCA Member Portal
+   Login Page Styles
+   ========================================================== */
+
+/* ---------- Root ---------- */
+
+:root {
+    --gmca-primary: #0d6efd;
+    --gmca-primary-dark: #0b5ed7;
+    --gmca-secondary: #6c757d;
+    --gmca-light: #f8f9fa;
+    --gmca-border: #dee2e6;
+    --gmca-text: #212529;
+    --gmca-muted: #6c757d;
+    --gmca-white: #ffffff;
+
+    --card-radius: 18px;
+    --input-radius: 10px;
+    --transition: .25s ease;
+}
+
+
+/* ---------- Page ---------- */
+
+body {
+    background:
+        linear-gradient(
+            135deg,
+            #f4f8fc 0%,
+            #edf3fa 100%
+        );
+
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    color: var(--gmca-text);
+}
+
+
+/* ---------- Card ---------- */
+
+.card {
+
+    border: none;
+
+    border-radius: var(--card-radius);
+
+    overflow: hidden;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.08);
+
+    animation:
+        fadeIn .45s ease;
+}
+
+
+/* ---------- Card Body ---------- */
+
+.card-body {
+
+    padding: 3rem;
+
+}
+
+
+/* ---------- Logo ---------- */
+
+.card img {
+
+    max-width: 90px;
+
+    transition: var(--transition);
+
+}
+
+.card img:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* ---------- Heading ---------- */
+
+.card h3 {
+
+    font-weight: 700;
+
+    color: var(--gmca-text);
+
+}
+
+.card p {
+
+    color: var(--gmca-muted);
+
+}
+
+
+/* ---------- Labels ---------- */
+
+.form-label {
+
+    font-weight: 600;
+
+    color: var(--gmca-text);
+
+}
+
+
+/* ---------- Inputs ---------- */
+
+.form-control {
+
+    border-radius: var(--input-radius);
+
+    min-height: 48px;
+
+    border: 1px solid var(--gmca-border);
+
+    transition: var(--transition);
+
+}
+
+.form-control:focus {
+
+    border-color: var(--gmca-primary);
+
+    box-shadow:
+        0 0 0 .2rem rgba(13,110,253,.15);
+
+}
+
+
+/* ---------- Password Button ---------- */
+
+.input-group .btn {
+
+    border-radius:
+        0 var(--input-radius)
+        var(--input-radius) 0;
+
+}
+
+#togglePassword {
+
+    min-width: 52px;
+
+}
+
+
+/* ---------- Login Button ---------- */
+
+.btn-primary {
+
+    border-radius: var(--input-radius);
+
+    font-weight: 600;
+
+    min-height: 50px;
+
+    transition: var(--transition);
+
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 18px rgba(13,110,253,.25);
+
+}
+
+
+/* ---------- Spinner ---------- */
+
+.spinner-border {
+
+    vertical-align: middle;
+
+}
+
+
+/* ---------- Footer ---------- */
+
+.card-footer {
+
+    background: var(--gmca-white);
+
+    border-top: 1px solid #efefef;
+
+    padding: 1rem;
+
+}
+
+
+/* ---------- Alert ---------- */
+
+.alert {
+
+    border-radius: 10px;
+
+}
+
+
+/* ---------- Fade Animation ---------- */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+
+    .card-body {
+
+        padding: 2rem;
+
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .card {
+
+        margin: 1rem;
+
+        border-radius: 14px;
+
+    }
+
+    .card-body {
+
+        padding: 1.75rem;
+
+    }
+
+    .card img {
+
+        max-width: 72px;
+
+    }
+
+    .card h3 {
+
+        font-size: 1.5rem;
+
+    }
+
+}
