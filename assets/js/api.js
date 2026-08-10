@@ -10,7 +10,7 @@ window.GMCA = window.GMCA || {};
 
 GMCA.api = (() => {
 
-    const API_URL = "http://localhost:5000/api";
+    const API_URL = "https://gmca-lu67.onrender.com/api";
 
     /**
      * ------------------------------------------------------
