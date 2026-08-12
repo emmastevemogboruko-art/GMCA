@@ -3689,3 +3689,125 @@ section .section-intro {
         font-weight: 700;
     }
 }
+
+/* =========================================================
+   PASS 2 — CHANGE 2B
+   COMPACT MOBILE HEADER
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Keep header compact */
+    header,
+    .navbar,
+    .site-header {
+        position: relative !important;
+        z-index: 1000 !important;
+        background: #171717 !important;
+    }
+
+    /* Header container becomes positioning reference */
+    header .container,
+    .navbar .container,
+    .site-header .container {
+        position: relative !important;
+        min-height: 88px !important;
+        height: 88px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* Brand stays on the left */
+    .navbar-brand {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Smaller, cleaner mobile logo */
+    .navbar-brand img {
+        width: 64px !important;
+        height: 64px !important;
+        object-fit: contain !important;
+        background: #fff !important;
+        border-radius: 2px !important;
+    }
+
+    /* Hamburger sits on SAME ROW as logo */
+    .navbar-toggler {
+        position: absolute !important;
+        top: 21px !important;
+        right: 0 !important;
+
+        width: 46px !important;
+        height: 46px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        background: #d4aa24 !important;
+        border: none !important;
+        border-radius: 8px !important;
+
+        z-index: 1100 !important;
+    }
+
+    /* Three-line hamburger */
+    .navbar-toggler-icon {
+        width: 22px !important;
+        height: 22px !important;
+        position: relative !important;
+        background: none !important;
+        background-image: none !important;
+    }
+
+    .navbar-toggler-icon::before {
+        content: "" !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 3px !important;
+
+        width: 22px !important;
+        height: 2px !important;
+
+        background: #171717 !important;
+        border-radius: 2px !important;
+
+        box-shadow:
+            0 7px 0 #171717,
+            0 14px 0 #171717 !important;
+    }
+
+    /* Mobile dropdown starts directly beneath header */
+    .navbar-collapse {
+        position: absolute !important;
+
+        top: 88px !important;
+        left: 0 !important;
+        right: 0 !important;
+
+        width: 100% !important;
+
+        background: #111111 !important;
+        opacity: 1 !important;
+
+        border-top: 1px solid rgba(212,170,36,0.35) !important;
+        border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+
+        box-shadow: 0 16px 30px rgba(0,0,0,0.4) !important;
+
+        z-index: 2000 !important;
+    }
+
+    .navbar-collapse.show,
+    .navbar-collapse.collapsing {
+        background: #111111 !important;
+        opacity: 1 !important;
+    }
+}
