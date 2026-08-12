@@ -257,6 +257,64 @@ body{
     color:#111;
 
 }
+
+/* ==========================================
+   HERO CONTENT
+========================================== */
+
+.hero-section {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    padding-top: 70px;
+}
+
+.hero-title {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-text {
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================
+   HERO - MOBILE
+========================================== */
+
+@media (max-width: 767.98px) {
+
+    .hero-section {
+        min-height: 590px;
+    }
+
+    .hero-content {
+        padding: 60px 20px 20px;
+    }
+
+    .hero-title {
+        font-size: 42px;
+        line-height: 1.08;
+    }
+
+    .hero-text {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+}
+
 /* ==========================================
    ABOUT PREVIEW
 ========================================== */
@@ -3082,4 +3140,375 @@ line-height:1.9;
 
     }
 
+}
+
+/* =========================================================
+   PASS 1 — CHANGE 2/5
+   Tighter vertical rhythm across the homepage
+   ========================================================= */
+
+section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+/* Reduce excessive spacing around section headings */
+.section-header,
+.section-heading {
+    margin-bottom: 35px;
+}
+
+/* Keep content from creating unnecessarily tall sections */
+.section-content {
+    margin-bottom: 30px;
+}
+
+/* Tighter card spacing */
+.card {
+    padding: 24px;
+}
+
+.card-grid {
+    gap: 24px;
+}
+
+/* Homepage-specific spacing */
+.hero + section {
+    padding-top: 65px;
+}
+
+/* Reduce large gaps between homepage sections */
+.home-section {
+    margin-bottom: 0;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    section {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .section-header,
+    .section-heading {
+        margin-bottom: 28px;
+    }
+
+    .card-grid {
+        gap: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    section {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+
+    .section-header,
+    .section-heading {
+        margin-bottom: 22px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card-grid {
+        gap: 16px;
+    }
+
+    .hero + section {
+        padding-top: 42px;
+    }
+}
+
+/* =========================================================
+   PASS 1 — CHANGE 3/5
+   Mobile navigation dropdown
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Keep the navbar above everything else */
+    .navbar,
+    nav {
+        position: relative;
+        z-index: 1000;
+    }
+
+    /* Make the collapsed menu a proper solid dropdown */
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+
+        background: #111111;
+        background-color: #111111;
+
+        padding: 14px 20px 20px;
+
+        z-index: 9999;
+
+        border-top: 1px solid rgba(212, 166, 30, 0.25);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Keep the mobile navigation links stacked */
+    .navbar-collapse .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 4px;
+    }
+
+    .navbar-collapse .nav-link {
+        display: block;
+        width: 100%;
+        padding: 12px 10px;
+
+        color: #ffffff;
+        background: transparent;
+
+        text-align: left;
+    }
+
+    .navbar-collapse .nav-link:hover,
+    .navbar-collapse .nav-link:focus {
+        color: #d4a61e;
+        background: rgba(212, 166, 30, 0.08);
+    }
+
+    /* Keep the Join button inside the dropdown */
+    .navbar-collapse .btn,
+    .navbar-collapse .join-btn {
+        width: 100%;
+        margin-top: 8px;
+        text-align: center;
+    }
+}
+
+/* =========================================================
+   PASS 1 — CHANGE 4/5
+   Compact homepage cards
+   ========================================================= */
+
+/* Program / event / content cards */
+.program-card,
+.event-card,
+.community-card,
+.testimonial-card {
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+/* Keep card images visually strong without making them enormous */
+.program-card img,
+.event-card img,
+.community-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Reduce the amount of empty space inside cards */
+.program-card .card-body,
+.event-card .card-body,
+.community-card .card-body {
+    padding: 22px 24px 24px;
+}
+
+/* Card headings */
+.program-card h3,
+.event-card h3,
+.community-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+/* Card descriptions */
+.program-card p,
+.event-card p,
+.community-card p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+/* Make "Learn More" links compact */
+.program-card a,
+.event-card a,
+.community-card a {
+    margin-top: 8px;
+}
+
+/* =========================================================
+   MOBILE CARD OPTIMIZATION
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .program-card,
+    .event-card,
+    .community-card,
+    .testimonial-card {
+        border-radius: 18px;
+    }
+
+    .program-card img,
+    .event-card img,
+    .community-card img {
+        height: 170px;
+    }
+
+    .program-card .card-body,
+    .event-card .card-body,
+    .community-card .card-body {
+        padding: 18px 18px 20px;
+    }
+
+    .program-card h3,
+    .event-card h3,
+    .community-card h3 {
+        font-size: 1.25rem;
+        line-height: 1.25;
+        margin-bottom: 10px;
+    }
+
+    .program-card p,
+    .event-card p,
+    .community-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+}
+
+/* =========================================================
+   PASS 1 — CHANGE 5/5
+   Reduce excessive spacing between homepage sections
+   ========================================================= */
+
+/* Tighten the main homepage sections */
+section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Reduce vertical padding between sections */
+section:not(.hero):not(footer) {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+}
+
+/* Keep section headings from creating oversized gaps */
+section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Reduce the gap beneath section intro text */
+section > .container > p,
+section .section-intro {
+    margin-bottom: 25px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    section:not(.hero):not(footer) {
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+    }
+
+    section h2 {
+        margin-bottom: 16px;
+    }
+
+    section > .container > p,
+    section .section-intro {
+        margin-bottom: 20px;
+    }
+}
+
+/* =========================================================
+   PASS 2 — CHANGE 1/5
+   Prevent fixed navbar from covering section content
+   ========================================================= */
+
+html {
+    scroll-padding-top: 90px;
+}
+
+/* Give anchor-target sections breathing room below the navbar */
+section[id],
+div[id] {
+    scroll-margin-top: 90px;
+}
+
+/* Keep the first section positioned correctly below the navbar */
+.hero {
+    scroll-margin-top: 0;
+}
+
+@media (max-width: 767px) {
+    html {
+        scroll-padding-top: 76px;
+    }
+
+    section[id],
+    div[id] {
+        scroll-margin-top: 76px;
+    }
+}
+
+/* =========================================================
+   PASS 2 — CHANGE 2/5
+   Responsive typography scale
+   ========================================================= */
+
+/* Main section headings */
+section h2 {
+    font-size: clamp(2rem, 3.5vw, 3.25rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+}
+
+/* Section supporting text */
+section > .container > p,
+section .section-intro {
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    line-height: 1.6;
+}
+
+/* Card headings */
+.program-card h3,
+.event-card h3,
+.community-card h3 {
+    line-height: 1.25;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    section h2 {
+        font-size: clamp(1.8rem, 8vw, 2.35rem);
+        line-height: 1.15;
+        letter-spacing: -0.015em;
+    }
+
+    section > .container > p,
+    section .section-intro {
+        font-size: 1rem;
+        line-height: 1.55;
+    }
 }
