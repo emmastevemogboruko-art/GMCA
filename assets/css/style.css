@@ -4300,3 +4300,94 @@ section .section-intro {
     }
 
 }
+
+/* ==========================================
+   PROGRAMS HERO — GMCA SHARED STYLE
+========================================== */
+
+.programs-hero {
+    position: relative;
+
+    min-height: 680px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.68)
+        ),
+        url("../images/programs/programs.jpg") center/cover no-repeat;
+
+    color: #fff;
+}
+
+.programs-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.programs-hero .hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 900px;
+
+    padding-top: 70px;
+}
+
+.programs-hero .hero-title {
+    max-width: 900px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.programs-hero .hero-text {
+    max-width: 780px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ==========================================
+   PROGRAMS HERO — MOBILE
+========================================== */
+
+@media (max-width: 767.98px) {
+
+    .programs-hero {
+        min-height: 650px;
+
+        padding: 105px 0 60px;
+
+        background:
+            linear-gradient(
+                rgba(0, 0, 0, 0.52),
+                rgba(0, 0, 0, 0.66)
+            ),
+            url("../images/programs/programs.jpg") center/cover no-repeat;
+    }
+
+    .programs-hero .hero-content {
+        padding: 20px;
+    }
+
+    .programs-hero .hero-title {
+        font-size: 42px;
+        line-height: 1.08;
+
+        margin: 22px auto;
+    }
+
+    .programs-hero .hero-text {
+        font-size: 15px;
+        line-height: 1.7;
+
+        max-width: 700px;
+    }
+
+}
