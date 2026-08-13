@@ -156,7 +156,7 @@ function buildEventCard(event) {
                         src="${
                             event.banner_image ||
 
-                            "assets/images/events/default-event.jpg"
+                            "assets/images/events/event-1.jpg"
                         }"
 
                         class="img-fluid"
