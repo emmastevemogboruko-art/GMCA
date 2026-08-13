@@ -2347,7 +2347,7 @@ body{
 
     position:relative;
 
-    min-height:620px;
+    min-height:560px;
 
     display:flex;
 
@@ -2357,7 +2357,7 @@ body{
 
     color:#fff;
 
-    padding-top:90px;
+    padding-top:70px;
 
 }
 
@@ -2407,7 +2407,7 @@ body{
 
     max-width:760px;
 
-    padding-top:30px;
+    padding-top:10px;
 
 }
 
@@ -2415,13 +2415,13 @@ body{
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:4rem;
+    font-size:3.7rem;
 
     font-weight:700;
 
     line-height:1.08;
 
-    margin:25px 0;
+    margin:20px 0;
 
 }
 
@@ -2431,9 +2431,9 @@ body{
 
     font-size:1.1rem;
 
-    line-height:1.8;
+    line-height:1.75;
 
-    margin-bottom:30px;
+    margin-bottom:28px;
 
 }
 
