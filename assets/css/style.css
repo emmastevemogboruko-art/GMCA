@@ -4072,3 +4072,76 @@ section .section-intro {
         padding: 11px 20px !important;
     }
 }
+
+/* ==========================================
+   GMCA — SHARED PAGE HERO MOBILE FIX
+   About / Programs / Community / Events / Contact
+========================================== */
+
+@media (max-width: 767.98px) {
+
+    /* Keep page heroes clear of the fixed navigation */
+    .about-hero,
+    .page-hero,
+    .inner-hero {
+        min-height: 590px;
+        height: auto;
+        padding-top: 105px;
+        padding-bottom: 55px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    /* Keep hero content inside the visible hero */
+    .about-hero .container,
+    .page-hero .container,
+    .inner-hero .container {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .about-hero .hero-content,
+    .page-hero .hero-content,
+    .inner-hero .hero-content {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    /* Page hero headings */
+    .about-hero h1,
+    .page-hero h1,
+    .inner-hero h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 42px;
+        line-height: 1.08;
+        font-weight: 700;
+        margin: 22px auto;
+        max-width: 900px;
+        color: #fff;
+    }
+
+    /* Page hero descriptions */
+    .about-hero p,
+    .page-hero p,
+    .inner-hero p {
+        font-size: 15px;
+        line-height: 1.7;
+        max-width: 780px;
+        margin: 0 auto;
+        color: #fff;
+    }
+
+    /* Gold page label */
+    .about-hero .section-tag,
+    .page-hero .section-tag,
+    .inner-hero .section-tag {
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+}
