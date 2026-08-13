@@ -1924,165 +1924,178 @@ body{
 ==========================================*/
 
 .upcoming-events{
-
     background:#FCFBF7;
-
 }
 
+/* Compact premium event card */
 .event-premium-card{
-
     position:relative;
-
     background:#fff;
-
-    border-radius:22px;
-
-    padding:35px 30px;
-
+    border-radius:18px;
+    padding:22px 22px 24px;
     height:100%;
-
-    border-top:5px solid #C9A227;
-
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
-
-    transition:.35s ease;
-
+    border-top:3px solid #C9A227;
+    box-shadow:0 8px 24px rgba(0,0,0,.07);
+    transition:.3s ease;
+    overflow:hidden;
 }
 
 .event-premium-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 20px 45px rgba(0,0,0,.14);
-
+    transform:translateY(-4px);
+    box-shadow:0 14px 32px rgba(0,0,0,.11);
 }
 
+/* Event image */
+.event-premium-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+    border-radius:13px;
+    margin-bottom:18px;
+}
+
+/* Date badge */
 .event-date-badge{
-
-    width:78px;
-
-    height:78px;
-
-    border-radius:18px;
-
+    width:62px;
+    height:62px;
+    border-radius:14px;
     background:#C9A227;
-
     color:#fff;
-
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
-
     justify-content:center;
-
     font-weight:600;
-
-    margin-bottom:25px;
-
+    margin-bottom:16px;
 }
 
 .event-date-badge small{
-
-    font-size:.8rem;
-
+    font-size:.7rem;
     letter-spacing:1px;
-
 }
 
 .event-date-badge span{
-
-    font-size:2rem;
-
+    font-size:1.55rem;
     line-height:1;
-
     font-weight:700;
-
 }
 
+/* Category */
 .event-category{
-
     display:inline-block;
-
     background:#F5E9BE;
-
     color:#8A6A16;
-
-    padding:6px 14px;
-
+    padding:5px 12px;
     border-radius:50px;
-
-    font-size:.8rem;
-
+    font-size:.72rem;
     font-weight:600;
-
-    margin-bottom:18px;
-
+    margin-bottom:12px;
 }
 
+/* Event content */
 .event-body h4{
-
-    margin-bottom:18px;
-
-}
-
-.event-meta{
-
-    list-style:none;
-
-    padding:0;
-
-    margin:0 0 20px;
-
-}
-
-.event-meta li{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    margin-bottom:10px;
-
-    color:#666;
-
-}
-
-.event-meta i{
-
-    color:#C9A227;
-
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.65rem;
+    line-height:1.15;
+    margin-bottom:12px;
+    color:#171717;
 }
 
 .event-body p{
-
     color:#555;
-
-    margin-bottom:25px;
-
+    font-size:.92rem;
+    line-height:1.65;
+    margin-bottom:18px;
 }
 
-.event-link{
+/* Metadata */
+.event-meta{
+    list-style:none;
+    padding:0;
+    margin:0 0 18px;
+}
 
+.event-meta li{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    margin-bottom:8px;
+    color:#666;
+    font-size:.88rem;
+}
+
+.event-meta i{
     color:#C9A227;
+    width:16px;
+}
 
+/* CTA */
+.event-link{
+    color:#C9A227;
     font-weight:600;
-
     text-decoration:none;
-
     transition:.3s;
-
 }
 
 .event-link:hover{
-
     color:#A8841F;
+}
 
-    letter-spacing:.5px;
+/*==========================================
+    UPCOMING EVENTS - MOBILE
+==========================================*/
 
+@media(max-width:767.98px){
+
+    .event-premium-card{
+        padding:16px 16px 20px;
+        border-radius:16px;
+        border-top-width:3px;
+    }
+
+    .event-premium-card img{
+        height:175px;
+        border-radius:11px;
+        margin-bottom:15px;
+    }
+
+    .event-date-badge{
+        width:56px;
+        height:56px;
+        border-radius:12px;
+        margin-bottom:13px;
+    }
+
+    .event-date-badge span{
+        font-size:1.4rem;
+    }
+
+    .event-category{
+        font-size:.68rem;
+        padding:5px 11px;
+        margin-bottom:10px;
+    }
+
+    .event-body h4{
+        font-size:1.45rem;
+        margin-bottom:10px;
+    }
+
+    .event-body p{
+        font-size:.88rem;
+        line-height:1.6;
+        margin-bottom:15px;
+    }
+
+    .event-meta{
+        margin-bottom:15px;
+    }
+
+    .event-meta li{
+        font-size:.82rem;
+        margin-bottom:7px;
+    }
 }
 /*==========================================
     SIGNATURE EVENTS
