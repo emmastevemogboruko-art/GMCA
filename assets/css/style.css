@@ -4201,3 +4201,102 @@ section .section-intro {
     }
 
 }
+
+/* ==========================================
+   GMCA — COMPACT CARD SYSTEM
+========================================== */
+
+.card {
+    border-radius: 22px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+
+/* Card images */
+
+.card img {
+    max-height: 220px;
+    object-fit: cover;
+}
+
+
+/* Card body */
+
+.card .card-body {
+    padding: 22px;
+}
+
+
+/* Card headings */
+
+.card .card-title {
+    font-size: 1.25rem;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+
+/* Card paragraphs */
+
+.card .card-text {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 16px;
+}
+
+
+/* Card links/buttons */
+
+.card .btn,
+.card a:not(.stretched-link) {
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================
+   COMPACT CARD GRID SPACING
+========================================== */
+
+.row.g-4 {
+    --bs-gutter-x: 1.25rem;
+    --bs-gutter-y: 1.25rem;
+}
+
+
+/* ==========================================
+   MOBILE CARD OPTIMIZATION
+========================================== */
+
+@media (max-width: 767.98px) {
+
+    .card {
+        border-radius: 18px;
+        margin-bottom: 18px;
+    }
+
+    .card img {
+        max-height: 190px;
+    }
+
+    .card .card-body {
+        padding: 18px;
+    }
+
+    .card .card-title {
+        font-size: 1.15rem;
+        margin-bottom: 9px;
+    }
+
+    .card .card-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 13px;
+    }
+
+    .row.g-4 {
+        --bs-gutter-x: 0.9rem;
+        --bs-gutter-y: 0.9rem;
+    }
+
+}
