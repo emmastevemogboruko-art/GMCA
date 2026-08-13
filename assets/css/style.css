@@ -709,43 +709,99 @@ body{
     color:#C9A227;
 
 }
+
 /* ==========================================
-   ABOUT HERO
+   ABOUT HERO — GMCA SHARED HERO STYLE
 ========================================== */
 
-.about-hero{
+.about-hero {
+    position: relative;
+    min-height: 680px;
+    padding: 120px 0 80px;
 
-padding:160px 0 100px;
+    display: flex;
+    align-items: center;
 
-background:
-linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),
-url("../images/about/about.jpg") center/cover;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.68)
+        ),
+        url("../images/about/about.jpg");
 
-color:#fff;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: #fff;
+}
+
+.about-hero .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.about-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.08;
+    margin: 25px auto;
+    max-width: 900px;
+    color: #fff;
+}
+
+.about-hero p {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #fff;
+}
+
+
+/* ==========================================
+   ABOUT HERO — MOBILE
+========================================== */
+
+@media (max-width: 767.98px) {
+
+    .about-hero {
+        min-height: 650px;
+        height: auto;
+        padding: 105px 0 60px;
+
+        background-image:
+            linear-gradient(
+                rgba(0, 0, 0, 0.52),
+                rgba(0, 0, 0, 0.66)
+            ),
+            url("../images/about/about.jpg");
+
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .about-hero .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .about-hero h1 {
+        font-size: 42px;
+        line-height: 1.08;
+        margin: 22px auto;
+    }
+
+    .about-hero p {
+        font-size: 15px;
+        line-height: 1.7;
+        max-width: 700px;
+    }
 
 }
 
-.about-hero h1{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:4rem;
-
-margin:25px 0;
-
-}
-
-.about-hero p{
-
-max-width:750px;
-
-margin:auto;
-
-font-size:1.1rem;
-
-line-height:1.9;
-
-}
 /* ==========================================
    ABOUT VALUES
 ========================================== */
