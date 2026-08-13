@@ -3910,3 +3910,49 @@ section .section-intro {
         display: none !important;
     }
 }
+
+/* =========================================================
+   FIX — MOBILE HERO IMAGE RESTORATION
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Do NOT let the mobile header styles affect the hero */
+    .hero-section {
+        background:
+            linear-gradient(
+                rgba(0,0,0,.52),
+                rgba(0,0,0,.60)
+            ),
+            url("../images/hero/hero.jpg") center center / cover no-repeat !important;
+
+        min-height: 700px !important;
+        position: relative !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* The hero must not inherit the header's solid background */
+    .hero-section {
+        background-color: transparent !important;
+    }
+
+    .hero-section .hero-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .hero-section .container {
+        position: relative;
+        z-index: 2;
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+    .hero-section .hero-content {
+        position: relative;
+        z-index: 3;
+    }
+}
