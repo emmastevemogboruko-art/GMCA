@@ -3811,3 +3811,102 @@ section .section-intro {
         opacity: 1 !important;
     }
 }
+
+/* =========================================================
+   PASS 2 — CHANGE 3
+   MOBILE HERO REFINEMENT
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .hero,
+    .hero-section,
+    .home-hero {
+        position: relative !important;
+        min-height: 700px !important;
+        height: auto !important;
+
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+
+    /* Restore the photograph while keeping text readable */
+    .hero::before,
+    .hero-section::before,
+    .home-hero::before {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0,0,0,0.55) 0%,
+                rgba(0,0,0,0.62) 45%,
+                rgba(0,0,0,0.72) 100%
+            ) !important;
+
+        z-index: 1 !important;
+    }
+
+    .hero > *,
+    .hero-section > *,
+    .home-hero > * {
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    /* Hero content */
+    .hero-content {
+        padding: 72px 22px 70px !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    /* Gold label */
+    .hero-content .hero-badge,
+    .hero-content .badge,
+    .hero-content .eyebrow {
+        display: inline-block !important;
+
+        margin: 0 auto 28px !important;
+        padding: 13px 24px !important;
+
+        border-radius: 999px !important;
+
+        background: rgba(212,170,36,0.18) !important;
+        border: 1px solid rgba(212,170,36,0.12) !important;
+
+        color: #d4aa24 !important;
+    }
+
+    /* Main heading */
+    .hero-content h1 {
+        max-width: 390px !important;
+
+        margin: 0 auto 28px !important;
+
+        font-size: clamp(2.5rem, 9vw, 3.5rem) !important;
+        line-height: 1.08 !important;
+
+        text-align: center !important;
+    }
+
+    /* Description */
+    .hero-content p {
+        max-width: 390px !important;
+
+        margin: 0 auto !important;
+
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+
+        text-align: center !important;
+    }
+
+    /* Hide hero CTA buttons on mobile */
+    .hero-content .hero-buttons,
+    .hero-content .cta-buttons {
+        display: none !important;
+    }
+}
