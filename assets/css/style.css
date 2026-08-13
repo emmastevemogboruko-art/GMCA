@@ -1465,33 +1465,66 @@ body{
     }
 
 }
-/*==========================================
+/* ==========================================
    COMMUNITY INTRO
-==========================================*/
+========================================== */
 
-.community-intro{
-
-    background:#fff;
-
+.community-intro {
+    background: #fff;
+    padding: 80px 0;
 }
 
-.community-intro img{
-
-    border-radius:20px;
-
-    transition:.4s;
-
+.community-intro img {
+    width: 100%;
+    max-width: 650px;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+    margin: 0 auto;
+    transition: transform .4s ease;
 }
 
-.community-intro img:hover{
-
-    transform:scale(1.02);
-
+.community-intro img:hover {
+    transform: scale(1.015);
 }
 
-.community-intro .section-title{
+.community-intro .section-title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
 
-    margin-top:20px;
+.community-intro p {
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+
+/* ==========================================
+   COMMUNITY INTRO - MOBILE
+========================================== */
+
+@media (max-width: 767.98px) {
+
+    .community-intro {
+        padding: 55px 16px;
+    }
+
+    .community-intro img {
+        max-width: 100%;
+        max-height: 300px;
+        border-radius: 16px;
+    }
+
+    .community-intro .section-title {
+        margin-top: 28px;
+        margin-bottom: 16px;
+    }
+
+    .community-intro p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
 
 }
 /*==========================================
