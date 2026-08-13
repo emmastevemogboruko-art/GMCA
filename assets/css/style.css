@@ -2502,160 +2502,83 @@ body{
 
 }
 /*==========================================
-    CONTACT INFO
+   CONTACT INTRO / LET'S CONNECT
 ==========================================*/
 
-.contact-info{
+.contact-intro{
 
     background:#FCFBF7;
 
-}
-
-.contact-premium-card{
-
-    background:#fff;
-
-    border-radius:22px;
-
-    padding:35px;
-
-    height:100%;
+    padding:75px 0 55px;
 
     text-align:center;
 
-    border-top:5px solid #C9A227;
-
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-
-    transition:.35s ease;
-
 }
 
-.contact-premium-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 20px 45px rgba(0,0,0,.14);
-
-}
-
-.contact-icon{
-
-    width:72px;
-
-    height:72px;
-
-    margin:0 auto 25px;
-
-    border-radius:50%;
-
-    background:#F5E9BE;
-
-    color:#C9A227;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:2rem;
-
-}
-
-.contact-premium-card h4{
-
-    margin-bottom:15px;
-
-}
-
-.contact-main{
-
-    font-weight:600;
-
-    color:#222;
-
-    margin-bottom:8px;
-
-}
-
-.contact-sub{
-
-    color:#666;
-
-    min-height:50px;
-
-}
-
-.contact-divider{
-
-    width:60px;
-
-    height:3px;
-
-    background:#C9A227;
-
-    margin:22px auto;
-
-    border-radius:10px;
-
-}
-
-.contact-link{
-
-    color:#C9A227;
-
-    font-weight:600;
-
-    text-decoration:none;
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    transition:.3s;
-
-}
-
-.contact-link:hover{
-
-    color:#9A7A16;
-
-    gap:12px;
-
-}
-
-.contact-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 20px 45px rgba(0,0,0,.12);
-
-}
-
-.contact-card i{
-
-    font-size:3rem;
-
-    color:#C9A227;
+.contact-intro .section-tag{
 
     margin-bottom:20px;
 
 }
 
-.contact-card h4{
+.contact-intro .section-title{
 
-    margin-bottom:15px;
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3.4rem;
+
+    line-height:1.1;
+
+    margin:0 auto 20px;
+
+    color:#111;
 
 }
 
-.contact-card p{
+.contact-intro p{
 
-    color:#666;
+    max-width:850px;
+
+    margin:0 auto;
+
+    font-size:1.05rem;
 
     line-height:1.8;
+
+    color:#555;
+
+}
+
+
+/*==========================================
+   CONTACT INTRO - MOBILE
+==========================================*/
+
+@media(max-width:767.98px){
+
+    .contact-intro{
+
+        padding:55px 20px 40px;
+
+    }
+
+    .contact-intro .section-title{
+
+        font-size:42px;
+
+        line-height:1.08;
+
+        margin-bottom:18px;
+
+    }
+
+    .contact-intro p{
+
+        font-size:15px;
+
+        line-height:1.7;
+
+    }
 
 }
 /*==========================================
@@ -4682,6 +4605,196 @@ section .section-intro {
     .equip-feature-card {
         min-height: auto;
         padding: 20px;
+    }
+
+}
+
+/*==========================================
+   CONTACT INFORMATION CARDS
+==========================================*/
+
+.contact-premium-card{
+
+    height:100%;
+
+    background:#fff;
+
+    border:1px solid rgba(201,162,39,.18);
+
+    border-radius:18px;
+
+    padding:28px 26px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+    transition:.3s ease;
+
+}
+
+.contact-premium-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:rgba(201,162,39,.38);
+
+    box-shadow:0 14px 32px rgba(0,0,0,.09);
+
+}
+
+
+/*==========================================
+   CONTACT ICON
+==========================================*/
+
+.contact-icon{
+
+    width:44px;
+
+    height:44px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#F5E9BE;
+
+    color:#C9A227;
+
+    font-size:1rem;
+
+    margin-bottom:16px;
+
+}
+
+
+/*==========================================
+   CONTACT CARD TITLE
+==========================================*/
+
+.contact-premium-card h4{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.7rem;
+
+    font-weight:700;
+
+    color:#111;
+
+    margin-bottom:10px;
+
+}
+
+
+/*==========================================
+   CONTACT CARD TEXT
+==========================================*/
+
+.contact-main{
+
+    color:#333;
+
+    font-size:.98rem;
+
+    margin-bottom:7px;
+
+}
+
+.contact-sub{
+
+    color:#666;
+
+    font-size:.92rem;
+
+    line-height:1.65;
+
+    margin-bottom:0;
+
+}
+
+
+/*==========================================
+   CONTACT DIVIDER
+==========================================*/
+
+.contact-divider{
+
+    height:1px;
+
+    background:rgba(201,162,39,.16);
+
+    margin:20px 0 16px;
+
+}
+
+
+/*==========================================
+   CONTACT LINK
+==========================================*/
+
+.contact-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    color:#C9A227;
+
+    font-size:.92rem;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:.3s ease;
+
+}
+
+.contact-link:hover{
+
+    color:#8A6A16;
+
+    transform:translateX(3px);
+
+}
+
+
+/*==========================================
+   CONTACT CARDS - MOBILE
+==========================================*/
+
+@media(max-width:767.98px){
+
+    .contact-premium-card{
+
+        padding:24px 22px;
+
+        border-radius:16px;
+
+    }
+
+    .contact-premium-card h4{
+
+        font-size:1.6rem;
+
+    }
+
+    .contact-main{
+
+        font-size:.95rem;
+
+    }
+
+    .contact-sub{
+
+        font-size:.9rem;
+
     }
 
 }
