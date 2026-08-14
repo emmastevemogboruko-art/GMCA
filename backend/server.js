@@ -10,6 +10,7 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const pool = require("./config/db");
 const EmailService = require("./services/emailService");
@@ -171,6 +172,16 @@ app.use(
 app.use(
     "/api/member",
     memberPortalRoutes
+);
+
+/* ==========================================================
+   Frontend Static Files
+========================================================== */
+
+app.use(
+    express.static(
+        path.join(__dirname, "..")
+    )
 );
 
 /* ==========================================================
