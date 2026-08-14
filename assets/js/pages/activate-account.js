@@ -110,11 +110,15 @@ form.addEventListener(
 
         try {
 
+            /*
+             * Use the same server that delivered
+             * this page.
+             *
+             * This works locally and on Render.
+             */
             const response =
                 await fetch(
-
-                    "http://localhost:5000/api/auth/activate",
-
+                    "/api/auth/activate",
                     {
 
                         method: "POST",
@@ -137,7 +141,6 @@ form.addEventListener(
                         })
 
                     }
-
                 );
 
             const result =
