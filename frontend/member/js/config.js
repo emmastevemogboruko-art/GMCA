@@ -12,7 +12,13 @@ const CONFIG = {
     APP_VERSION: "1.0.0",
 
     // Backend API Configuration
-    API_BASE_URL: "http://localhost:5000/api",
+    API_BASE_URL:
+        (
+            window.location.hostname === "localhost" ||
+            window.location.hostname === "127.0.0.1"
+        )
+            ? "http://localhost:5000/api"
+            : "https://gmca-lu67.onrender.com/api",
 
     // Local Storage Keys
     STORAGE: {

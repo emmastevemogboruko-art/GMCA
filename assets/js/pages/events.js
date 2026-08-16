@@ -14,6 +14,7 @@
 const API_BASE_URL =
     "https://gmca-lu67.onrender.com/api";
 
+
 /* ==========================================================
    DOM Elements
 ========================================================== */
@@ -28,23 +29,45 @@ const signatureContainer =
         "signature-events-container"
     );
 
+
 /* ==========================================================
-   Logged-in Member
+   Authentication
 ========================================================== */
 
-function getMemberToken() {
+/**
+ * Use the central GMCA public-site authentication system.
+ *
+ * SiteAuth is responsible for checking whether a valid
+ * member session exists.
+ */
 
-    return localStorage.getItem(
-        "member_token"
+function isLoggedIn() {
+
+    return (
+        typeof SiteAuth !== "undefined" &&
+        SiteAuth.isAuthenticated
     );
 
 }
 
-function isLoggedIn() {
 
-    return !!getMemberToken();
+function getMemberToken() {
+
+    if (
+        typeof SiteAuth !== "undefined" &&
+        SiteAuth.token
+    ) {
+
+        return SiteAuth.token;
+
+    }
+
+    return localStorage.getItem(
+        "gmca_member_token"
+    );
 
 }
+
 
 /* ==========================================================
    Helpers
@@ -69,6 +92,7 @@ function formatDate(date) {
 
 }
 
+
 function formatDateRange(start, end) {
 
     if (!start) {
@@ -87,6 +111,7 @@ function formatDateRange(start, end) {
 
 }
 
+
 function eventBadge(event) {
 
     let badgeClass = "bg-success";
@@ -96,17 +121,23 @@ function eventBadge(event) {
         case "Registration Closed":
 
             badgeClass = "bg-danger";
+
             break;
+
 
         case "Registration Opens Soon":
 
             badgeClass = "bg-warning text-dark";
+
             break;
+
 
         case "Event Full":
 
             badgeClass = "bg-dark";
+
             break;
+
 
         default:
 
@@ -116,11 +147,12 @@ function eventBadge(event) {
 
     return `
         <span class="badge ${badgeClass}">
-            ${event.registration_message}
+            ${event.registration_message || "Registration Open"}
         </span>
     `;
 
 }
+
 
 /* ==========================================================
    Event Card
@@ -129,20 +161,19 @@ function eventBadge(event) {
 function buildEventCard(event) {
 
     const button =
-
         isLoggedIn()
-
             ? buildMemberButton(event)
-
             : buildVisitorButton();
 
-    const slots =
 
-        event.remaining_capacity === null
+    const slots =
+        event.remaining_capacity === null ||
+        event.remaining_capacity === undefined
 
             ? "Unlimited"
 
             : `${event.remaining_capacity} Places Left`;
+
 
     return `
 
@@ -155,7 +186,6 @@ function buildEventCard(event) {
                     <img
                         src="${
                             event.banner_image ||
-
                             "assets/images/events/event-1.jpg"
                         }"
 
@@ -172,6 +202,7 @@ function buildEventCard(event) {
 
                 </div>
 
+
                 <div class="event-content">
 
                     <small class="text-warning fw-semibold">
@@ -180,11 +211,13 @@ function buildEventCard(event) {
 
                     </small>
 
+
                     <h4 class="mt-2">
 
                         ${event.title}
 
                     </h4>
+
 
                     <p class="text-muted">
 
@@ -201,6 +234,7 @@ function buildEventCard(event) {
 
                     </p>
 
+
                     <div class="small text-muted mb-2">
 
                         <i class="bi bi-calendar-event me-2"></i>
@@ -212,6 +246,7 @@ function buildEventCard(event) {
 
                     </div>
 
+
                     <div class="small text-muted mb-2">
 
                         <i class="bi bi-geo-alt me-2"></i>
@@ -219,16 +254,13 @@ function buildEventCard(event) {
                         ${event.venue || ""}
 
                         ${
-
                             event.location
-
                                 ? ", " + event.location
-
                                 : ""
-
                         }
 
                     </div>
+
 
                     <div class="small text-muted mb-4">
 
@@ -237,6 +269,7 @@ function buildEventCard(event) {
                         ${slots}
 
                     </div>
+
 
                     ${button}
 
@@ -249,6 +282,7 @@ function buildEventCard(event) {
     `;
 
 }
+
 
 /* ==========================================================
    Visitor Button
@@ -270,11 +304,17 @@ function buildVisitorButton() {
 
 }
 
+
 /* ==========================================================
    Member Button
 ========================================================== */
 
 function buildMemberButton(event) {
+
+    /*
+     * If the backend tells us that this member has already
+     * registered, show Registered.
+     */
 
     if (event.registered) {
 
@@ -292,7 +332,13 @@ function buildMemberButton(event) {
 
     }
 
-    if (!event.can_register) {
+
+    /*
+     * If registration is not currently available,
+     * show the backend's registration message.
+     */
+
+    if (event.can_register === false) {
 
         return `
 
@@ -300,13 +346,18 @@ function buildMemberButton(event) {
                 class="btn btn-secondary w-100"
                 disabled>
 
-                ${event.registration_message}
+                ${event.registration_message || "Registration unavailable"}
 
             </button>
 
         `;
 
     }
+
+
+    /*
+     * Logged-in member who can register.
+     */
 
     return `
 
@@ -322,11 +373,39 @@ function buildMemberButton(event) {
 
 }
 
+
 /* ==========================================================
    Register For Event
 ========================================================== */
 
-async function registerForEvent(eventId) {
+async function registerForEvent(eventId, button) {
+
+    const token = getMemberToken();
+
+
+    if (!token) {
+
+        alert(
+            "Please log in to your GMCA member account first."
+        );
+
+        return;
+
+    }
+
+
+    /*
+     * Prevent duplicate clicks.
+     */
+
+    if (button) {
+
+        button.disabled = true;
+
+        button.textContent = "Joining...";
+
+    }
+
 
     try {
 
@@ -340,11 +419,11 @@ async function registerForEvent(eventId) {
 
                 headers: {
 
-                    Authorization:
-                        `Bearer ${getMemberToken()}`,
-
                     "Content-Type":
-                        "application/json"
+                        "application/json",
+
+                    "Authorization":
+                        `Bearer ${token}`
 
                 }
 
@@ -352,8 +431,35 @@ async function registerForEvent(eventId) {
 
         );
 
+
         const result =
             await response.json();
+
+
+        /*
+         * If the token has expired, clear the public
+         * authentication session and send the member
+         * back through the normal login flow.
+         */
+
+        if (response.status === 401) {
+
+            if (
+                typeof SiteAuth !== "undefined"
+            ) {
+
+                SiteAuth.logout();
+
+                return;
+
+            }
+
+            throw new Error(
+                "Your session has expired. Please log in again."
+            );
+
+        }
+
 
         if (!response.ok) {
 
@@ -361,46 +467,68 @@ async function registerForEvent(eventId) {
 
                 result.message ||
 
-                "Registration failed."
+                "Unable to register for this event."
 
             );
 
         }
 
+
+        /*
+         * Registration succeeded.
+         */
+
+        if (button) {
+
+            button.classList.remove(
+                "btn-primary"
+            );
+
+            button.classList.add(
+                "btn-success"
+            );
+
+            button.textContent =
+                "✓ Registered";
+
+        }
+
+
         alert(
+            result.message ||
             "You have successfully registered for the event."
         );
 
-        loadEvents();
+
     }
 
     catch (error) {
 
-        alert(error.message);
+        console.error(
+            "Event registration error:",
+            error
+        );
+
+
+        if (button) {
+
+            button.disabled = false;
+
+            button.textContent =
+                "Join Event";
+
+        }
+
+
+        alert(
+            error.message ||
+            "Unable to register for this event."
+        );
 
     }
 
 }
 
-/* ==========================================================
-   Unified Event Loader
-========================================================== */
-
-function loadEvents() {
-
-    if (isLoggedIn()) {
-
-        loadMemberUpcomingEvents();
-        loadMemberFeaturedEvents();
-
-    } else {
-
-        loadUpcomingEvents();
-        loadFeaturedEvents();
-
-    }
-
-}
 
 /* ==========================================================
    Load Upcoming Events
@@ -414,6 +542,7 @@ async function loadUpcomingEvents() {
 
     }
 
+
     upcomingContainer.innerHTML =
 
         `
@@ -424,6 +553,7 @@ async function loadUpcomingEvents() {
         </div>
         `;
 
+
     try {
 
         const response = await fetch(
@@ -432,12 +562,16 @@ async function loadUpcomingEvents() {
 
         );
 
+
         const result =
             await response.json();
+
 
         if (
 
             !result.success ||
+
+            !result.data ||
 
             result.data.length === 0
 
@@ -449,9 +583,7 @@ async function loadUpcomingEvents() {
                 <div class="col-12 text-center py-5">
 
                     <h5>
-
                         No upcoming events.
-
                     </h5>
 
                 </div>
@@ -460,6 +592,7 @@ async function loadUpcomingEvents() {
             return;
 
         }
+
 
         upcomingContainer.innerHTML =
 
@@ -471,9 +604,14 @@ async function loadUpcomingEvents() {
 
     }
 
+
     catch (error) {
 
-        console.error(error);
+        console.error(
+            "Upcoming events error:",
+            error
+        );
+
 
         upcomingContainer.innerHTML =
 
@@ -489,6 +627,7 @@ async function loadUpcomingEvents() {
 
 }
 
+
 /* ==========================================================
    Load Featured Events
 ========================================================== */
@@ -501,6 +640,7 @@ async function loadFeaturedEvents() {
 
     }
 
+
     signatureContainer.innerHTML =
 
         `
@@ -511,6 +651,7 @@ async function loadFeaturedEvents() {
         </div>
         `;
 
+
     try {
 
         const response = await fetch(
@@ -519,12 +660,16 @@ async function loadFeaturedEvents() {
 
         );
 
+
         const result =
             await response.json();
+
 
         if (
 
             !result.success ||
+
+            !result.data ||
 
             result.data.length === 0
 
@@ -544,6 +689,7 @@ async function loadFeaturedEvents() {
 
         }
 
+
         signatureContainer.innerHTML =
 
             result.data
@@ -554,9 +700,14 @@ async function loadFeaturedEvents() {
 
     }
 
+
     catch (error) {
 
-        console.error(error);
+        console.error(
+            "Featured events error:",
+            error
+        );
+
 
         signatureContainer.innerHTML =
 
@@ -572,37 +723,76 @@ async function loadFeaturedEvents() {
 
 }
 
+
 /* ==========================================================
-   Events
+   Load All Events
+========================================================== */
+
+async function loadEvents() {
+
+    /*
+     * We deliberately use the PUBLIC event endpoints for
+     * displaying the events.
+     *
+     * Authentication only changes the action button.
+     *
+     * This means guests can still browse events normally.
+     */
+
+    await Promise.all([
+
+        loadUpcomingEvents(),
+
+        loadFeaturedEvents()
+
+    ]);
+
+}
+
+
+/* ==========================================================
+   Event Button Click
 ========================================================== */
 
 document.addEventListener(
 
     "click",
 
-    function (e) {
+    function (event) {
 
-        if (
-
-            e.target.classList.contains(
-
-                "join-event-btn"
-
-            )
-
-        ) {
-
-            registerForEvent(
-
-                e.target.dataset.eventId
-
+        const button =
+            event.target.closest(
+                ".join-event-btn"
             );
 
+
+        if (!button) {
+
+            return;
+
         }
+
+
+        const eventId =
+            button.dataset.eventId;
+
+
+        if (!eventId) {
+
+            return;
+
+        }
+
+
+        registerForEvent(
+            eventId,
+            button
+        );
 
     }
 
 );
+
 
 /* ==========================================================
    Initialize
@@ -612,9 +802,47 @@ document.addEventListener(
 
     "DOMContentLoaded",
 
-    () => {
+    async function () {
+
+        /*
+         * IMPORTANT:
+         *
+         * events.js is loaded before site-auth.js in
+         * events.html, so we wait until DOMContentLoaded.
+         *
+         * By then SiteAuth has been loaded and can validate
+         * the existing member session.
+         */
+
+        if (
+            typeof SiteAuth !== "undefined"
+        ) {
+
+            try {
+
+                await SiteAuth.initialize();
+
+            }
+
+            catch (error) {
+
+                console.error(
+                    "Unable to initialize site authentication:",
+                    error
+                );
+
+            }
+
+        }
+
+
+        /*
+         * Now that authentication state has been determined,
+         * render the event cards.
+         */
 
         loadEvents();
+
     }
 
 );
