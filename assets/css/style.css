@@ -4798,3 +4798,417 @@ section .section-intro {
     }
 
 }
+
+/* =========================================================
+   HOMEPAGE — PARTNERSHIP PREVIEW
+   Featured supporters / partners
+========================================================= */
+
+.home-partners-preview {
+
+    background:
+        linear-gradient(
+            180deg,
+            #faf9f4 0%,
+            #f6f3eb 100%
+        );
+
+    padding: 90px 0 95px;
+
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.home-partners-heading {
+
+    max-width: 820px;
+
+    margin: 0 auto 48px;
+
+}
+
+
+.home-partners-kicker {
+
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: #A88418;
+
+    font-size: .72rem;
+
+    font-weight: 800;
+
+    letter-spacing: .24em;
+
+}
+
+
+.home-partners-heading h2 {
+
+    margin: 0;
+
+    color: #111;
+
+    font-size: clamp(2.5rem, 4vw, 3.8rem);
+
+    font-weight: 800;
+
+    letter-spacing: -.045em;
+
+    line-height: 1.05;
+
+}
+
+
+.home-partners-heading p {
+
+    max-width: 720px;
+
+    margin: 18px auto 0;
+
+    color: #66717c;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.home-partner-card {
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid rgba(0,0,0,.07);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 32px rgba(0,0,0,.07);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.home-partner-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.13);
+
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.home-partner-image {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 235px;
+
+    overflow: hidden;
+
+    background: #161616;
+
+}
+
+
+.home-partner-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    transition: transform .45s ease;
+
+}
+
+
+.home-partner-card:hover
+.home-partner-image img {
+
+    transform: scale(1.04);
+
+}
+
+
+/* =========================================================
+   IMAGE POSITIONING
+   Keep faces / important content visible
+========================================================= */
+
+.home-partner-card:nth-child(1)
+.home-partner-image img {
+
+    object-position: center 40%;
+
+}
+
+
+.home-partner-card:nth-child(2)
+.home-partner-image img {
+
+    object-position: center 38%;
+
+}
+
+
+.home-partner-card:nth-child(3)
+.home-partner-image img {
+
+    object-position: center center;
+
+}
+
+
+.home-partner-card:nth-child(4)
+.home-partner-image img {
+
+    object-position: center center;
+
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.home-partner-badge {
+
+    position: absolute;
+
+    top: 16px;
+
+    right: 16px;
+
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 9px 16px;
+
+    background: #E0B82F;
+
+    color: #111;
+
+    border-radius: 50px;
+
+    font-size: .72rem;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 6px 15px rgba(0,0,0,.12);
+
+}
+
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.home-partner-body {
+
+    padding: 22px 22px 24px;
+
+    flex: 1;
+
+}
+
+
+.home-partner-category {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #B18516;
+
+    font-size: .68rem;
+
+    font-weight: 800;
+
+    letter-spacing: .2em;
+
+}
+
+
+.home-partner-body h3 {
+
+    margin: 0 0 8px;
+
+    color: #111;
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+}
+
+
+.home-partner-body p {
+
+    margin: 0;
+
+    color: #66717c;
+
+    font-size: .88rem;
+
+    line-height: 1.55;
+
+}
+
+
+/* =========================================================
+   BOTTOM CTA
+========================================================= */
+
+.home-partners-action {
+
+    margin-top: 42px;
+
+}
+
+
+.home-partners-action p {
+
+    margin-bottom: 18px;
+
+    color: #66717c;
+
+    font-size: .95rem;
+
+}
+
+
+.home-partners-action .btn {
+
+    padding-top: 12px;
+
+    padding-bottom: 12px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .home-partners-preview {
+
+        padding: 75px 0 80px;
+
+    }
+
+    .home-partner-image {
+
+        height: 250px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .home-partners-preview {
+
+        padding: 60px 0 65px;
+
+    }
+
+    .home-partners-heading {
+
+        margin-bottom: 32px;
+
+        padding: 0 10px;
+
+    }
+
+    .home-partners-heading h2 {
+
+        font-size: 2.45rem;
+
+    }
+
+    .home-partners-heading p {
+
+        font-size: .92rem;
+
+        line-height: 1.7;
+
+    }
+
+    .home-partner-image {
+
+        height: 230px;
+
+    }
+
+    .home-partner-body {
+
+        padding: 19px 20px 21px;
+
+    }
+
+    .home-partner-body h3 {
+
+        font-size: 1.2rem;
+
+    }
+
+    .home-partners-action {
+
+        margin-top: 32px;
+
+    }
+
+}

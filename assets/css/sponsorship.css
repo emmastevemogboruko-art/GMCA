@@ -1,0 +1,1263 @@
+/* ============================================================
+   GMCA SPONSORSHIP PAGE
+   PREMIUM EXECUTIVE STYLING
+   DIMENSION-SAFE VERSION
+============================================================ */
+
+
+/* ============================================================
+   01. VARIABLES
+============================================================ */
+
+:root {
+
+    --sp-black: #0b0b0b;
+    --sp-black-soft: #151515;
+
+    --sp-gold: #d4a91e;
+    --sp-gold-light: #edc957;
+    --sp-gold-dark: #b78b0b;
+
+    --sp-white: #ffffff;
+    --sp-cream: #faf8f1;
+
+    --sp-text: #171717;
+    --sp-muted: #68727c;
+
+    --sp-border: rgba(0, 0, 0, .08);
+
+}
+
+
+/* ============================================================
+   02. IMPORTANT — NAVBAR PROTECTION
+   ------------------------------------------------------------
+   The global style.css is affecting the sponsorship page
+   differently. These dimensions deliberately match the
+   working GMCA pages.
+============================================================ */
+
+.site-navbar {
+
+    min-height: 96px !important;
+
+    height: auto !important;
+
+    padding-top: 8px !important;
+
+    padding-bottom: 8px !important;
+
+}
+
+
+.site-navbar .container {
+
+    min-height: 80px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+}
+
+
+/*
+ * LOCK THE LOGO SIZE.
+ */
+
+.site-navbar .site-logo {
+
+    width: 80px !important;
+
+    height: 80px !important;
+
+    max-width: 80px !important;
+
+    max-height: 80px !important;
+
+    min-width: 80px !important;
+
+    min-height: 80px !important;
+
+    object-fit: contain !important;
+
+    display: block !important;
+
+}
+
+
+/*
+ * Brand wrapper.
+ */
+
+.site-navbar .navbar-brand {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 16px !important;
+
+    width: auto !important;
+
+    max-width: none !important;
+
+    margin-right: 30px !important;
+
+}
+
+
+/*
+ * GMCA brand text.
+ */
+
+.site-navbar .brand-text {
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    justify-content: center !important;
+
+    white-space: nowrap !important;
+
+}
+
+
+.site-navbar .brand-text strong {
+
+    font-size: 1.8rem !important;
+
+    line-height: 1 !important;
+
+}
+
+
+.site-navbar .brand-text small {
+
+    font-size: .82rem !important;
+
+    line-height: 1.25 !important;
+
+}
+
+
+/*
+ * Navigation itself.
+ */
+
+.site-navbar .navbar-collapse {
+
+    flex-grow: 1 !important;
+
+}
+
+
+.site-navbar .navbar-nav {
+
+    align-items: center !important;
+
+}
+
+
+.site-navbar .nav-link {
+
+    white-space: nowrap !important;
+
+}
+
+
+/* ============================================================
+   03. PAGE FOUNDATION
+============================================================ */
+
+body {
+
+    overflow-x: hidden;
+
+    background: #fff;
+
+    color: var(--sp-text);
+
+}
+
+
+/* ============================================================
+   04. HERO
+============================================================ */
+
+.partner-hero {
+
+    position: relative;
+
+    min-height: 560px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            115deg,
+            #080808 0%,
+            #11110f 52%,
+            #29251a 100%
+        );
+
+}
+
+
+.partner-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(212,169,30,.19),
+            transparent 35%
+        );
+
+    pointer-events: none;
+
+}
+
+
+.partner-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.30),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+}
+
+
+.partner-hero .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.partner-hero-content {
+
+    max-width: 1000px;
+
+    padding: 85px 0;
+
+}
+
+
+.partner-eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--sp-gold-light);
+
+    font-size: .76rem;
+
+    font-weight: 800;
+
+    letter-spacing: .25em;
+
+}
+
+
+.partner-hero h1 {
+
+    margin: 0;
+
+    color: #fff;
+
+    font-size:
+        clamp(3.3rem, 5.3vw, 5.7rem);
+
+    font-weight: 800;
+
+    letter-spacing: -.055em;
+
+    line-height: .98;
+
+}
+
+
+.partner-hero h1 span {
+
+    color: var(--sp-gold-light);
+
+}
+
+
+.partner-hero p {
+
+    max-width: 900px;
+
+    margin-top: 30px;
+
+    color: rgba(255,255,255,.78);
+
+    font-size: 1.08rem;
+
+    line-height: 1.85;
+
+}
+
+
+/* ============================================================
+   05. GENERAL SECTION WIDTH
+============================================================ */
+
+.partners-intro .container,
+.people-section .container,
+.impact-section .container,
+.become-partner-section .container {
+
+    width: calc(100% - 48px);
+
+    max-width: 1400px;
+
+}
+
+
+/* ============================================================
+   06. SECTION KICKER
+============================================================ */
+
+.section-kicker {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: var(--sp-gold-dark);
+
+    font-size: .72rem;
+
+    font-weight: 800;
+
+    letter-spacing: .24em;
+
+}
+
+
+/* ============================================================
+   07. INTRO
+============================================================ */
+
+.partners-intro {
+
+    padding: 95px 0;
+
+    background: #fff;
+
+}
+
+
+.partners-intro h2 {
+
+    margin: 0;
+
+    color: #111;
+
+    font-size:
+        clamp(2.7rem, 4vw, 4.1rem);
+
+    font-weight: 800;
+
+    letter-spacing: -.045em;
+
+    line-height: 1.05;
+
+}
+
+
+.partners-intro .lead {
+
+    margin-top: 25px;
+
+    color: #1d2730;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+}
+
+
+.partners-intro p:not(.lead) {
+
+    margin-top: 18px;
+
+    color: var(--sp-muted);
+
+    line-height: 1.85;
+
+}
+
+
+/* ============================================================
+   08. PEOPLE SECTIONS
+============================================================ */
+
+.people-section {
+
+    padding: 95px 0 105px;
+
+}
+
+
+.mentors-section {
+
+    background:
+        linear-gradient(
+            180deg,
+            #faf9f4,
+            #f6f3eb
+        );
+
+}
+
+
+.partners-section {
+
+    background: #fff;
+
+}
+
+
+/* ============================================================
+   09. SECTION HEADING
+============================================================ */
+
+.section-heading {
+
+    max-width: 900px;
+
+    margin: 0 auto 55px;
+
+}
+
+
+.section-heading h2 {
+
+    margin: 0;
+
+    color: #111;
+
+    font-size:
+        clamp(2.7rem, 4vw, 4rem);
+
+    font-weight: 800;
+
+    letter-spacing: -.045em;
+
+    line-height: 1.04;
+
+}
+
+
+.section-heading p {
+
+    max-width: 800px;
+
+    margin: 20px auto 0;
+
+    color: var(--sp-muted);
+
+    line-height: 1.8;
+
+}
+
+
+/* ============================================================
+   10. GRID
+   ------------------------------------------------------------
+   Compact executive card layout.
+   Matches the proportions used across the working GMCA pages.
+============================================================ */
+
+.people-section .row {
+
+    --bs-gutter-x: 22px;
+    --bs-gutter-y: 28px;
+
+    justify-content: center;
+
+}
+
+
+/*
+ * Keep the cards compact rather than allowing them
+ * to become excessively wide.
+ */
+
+.people-section .row > [class*="col-"] {
+
+    display: flex;
+
+}
+
+
+/*
+ * Desktop:
+ * Three balanced cards across the content area.
+ */
+
+@media (min-width: 992px) {
+
+    .people-section .row > [class*="col-lg-4"] {
+
+        flex: 0 0 33.333333%;
+
+        max-width: 33.333333%;
+
+    }
+
+}
+
+
+/* ============================================================
+   11. CARD
+============================================================ */
+
+.partner-card {
+
+    height: 100% !important;
+
+    min-height: 0 !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    overflow: hidden !important;
+
+    background: #fff;
+
+    border: 1px solid var(--sp-border);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 16px 45px rgba(0,0,0,.07);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.partner-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.13);
+
+}
+
+
+/* ============================================================
+   12. IMAGE AREA
+   ------------------------------------------------------------
+   Compact premium image treatment.
+   Portrait subjects are anchored from the TOP so faces
+   remain visible and the lower portion takes the crop.
+============================================================ */
+
+.partner-image {
+
+    position: relative !important;
+
+    width: 100% !important;
+
+    height: 300px !important;
+
+    min-height: 300px !important;
+
+    max-height: 300px !important;
+
+    overflow: hidden !important;
+
+    display: block !important;
+
+    flex: 0 0 300px !important;
+
+    background: #161616;
+
+}
+
+
+/*
+ * ALL PEOPLE IMAGES
+ *
+ * The previous Mary treatment is now the standard treatment
+ * for every portrait card.
+ */
+
+.partner-image:not(.logo-image) img {
+
+    display: block !important;
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+    max-width: none !important;
+
+    max-height: none !important;
+
+    min-width: 100% !important;
+
+    min-height: 100% !important;
+
+    object-fit: cover !important;
+
+    object-position: center top !important;
+
+}
+
+
+/* ============================================================
+   14. LOGO CARDS
+============================================================ */
+
+.partner-image.logo-image {
+
+    background:
+        radial-gradient(
+            circle,
+            #292929,
+            #151515 65%,
+            #0d0d0d
+        );
+
+}
+
+
+.partner-image.logo-image img {
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+    min-width: 100% !important;
+
+    min-height: 100% !important;
+
+    object-fit: contain !important;
+
+    padding: 48px !important;
+
+}
+
+
+/* UWR */
+
+.partners-section
+.partner-card:nth-child(1)
+.partner-image img {
+
+    padding: 42px !important;
+
+}
+
+
+/* Key of David */
+
+.partners-section
+.partner-card:nth-child(3)
+.partner-image img {
+
+    padding: 58px !important;
+
+}
+
+
+/* ============================================================
+   15. BADGE
+============================================================ */
+
+.relationship-badge {
+
+    position: absolute !important;
+
+    top: 19px !important;
+
+    right: 19px !important;
+
+    z-index: 10 !important;
+
+    display: inline-flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    min-height: 38px;
+
+    padding: 8px 17px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--sp-gold-light),
+            var(--sp-gold)
+        );
+
+    color: #111;
+
+    font-size: .70rem;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 7px 20px rgba(0,0,0,.2);
+
+}
+
+
+/* ============================================================
+   16. CARD BODY
+   ------------------------------------------------------------
+   Compact executive proportions.
+============================================================ */
+
+.partner-card-body {
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    flex: 1 !important;
+
+    padding: 25px 27px 28px !important;
+
+}
+
+
+.card-category {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--sp-gold-dark);
+
+    font-size: .67rem;
+
+    font-weight: 800;
+
+    letter-spacing: .21em;
+
+}
+
+
+.partner-card-body h3 {
+
+    margin: 0 !important;
+
+    color: #151515;
+
+    font-size: 1.42rem;
+
+    font-weight: 600;
+
+    letter-spacing: -.025em;
+
+    line-height: 1.25;
+
+}
+
+
+.partner-card-body h5 {
+
+    margin: 7px 0 0 !important;
+
+    color: #4e5963;
+
+    font-size: .88rem;
+
+    font-weight: 700;
+
+    line-height: 1.45;
+
+}
+
+
+.partner-card-body p {
+
+    margin: 16px 0 0 !important;
+
+    color: #68727c;
+
+    font-size: .90rem;
+
+    line-height: 1.72;
+
+}
+
+
+.partner-location {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin-top: auto;
+
+    padding-top: 19px;
+
+    color: #68727c;
+
+    font-size: .80rem;
+
+    line-height: 1.5;
+
+}
+
+
+.partner-location i {
+
+    color: var(--sp-gold);
+
+    flex-shrink: 0;
+
+}
+
+
+/* ============================================================
+   17. IMPACT
+============================================================ */
+
+.impact-section {
+
+    padding: 105px 0 110px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #101010,
+            #181818 60%,
+            #292419
+        );
+
+}
+
+
+.impact-section h2 {
+
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #fff;
+
+    font-size:
+        clamp(2.8rem, 4vw, 4.6rem);
+
+    font-weight: 800;
+
+    letter-spacing: -.05em;
+
+    line-height: 1.03;
+
+}
+
+
+.impact-section p {
+
+    max-width: 700px;
+
+    margin-top: 22px;
+
+    color: rgba(255,255,255,.67);
+
+    line-height: 1.85;
+
+}
+
+
+.impact-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.impact-box {
+
+    min-height: 185px;
+
+    padding: 27px;
+
+    border: 1px solid rgba(255,255,255,.10);
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,.045);
+
+}
+
+
+.impact-box i {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: var(--sp-gold-light);
+
+    font-size: 1.7rem;
+
+}
+
+
+.impact-box h4 {
+
+    margin: 0;
+
+    color: #fff;
+
+    font-size: 1.15rem;
+
+}
+
+
+.impact-box p {
+
+    margin: 9px 0 0;
+
+    font-size: .85rem;
+
+}
+
+
+/* ============================================================
+   18. BECOME PARTNER
+============================================================ */
+
+.become-partner-section {
+
+    padding: 90px 0 100px;
+
+    background: #f7f4ec;
+
+}
+
+
+.become-partner-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 62px 68px;
+
+    border-radius: 27px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #111,
+            #1b1b1b 70%,
+            #282319
+        );
+
+    box-shadow:
+        0 25px 65px rgba(0,0,0,.12);
+
+}
+
+
+.become-partner-card h2 {
+
+    max-width: 800px;
+
+    margin: 0;
+
+    color: #fff;
+
+    font-size:
+        clamp(2.7rem, 4vw, 4.4rem);
+
+    font-weight: 800;
+
+    letter-spacing: -.05em;
+
+    line-height: 1.03;
+
+}
+
+
+.become-partner-card p {
+
+    max-width: 800px;
+
+    margin-top: 21px;
+
+    color: rgba(255,255,255,.67);
+
+    line-height: 1.85;
+
+}
+
+
+.btn-gold {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 53px;
+
+    padding: 12px 28px;
+
+    border: 1px solid var(--sp-gold);
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--sp-gold-light),
+            var(--sp-gold)
+        );
+
+    color: #111;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 12px 30px rgba(212,169,30,.18);
+
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 991px) {
+
+    .site-navbar .site-logo {
+
+        width: 70px !important;
+        height: 70px !important;
+        max-width: 70px !important;
+        max-height: 70px !important;
+        min-width: 70px !important;
+        min-height: 70px !important;
+
+    }
+
+
+    .site-navbar .container {
+
+        min-height: 70px !important;
+
+    }
+
+
+    .partner-image {
+
+        height: 300px !important;
+
+        min-height: 300px !important;
+
+        max-height: 300px !important;
+
+        flex-basis: 300px !important;
+
+    }
+
+
+    .impact-section .row {
+
+        row-gap: 45px;
+
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 767px) {
+
+    .site-navbar {
+
+        min-height: auto !important;
+
+    }
+
+
+    .site-navbar .site-logo {
+
+        width: 62px !important;
+        height: 62px !important;
+        max-width: 62px !important;
+        max-height: 62px !important;
+        min-width: 62px !important;
+        min-height: 62px !important;
+
+    }
+
+
+    .site-navbar .brand-text strong {
+
+        font-size: 1.35rem !important;
+
+    }
+
+
+    .site-navbar .brand-text small {
+
+        font-size: .67rem !important;
+
+    }
+
+
+    .partner-hero {
+
+        min-height: 480px;
+
+    }
+
+
+    .partner-hero-content {
+
+        padding: 70px 0;
+
+    }
+
+
+    .partner-hero h1 {
+
+        font-size: 2.7rem;
+
+    }
+
+
+    .partners-intro {
+
+        padding: 70px 0;
+
+    }
+
+
+    .people-section {
+
+        padding: 70px 0 80px;
+
+    }
+
+
+    .section-heading {
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .partner-image {
+
+        height: 290px !important;
+
+        min-height: 290px !important;
+
+        max-height: 290px !important;
+
+        flex-basis: 290px !important;
+
+    }
+
+
+    .partner-card-body {
+
+        padding: 24px 22px 27px !important;
+
+    }
+
+
+    .impact-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .become-partner-card {
+
+        padding: 42px 26px;
+
+    }
+
+
+    .become-partner-card h2 {
+
+        font-size: 2.65rem;
+
+    }
+
+}
+
+
+/* ============================================================
+   SMALL PHONES
+============================================================ */
+
+@media (max-width: 480px) {
+
+    .partner-image {
+
+        height: 270px !important;
+
+        min-height: 270px !important;
+
+        max-height: 270px !important;
+
+        flex-basis: 270px !important;
+
+    }
+
+
+    .partner-hero h1 {
+
+        font-size: 2.45rem;
+
+    }
+
+}
