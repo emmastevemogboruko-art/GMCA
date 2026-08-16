@@ -5212,3 +5212,532 @@ section .section-intro {
     }
 
 }
+
+/* ============================================================
+   GMCA NEWS & UPDATES
+   Premium editorial announcement section
+============================================================ */
+
+.gmca-news-section {
+
+    position: relative;
+
+    padding: 95px 0 100px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #faf9f4 0%,
+            #f6f3eb 100%
+        );
+
+}
+
+
+/* ============================================================
+   SECTION HEADING
+============================================================ */
+
+.gmca-news-heading {
+
+    max-width: 820px;
+
+    margin: 0 auto 52px;
+
+}
+
+
+.gmca-news-kicker {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #a88418;
+
+    font-size: .72rem;
+
+    font-weight: 800;
+
+    letter-spacing: .25em;
+
+}
+
+
+.gmca-news-heading h2 {
+
+    margin: 0;
+
+    color: #111;
+
+    font-size:
+        clamp(
+            2.5rem,
+            4vw,
+            3.9rem
+        );
+
+    font-weight: 800;
+
+    letter-spacing: -.045em;
+
+    line-height: 1.05;
+
+}
+
+
+.gmca-news-heading p {
+
+    max-width: 700px;
+
+    margin: 19px auto 0;
+
+    color: #68727c;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* ============================================================
+   GMCA NEWS CARDS — COMPACT PREMIUM SIZE
+============================================================ */
+
+.gmca-news-section .row {
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gmca-news-section .col-lg-4 {
+    max-width: 340px;
+}
+
+
+/* Card */
+
+.gmca-news-card {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+/* Smaller image area */
+
+.gmca-news-image {
+    height: 185px;
+}
+
+
+/* Smaller GMCA logo */
+
+.gmca-news-image img {
+    width: 105px;
+    height: 105px;
+    max-width: 105px;
+    max-height: 105px;
+}
+
+
+/* Smaller status badge */
+
+.gmca-news-status {
+    top: 14px;
+    right: 14px;
+    padding: 7px 13px;
+    font-size: .62rem;
+}
+
+
+/* More compact content */
+
+.gmca-news-body {
+    padding: 21px 22px 24px;
+}
+
+
+/* Category */
+
+.gmca-news-category {
+    margin-bottom: 9px;
+    font-size: .63rem;
+}
+
+
+/* Title */
+
+.gmca-news-body h3 {
+    font-size: 1.25rem;
+    line-height: 1.22;
+}
+
+
+/* Description */
+
+.gmca-news-body p {
+    margin-top: 13px;
+    font-size: .84rem;
+    line-height: 1.65;
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 991px) {
+
+    .gmca-news-section .row {
+        max-width: 720px;
+    }
+
+    .gmca-news-section .col-lg-4 {
+        max-width: 340px;
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 767px) {
+
+    .gmca-news-section .row {
+        max-width: 420px;
+    }
+
+    .gmca-news-section .col-lg-4 {
+        max-width: 100%;
+    }
+
+    .gmca-news-image {
+        height: 190px;
+    }
+
+}
+
+
+/* ============================================================
+   NEWS IMAGE / LOGO AREA
+============================================================ */
+
+.gmca-news-image {
+
+    position: relative;
+
+    height: 245px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #292929 0%,
+            #171717 55%,
+            #0b0b0b 100%
+        );
+
+}
+
+
+/*
+ * Subtle gold atmosphere behind the logo.
+ */
+
+.gmca-news-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 270px;
+
+    height: 270px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212,169,30,.17),
+            transparent 68%
+        );
+
+}
+
+
+/* GMCA logo */
+
+.gmca-news-image img {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 135px;
+
+    height: 135px;
+
+    max-width: 135px;
+
+    max-height: 135px;
+
+    object-fit: contain;
+
+}
+
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.gmca-news-status {
+
+    position: absolute;
+
+    top: 17px;
+
+    right: 17px;
+
+    z-index: 3;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        8px 15px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #edc957,
+            #d4a91e
+        );
+
+    color: #111;
+
+    font-size: .67rem;
+
+    font-weight: 800;
+
+    letter-spacing: .06em;
+
+    box-shadow:
+        0 7px 18px
+        rgba(0,0,0,.2);
+
+}
+
+
+/* ============================================================
+   NEWS BODY
+============================================================ */
+
+.gmca-news-body {
+
+    padding:
+        27px 27px 30px;
+
+}
+
+
+.gmca-news-category {
+
+    display: block;
+
+    margin-bottom: 11px;
+
+    color: #ad8415;
+
+    font-size: .68rem;
+
+    font-weight: 800;
+
+    letter-spacing: .21em;
+
+}
+
+
+.gmca-news-body h3 {
+
+    margin: 0;
+
+    color: #151515;
+
+    font-size: 1.45rem;
+
+    font-weight: 700;
+
+    letter-spacing: -.025em;
+
+    line-height: 1.25;
+
+}
+
+
+.gmca-news-body p {
+
+    margin:
+        17px 0 0;
+
+    color: #68727c;
+
+    font-size: .91rem;
+
+    line-height: 1.78;
+
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 991px) {
+
+    .gmca-news-section {
+
+        padding:
+            80px 0
+            85px;
+
+    }
+
+
+    .gmca-news-heading {
+
+        margin-bottom:
+            42px;
+
+    }
+
+
+    .gmca-news-image {
+
+        height:
+            230px;
+
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 767px) {
+
+    .gmca-news-section {
+
+        padding:
+            65px 0
+            70px;
+
+    }
+
+
+    .gmca-news-heading {
+
+        margin-bottom:
+            32px;
+
+        padding:
+            0 10px;
+
+    }
+
+
+    .gmca-news-heading h2 {
+
+        font-size:
+            2.45rem;
+
+    }
+
+
+    .gmca-news-heading p {
+
+        font-size:
+            .92rem;
+
+        line-height:
+            1.7;
+
+    }
+
+
+    .gmca-news-image {
+
+        height:
+            225px;
+
+    }
+
+
+    .gmca-news-body {
+
+        padding:
+            23px 22px 27px;
+
+    }
+
+
+    .gmca-news-body h3 {
+
+        font-size:
+            1.3rem;
+
+    }
+
+
+    .gmca-news-body p {
+
+        font-size:
+            .9rem;
+
+    }
+
+}
+
+
+/* ============================================================
+   SMALL PHONES
+============================================================ */
+
+@media (max-width: 480px) {
+
+    .gmca-news-image {
+
+        height:
+            210px;
+
+    }
+
+
+    .gmca-news-image img {
+
+        width:
+            120px;
+
+        height:
+            120px;
+
+    }
+
+}
