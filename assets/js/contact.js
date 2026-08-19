@@ -4,7 +4,7 @@ GMCA Donations
 ==========================================================
 */
 
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://gmca-lu67.onrender.com/api";
 
 const donationForm =
     document.getElementById("donationForm");
