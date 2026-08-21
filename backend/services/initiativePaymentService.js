@@ -230,7 +230,7 @@ class InitiativePaymentService {
                         member.email ||
                         "anonymous@gmcafrica.org",
 
-                    phonenumber:
+                    phone_number:
                         member.phone ||
                         undefined
 
