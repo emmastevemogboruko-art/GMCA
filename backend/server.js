@@ -35,6 +35,12 @@ const donationRoutes = require("./routes/donationRoutes");
 
 const app = express();
 
+/* ==========================================
+   Initiative Payments
+========================================== */
+
+const initiativePaymentRoutes = require("./routes/initiativePaymentRoutes");
+
 /* ==========================================================
    Middleware
 ========================================================== */
@@ -161,6 +167,17 @@ app.use(
 app.use(
     "/api/donations",
     donationRoutes
+);
+
+/*
+|--------------------------------------------------------------------------
+| Initiative Payments API
+|--------------------------------------------------------------------------
+*/
+
+app.use(
+    "/api/initiative-payments",
+    initiativePaymentRoutes
 );
 
 /*
