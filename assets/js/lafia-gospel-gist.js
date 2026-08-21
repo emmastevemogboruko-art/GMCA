@@ -39,7 +39,7 @@ const LafiaGospelGist = (() => {
 
 
     const PRODUCTION_API_BASE =
-        "/api";
+        "https://gmca-lu67.onrender.com/api";
 
 
     /* ==========================================================

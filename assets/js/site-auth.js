@@ -155,13 +155,9 @@ const SiteAuth = (() => {
         /*
          * Local development.
          */
-
         if (
-
             hostname === "localhost" ||
-
             hostname === "127.0.0.1"
-
         ) {
 
             return "http://localhost:5000/api";
@@ -170,10 +166,9 @@ const SiteAuth = (() => {
 
 
         /*
-         * Production.
+         * Production backend.
          */
-
-        return "/api";
+        return "https://gmca-lu67.onrender.com/api";
 
     }
 
