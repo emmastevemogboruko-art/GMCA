@@ -12,56 +12,52 @@ class InitiativePaymentController {
      */
     static async initialize(req, res) {
 
-        try {
+        console.log("======================================");
+        console.log("INITIATIVE PAYMENT INITIALIZE HIT");
+        console.log("USER:", req.user);
+        console.log("BODY:", req.body);
 
-            // ======================================
-            // Get Authenticated Member
-            // ======================================
+        try {
 
             const memberId =
                 req.user.member_id;
 
+            console.log("MEMBER ID:", memberId);
+
             if (!memberId) {
 
+                console.log("NO MEMBER ID");
+
                 return res.status(403).json({
-
                     success: false,
-
                     message:
                         "Authenticated member account is required."
-
                 });
 
             }
 
+            const { purpose } = req.body;
 
-            // ======================================
-            // Get Payment Purpose
-            // ======================================
+            console.log("PURPOSE:", purpose);
 
-            const {
-                purpose
-            } = req.body;
-
-
-            // ======================================
-            // Initialize Payment
-            // ======================================
+            console.log(
+                "CALLING InitiativePaymentService.initializePayment..."
+            );
 
             const payment =
-                await InitiativePaymentService
-                    .initializePayment(
+                await InitiativePaymentService.initializePayment(
+                    memberId,
+                    purpose
+                );
 
-                        memberId,
+            console.log(
+                "SERVICE RETURNED:",
+                payment
+            );
 
-                        purpose
-
-                    );
-
-
-            // ======================================
-            // Return Flutterwave Response
-            // ======================================
+            console.log(
+                "SENDING JSON RESPONSE..."
+            );
 
             return res.status(200).json({
 
@@ -79,9 +75,10 @@ class InitiativePaymentController {
         catch (error) {
 
             console.error(
-                "Initiative Payment Initialization Error:",
-                error
+                "INITIATIVE PAYMENT INITIALIZATION ERROR:"
             );
+
+            console.error(error);
 
             return res.status(400).json({
 
@@ -95,7 +92,6 @@ class InitiativePaymentController {
         }
 
     }
-
 
     /**
      * ==========================================
