@@ -5741,3 +5741,829 @@ section .section-intro {
     }
 
 }
+
+/* ==========================================================
+   FEATURED INITIATIVE — LAFIA GOSPEL GIST
+========================================================== */
+
+.lgg-featured-section {
+    background: #f7f4ed;
+}
+
+.lgg-featured-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171510 0%,
+            #211e17 58%,
+            #2b2518 100%
+        );
+
+    box-shadow:
+        0 22px 60px rgba(0, 0, 0, 0.14);
+}
+
+.lgg-featured-content {
+    padding: 64px 58px;
+}
+
+.lgg-featured-content .section-tag {
+    color: #d1a83a;
+}
+
+.lgg-featured-content h2 {
+    margin: 14px 0 10px;
+
+    color: #ffffff;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.lgg-featured-tagline {
+    max-width: 620px;
+    margin-bottom: 22px;
+
+    color: #d5b55b;
+
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.lgg-featured-content > p:not(.lgg-featured-tagline) {
+    max-width: 650px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 0.96rem;
+    line-height: 1.85;
+}
+
+.lgg-featured-actions {
+    margin-top: 30px;
+}
+
+.lgg-featured-actions .btn {
+    min-height: 48px;
+    font-weight: 600;
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+.lgg-featured-visual {
+    position: relative;
+
+    min-height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 35px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(209, 168, 58, 0.20),
+            transparent 62%
+        );
+}
+
+.lgg-featured-mark {
+    width: min(300px, 100%);
+    aspect-ratio: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border: 1px solid rgba(209, 168, 58, 0.42);
+    border-radius: 50%;
+
+    box-shadow:
+        inset 0 0 50px rgba(209, 168, 58, 0.06),
+        0 20px 50px rgba(0, 0, 0, 0.22);
+}
+
+.lgg-featured-mark span {
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+}
+
+.lgg-featured-mark strong {
+    margin: 7px 0;
+
+    color: #d5b55b;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 2rem;
+    letter-spacing: 0.04em;
+}
+
+.lgg-featured-mark small {
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 991px) {
+
+    .lgg-featured-content {
+        padding: 48px 36px;
+    }
+
+    .lgg-featured-visual {
+        min-height: 360px;
+        padding-top: 0;
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .lgg-featured-card {
+        border-radius: 22px;
+    }
+
+    .lgg-featured-content {
+        padding: 38px 25px;
+    }
+
+    .lgg-featured-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .lgg-featured-visual {
+        min-height: 300px;
+        padding: 25px;
+    }
+
+    .lgg-featured-mark {
+        width: 235px;
+    }
+
+    .lgg-featured-mark strong {
+        font-size: 1.65rem;
+    }
+
+}
+
+/* ============================================================
+   PROGRAMS — LAFIA GOSPEL GIST FEATURED INITIATIVE
+   COMPACT RESPONSIVE REFINEMENT
+   ------------------------------------------------------------
+   This targets ONLY the LGG featured banner on programs.html.
+============================================================ */
+
+
+/* ============================================================
+   DESKTOP
+============================================================ */
+
+.lgg-featured-initiative {
+
+    width: min(100%, 1180px);
+
+    margin: 42px auto 0;
+
+    padding: 52px 58px;
+
+    min-height: 360px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background:
+        radial-gradient(
+            circle at 82% 50%,
+            rgba(201, 162, 31, 0.12),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #15140f 0%,
+            #1d1b15 55%,
+            #12110e 100%
+        );
+
+    border: 1px solid rgba(201, 162, 31, 0.28);
+
+    box-shadow:
+        0 24px 55px rgba(24, 21, 14, 0.16);
+
+    color: #fff;
+}
+
+
+/* subtle premium glow */
+
+.lgg-featured-initiative::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    right: -150px;
+    top: -120px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(201, 162, 31, 0.14);
+
+    box-shadow:
+        0 0 0 28px rgba(201, 162, 31, 0.025),
+        0 0 0 58px rgba(201, 162, 31, 0.018);
+
+    pointer-events: none;
+}
+
+
+/* keep content above decoration */
+
+.lgg-featured-initiative > * {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ============================================================
+   FEATURED CONTENT
+============================================================ */
+
+.lgg-featured-content {
+
+    max-width: 670px;
+
+    padding-right: 20px;
+}
+
+
+.lgg-featured-content .section-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-bottom: 17px;
+
+    padding: 9px 17px;
+
+    border-radius: 999px;
+
+    background: rgba(201, 162, 31, 0.13);
+
+    border: 1px solid rgba(201, 162, 31, 0.22);
+
+    color: #d9ad24;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+}
+
+
+.lgg-featured-content h2 {
+
+    margin: 0 0 10px;
+
+    color: #f7f3e9;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(
+        2.8rem,
+        4.5vw,
+        4.4rem
+    );
+
+    font-weight: 600;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.035em;
+}
+
+
+.lgg-featured-subtitle {
+
+    margin: 0 0 20px;
+
+    color: #d9ad24;
+
+    font-size: 0.98rem;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+.lgg-featured-content p {
+
+    max-width: 650px;
+
+    margin: 0 0 13px;
+
+    color: rgba(244, 241, 232, 0.76);
+
+    font-size: 0.88rem;
+
+    line-height: 1.75;
+}
+
+
+/* ============================================================
+   CTA
+============================================================ */
+
+.lgg-featured-content .btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: 9px;
+
+    padding: 12px 22px;
+
+    min-height: 46px;
+
+    border: 0;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d8aa20,
+            #c49313
+        );
+
+    color: #17140b;
+
+    font-size: 0.86rem;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 24px rgba(201, 157, 24, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.lgg-featured-content .btn:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #e4ba3a,
+            #d0a21e
+        );
+
+    box-shadow:
+        0 14px 30px rgba(201, 157, 24, 0.27);
+
+    color: #111;
+}
+
+
+/* ============================================================
+   LGG EMBLEM / RIGHT SIDE
+============================================================ */
+
+.lgg-featured-emblem {
+
+    position: absolute;
+
+    right: 72px;
+    top: 50%;
+
+    width: 245px;
+    height: 245px;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(217, 173, 36, 0.48);
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(217, 173, 36, 0.16),
+            rgba(12, 11, 9, 0.72) 68%
+        );
+
+    box-shadow:
+        inset 0 0 35px rgba(217, 173, 36, 0.06),
+        0 0 50px rgba(217, 173, 36, 0.06);
+}
+
+
+/* outer ring */
+
+.lgg-featured-emblem::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 10px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(217, 173, 36, 0.18);
+
+}
+
+
+/* tiny decorative ring */
+
+.lgg-featured-emblem::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -14px;
+
+    border-radius: 50%;
+
+    border: 1px dashed rgba(217, 173, 36, 0.14);
+
+}
+
+
+.lgg-featured-emblem small {
+
+    margin-bottom: 5px;
+
+    color: rgba(244, 241, 232, 0.65);
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3em;
+}
+
+
+.lgg-featured-emblem strong {
+
+    color: #d9ad24;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 2rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.025em;
+
+    line-height: 1;
+}
+
+
+.lgg-featured-emblem span {
+
+    margin-top: 12px;
+
+    color: rgba(244, 241, 232, 0.58);
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 991.98px) {
+
+    .lgg-featured-initiative {
+
+        margin-top: 35px;
+
+        padding: 45px 40px;
+
+        min-height: 340px;
+
+        border-radius: 24px;
+    }
+
+
+    .lgg-featured-content {
+
+        max-width: 62%;
+
+        padding-right: 10px;
+    }
+
+
+    .lgg-featured-content h2 {
+
+        font-size: clamp(
+            2.7rem,
+            6vw,
+            3.7rem
+        );
+    }
+
+
+    .lgg-featured-emblem {
+
+        right: 38px;
+
+        width: 205px;
+        height: 205px;
+    }
+
+
+    .lgg-featured-emblem strong {
+
+        font-size: 1.7rem;
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 767.98px) {
+
+    .lgg-featured-initiative {
+
+        width: calc(100% - 30px);
+
+        margin: 28px auto 0;
+
+        padding: 32px 25px 30px;
+
+        min-height: auto;
+
+        border-radius: 21px;
+
+        background:
+            radial-gradient(
+                circle at 90% 0%,
+                rgba(201, 162, 31, 0.11),
+                transparent 32%
+            ),
+            linear-gradient(
+                145deg,
+                #15140f,
+                #1c1a14
+            );
+    }
+
+
+    .lgg-featured-initiative::before {
+
+        width: 240px;
+        height: 240px;
+
+        right: -130px;
+        top: -140px;
+    }
+
+
+    .lgg-featured-content {
+
+        max-width: 100%;
+
+        padding-right: 0;
+    }
+
+
+    .lgg-featured-content .section-tag {
+
+        margin-bottom: 14px;
+
+        padding: 8px 13px;
+
+        font-size: 0.63rem;
+    }
+
+
+    .lgg-featured-content h2 {
+
+        max-width: 100%;
+
+        margin-bottom: 9px;
+
+        font-size: clamp(
+            2.45rem,
+            11vw,
+            3.25rem
+        );
+
+        line-height: 0.94;
+    }
+
+
+    .lgg-featured-subtitle {
+
+        margin-bottom: 17px;
+
+        font-size: 0.83rem;
+
+        line-height: 1.55;
+    }
+
+
+    .lgg-featured-content p {
+
+        margin-bottom: 11px;
+
+        font-size: 0.79rem;
+
+        line-height: 1.7;
+    }
+
+
+    .lgg-featured-content .btn {
+
+        width: 100%;
+
+        margin-top: 8px;
+
+        padding: 11px 18px;
+
+        min-height: 45px;
+
+        font-size: 0.8rem;
+    }
+
+
+    /*
+     * The emblem becomes a subtle decorative element
+     * rather than competing with the content.
+     */
+
+    .lgg-featured-emblem {
+
+        position: relative;
+
+        right: auto;
+        top: auto;
+
+        transform: none;
+
+        width: 128px;
+        height: 128px;
+
+        margin: 27px auto 0;
+    }
+
+
+    .lgg-featured-emblem::before {
+
+        inset: 7px;
+    }
+
+
+    .lgg-featured-emblem::after {
+
+        inset: -8px;
+    }
+
+
+    .lgg-featured-emblem small {
+
+        font-size: 0.45rem;
+
+        letter-spacing: 0.22em;
+    }
+
+
+    .lgg-featured-emblem strong {
+
+        font-size: 1.05rem;
+    }
+
+
+    .lgg-featured-emblem span {
+
+        margin-top: 7px;
+
+        font-size: 0.42rem;
+    }
+
+}
+
+
+/* ============================================================
+   SMALL PHONES
+============================================================ */
+
+@media (max-width: 420px) {
+
+    .lgg-featured-initiative {
+
+        width: calc(100% - 24px);
+
+        padding:
+            27px 20px 25px;
+
+        border-radius: 18px;
+    }
+
+
+    .lgg-featured-content h2 {
+
+        font-size: 2.35rem;
+    }
+
+
+    .lgg-featured-subtitle {
+
+        font-size: 0.78rem;
+    }
+
+
+    .lgg-featured-content p {
+
+        font-size: 0.75rem;
+
+        line-height: 1.65;
+    }
+
+
+    .lgg-featured-emblem {
+
+        width: 112px;
+        height: 112px;
+
+        margin-top: 23px;
+    }
+
+}
